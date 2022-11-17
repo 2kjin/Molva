@@ -1,0 +1,590 @@
+[
+{
+    "model": "movies.director",
+    "pk": "1056121",
+    "fields": {
+        "name": "Ryan Coogler"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1062420",
+    "fields": {
+        "name": "John Ross"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1102370",
+    "fields": {
+        "name": "L. Gustavo Cooper"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "116805",
+    "fields": {
+        "name": "Paul Feig"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1168608",
+    "fields": {
+        "name": "Taneli Mustonen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1168992",
+    "fields": {
+        "name": "Sam Macaroni"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1188208",
+    "fields": {
+        "name": "Guillaume Pierret"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1212871",
+    "fields": {
+        "name": "Thomas M. Wright"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1234311",
+    "fields": {
+        "name": "Mitch Schauer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "126145",
+    "fields": {
+        "name": "Sarah Gibson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1282094",
+    "fields": {
+        "name": "Annemarie van de Mond"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1283010",
+    "fields": {
+        "name": "Haruo Sotozaki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1293994",
+    "fields": {
+        "name": "Jon Watts"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1299642",
+    "fields": {
+        "name": "Julius Avery"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1307036",
+    "fields": {
+        "name": "Kenji Nagasaki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1318201",
+    "fields": {
+        "name": "Jared Bush"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "142272",
+    "fields": {
+        "name": "Henry Joost"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "142276",
+    "fields": {
+        "name": "Ariel Schulman"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1448492",
+    "fields": {
+        "name": "Castille Landon"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1450921",
+    "fields": {
+        "name": "Ben Steiner"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1451203",
+    "fields": {
+        "name": "Chloe Okuno"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "147021",
+    "fields": {
+        "name": "S. S. Rajamouli"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1495399",
+    "fields": {
+        "name": "Masato Jimbo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1535020",
+    "fields": {
+        "name": "Mark Koetsier"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1564258",
+    "fields": {
+        "name": "Romuald Boulanger"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1657527",
+    "fields": {
+        "name": "Agustina San Martín"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1709460",
+    "fields": {
+        "name": "Jessica M. Thompson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "173394",
+    "fields": {
+        "name": "Chris Bailey"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "173847",
+    "fields": {
+        "name": "Harry Bradbeer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "174313",
+    "fields": {
+        "name": "Adam Nee"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "18898",
+    "fields": {
+        "name": "Rob Minkoff"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "19271",
+    "fields": {
+        "name": "Anthony Russo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "19272",
+    "fields": {
+        "name": "Joe Russo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "1987284",
+    "fields": {
+        "name": "Carlota Pereda"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2009739",
+    "fields": {
+        "name": "Domee Shi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2036",
+    "fields": {
+        "name": "Alex Garland"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2093022",
+    "fields": {
+        "name": "Jennifer Kluska"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "221522",
+    "fields": {
+        "name": "Edward Berger"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2218465",
+    "fields": {
+        "name": "Parker Finn"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2264366",
+    "fields": {
+        "name": "Sunghoo Park"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "230217",
+    "fields": {
+        "name": "Adrián Caetano"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2378215",
+    "fields": {
+        "name": "Bang Woo-ri"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "24",
+    "fields": {
+        "name": "Robert Zemeckis"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2403335",
+    "fields": {
+        "name": "Tetsuro Kodama"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2441040",
+    "fields": {
+        "name": "Andrew Hunt"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2703260",
+    "fields": {
+        "name": "Diego Freitas"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "2710",
+    "fields": {
+        "name": "James Cameron"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "29214",
+    "fields": {
+        "name": "Anne Fletcher"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "3183304",
+    "fields": {
+        "name": "Serik Beyseu"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "32278",
+    "fields": {
+        "name": "Matt Reeves"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "3744992",
+    "fields": {
+        "name": "Fabian Medea"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "402272",
+    "fields": {
+        "name": "Anna Foerster"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "40684",
+    "fields": {
+        "name": "David Leitch"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "52342",
+    "fields": {
+        "name": "Olivier Marchal"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "55499",
+    "fields": {
+        "name": "Scott Derrickson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "55934",
+    "fields": {
+        "name": "Taika Waititi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "568322",
+    "fields": {
+        "name": "Dan Trachtenberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "572295",
+    "fields": {
+        "name": "Howard J. Ford"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "5877",
+    "fields": {
+        "name": "Vincenzo Natali"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "59315",
+    "fields": {
+        "name": "Olivia Wilde"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "59521",
+    "fields": {
+        "name": "Jaume Collet-Serra"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "60007",
+    "fields": {
+        "name": "Sloane Klevin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "62079",
+    "fields": {
+        "name": "Janeen Damian"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "62768",
+    "fields": {
+        "name": "William Brent Bell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "64141",
+    "fields": {
+        "name": "David Gordon Green"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "67813",
+    "fields": {
+        "name": "Baltasar Kormákur"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "70103",
+    "fields": {
+        "name": "Fumihiko Sori"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "70652",
+    "fields": {
+        "name": "Derek Drymon"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "7623",
+    "fields": {
+        "name": "Sam Raimi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "76595",
+    "fields": {
+        "name": "Byron Howard"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "78207",
+    "fields": {
+        "name": "Romain Gavras"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "8",
+    "fields": {
+        "name": "Lee Unkrich"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "8023",
+    "fields": {
+        "name": "Kyle Balda"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "80672",
+    "fields": {
+        "name": "Peggy Holmes"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "86270",
+    "fields": {
+        "name": "Joseph Kosinski"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "88077",
+    "fields": {
+        "name": "Alex Zamm"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "89027",
+    "fields": {
+        "name": "Jared Stern"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "90502",
+    "fields": {
+        "name": "Goro Taniguchi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "90812",
+    "fields": {
+        "name": "Scott Mann"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "92125",
+    "fields": {
+        "name": "Conrad Helten"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "930707",
+    "fields": {
+        "name": "Colin Trevorrow"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "931525",
+    "fields": {
+        "name": "Aaron Nee"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "933176",
+    "fields": {
+        "name": "Damien Leone"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": "93364",
+    "fields": {
+        "name": "Jeff Fowler"
+    }
+}
+]
