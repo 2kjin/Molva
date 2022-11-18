@@ -6,6 +6,9 @@ import MovieList from '@/views/MovieList'
 import MyProfile from '@/views/MyProfile'
 import SignUpPage from '@/views/SignUpPage'
 import LoginPage from '@/views/LoginPage'
+import CommunityPage from '@/views/CommunityPage'
+import CreatePage from '@/views/CreatePage'
+import DetailPage from '@/views/DetailPage'
 
 Vue.use(VueRouter)
 
@@ -39,6 +42,21 @@ const routes = [
     path: '/login',
     name: 'LoginPage',
     component: LoginPage
+  },
+  {
+    path: '/community',
+    name: 'CommunityPage',
+    component: CommunityPage
+  },
+  {
+    path: '/:id',
+    name: 'DetailPage',
+    component: DetailPage
+  },
+  {
+    path: '/create',
+    name: 'CreatePage',
+    component: CreatePage
   },
 ]
 
