@@ -4,8 +4,8 @@
       <router-link to="/">Index</router-link> |
       <router-link :to="{ name: 'HomePage' }">Home</router-link> |
       <router-link :to="{ name: 'MovieList' }">MovieList</router-link> |
-      <router-link :to="{ name: 'MyProfile' }">MyProfile</router-link>
-      <router-link :to="{ name: 'LoginPage' }">LoginPage</router-link>
+      <router-link :to="{ name: 'MyProfile' }">MyProfile</router-link> |
+      <router-link :to="{ name: 'LoginPage' }">LoginPage</router-link> |
       <router-link :to="{ name: 'SignUpPage' }">SignUpPage</router-link>
     </nav>
     <router-view/>
