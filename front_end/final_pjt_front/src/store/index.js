@@ -15,6 +15,7 @@ export default new Vuex.Store({
     createPersistedState()
   ],
   state: {
+    movieList: null,
     communities: [],
     token: null,
   },
@@ -24,6 +25,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    GET_MOIVE(state, movieList){
+      state.movieList = movieList
+    },
     GET_COMMUNITIES(state, communities) {
       state.communities = communities
     },
@@ -34,6 +38,23 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    getMovie(context) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/api/v1/movie/`,
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`
+        // }
+      })
+        .then((res) => {
+          console.log(res, context)
+          const movieList = res.data
+          context.commit('GET_MOIVE',movieList)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
     getCommunities(context) {
       axios({
         method: 'get',
