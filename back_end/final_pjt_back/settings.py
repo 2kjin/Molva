@@ -38,22 +38,22 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
-    # # CORS policy
-    # "corsheaders",
+    # CORS policy
+    "corsheaders",
 
-    # # Auth
-    # 'rest_framework.authtoken',
-    # 'dj_rest_auth',
+    # Auth
+    'rest_framework.authtoken',
+    'dj_rest_auth',
 
-    # # registration
-    # 'django.contrib.sites',
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
-    # 'dj_rest_auth.registration',
+    # registration
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'dj_rest_auth.registration',
 
-    # # OpenAPI 3.0
-    # 'drf_spectacular',
+    # OpenAPI 3.0
+    'drf_spectacular',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -63,37 +63,37 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-# SITE_ID = 1
+SITE_ID = 1
 
-# REST_FRAMEWORK = {
-#     # Authentication
-#     'DEFAULT_AUTHENTICATION_CLASSES': [
-#         'rest_framework.authentication.TokenAuthentication',
-#     ],
+REST_FRAMEWORK = {
+    # Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 
-#     # permission
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         # 'rest_framework.permissions.IsAuthenticated',     # 인증되면 모두 허용
-#         'rest_framework.permissions.AllowAny',
-#     ],
+    # permission
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.IsAuthenticated',     # 인증되면 모두 허용
+        'rest_framework.permissions.AllowAny',
+    ],
 
-#     # spectacular Settings
-#     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-# }
+    # spectacular Settings
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
-# SPECTACULAR_SETTINGS = {
-#     'TITLE': 'Your Project API',
-#     'DESCRIPTION': 'Your project description',
-#     'VERSION': '1.0.0',
-#     'SERVE_INCLUDE_SCHEMA': False,
-#     # OTHER SETTINGS
-# }
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Your Project API',
+    'DESCRIPTION': 'Your project description',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
 
-    # "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -101,10 +101,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# # Vue server 주소에게 header 보내줘서 해결
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:8080',
-# ]
+# Vue server 주소에게 header 보내줘서 해결
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8080',
+]
 
 ROOT_URLCONF = 'final_pjt_back.urls'
 
