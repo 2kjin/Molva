@@ -3,11 +3,12 @@ import requests
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import MovieSerializer, GenreSerializer, ActorSerializer, DirectorSerializer
+from .serializers import MovieSerializer, Genrename, Actorname, Directorname
 
 from .models import Movie, Genre, Actor, Director
 from django.http import HttpResponse
 # Create your views here.
+# from pprint import pprint
 
 def create_json(request):
     lst_movie = []
@@ -87,22 +88,23 @@ def create_json(request):
 def movie(request):
     movies = Movie.objects.all()
     serializers = MovieSerializer(movies, many=True)
+    # pprint(serializers.data)
     return Response(serializers.data)
 
 @api_view(['GET'])
 def genre(request):
     genres = Genre.objects.all()
-    serializers = GenreSerializer(genres, many=True)
+    serializers = Genrename(genres, many=True)
     return Response(serializers.data)
 
 @api_view(['GET'])
 def actor(request):
     actors = Actor.objects.all()
-    serializers = ActorSerializer(actors, many=True)
+    serializers = Actorname(actors, many=True)
     return Response(serializers.data)
 
 @api_view(['GET'])
 def director(request):
     directors = Director.objects.all()
-    serializers = DirectorSerializer(directors, many=True)
+    serializers = Directorname(directors, many=True)
     return Response(serializers.data)

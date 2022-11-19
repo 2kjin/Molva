@@ -19,7 +19,7 @@ export default {
   methods: {
     getMovie() {
       this.$store.dispatch('getMovie')
-    }    
+    }
   },
   created() {
     this.getMovie()
