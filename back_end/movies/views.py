@@ -1,22 +1,25 @@
 import json
 import requests
 from django.shortcuts import render
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import MovieSerializer, Genrename, Actorname, Directorname
+from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer
 
-from .models import Movie, Genre, Actor, Director
+from .models import Movie, Genre, Actor, Director, Review
+from django.shortcuts import get_object_or_404, get_list_or_404
 from django.http import HttpResponse
+from django.http import JsonResponse
 # Create your views here.
 # from pprint import pprint
 
 def create_json(request):
     lst_movie = []
     # movie.json 생성
-    for i in range(1,6):
-        url_movie = f'https://api.themoviedb.org/3/movie/popular?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr&page={i}'
-        dict_movie = requests.get(url_movie).json()
-        lst_movie += dict_movie.get('results')
+    for i in range(1,20):
+        url_movies = f'https://api.themoviedb.org/3/movie/popular?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr&page={i}'
+        dict_movies = requests.get(url_movies).json()
+        lst_movie += dict_movies.get('results')
 
     # genre.json 생성 
     url_genre = 'https://api.themoviedb.org/3/genre/movie/list?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr'
@@ -24,23 +27,29 @@ def create_json(request):
     lst_genre = dict_genre.get('genres')
     for i in lst_genre:
         genre = Genre()
-        genre.id = i.get('id')
+        genre.genre_id = i.get('id')
         genre.name = i.get('name')
         genre.save()
 
     for j in lst_movie:
         tmdb_id = j.get('id')
-        if not j.get('overview') or not j.get('poster_path') or not j.get('backdrop_path'):
+        url_movie = f'https://api.themoviedb.org/3/movie/{tmdb_id}?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr'
+        dict_movie = requests.get(url_movie).json()
+        # pprint(dict_movie.get('runtime'))
+        # lst_movie += dict_movie.get('results')
+        if not j.get('overview') or not j.get('poster_path') or not j.get('backdrop_path') or not j.get('backdrop_path'):
             continue
         movie = Movie()
-        movie.id = j.get('id')
+        movie.movie_id = j.get('id')
         movie.title = j.get('title')
         movie.overview = j.get('overview')
+        movie.runtime = dict_movie.get('runtime')
         movie.popularity = j.get('popularity')
+        movie.vote_count = j.get('vote_count')
         movie.poster_path = j.get('poster_path')
         movie.release_date = j.get('release_date')
         movie.vote_average = j.get('vote_average')
-        # pprint(movie.keys)
+        movie.backdrop_path = j.get('backdrop_path')
         movie.save()
 
         # 장르 연동
@@ -60,7 +69,7 @@ def create_json(request):
             if not cast.get('id') or not cast.get('name'):
                 continue
             actor = Actor()
-            actor.id = cast.get('id')
+            actor.actor_id = cast.get('id')
             actor.name = cast.get('name')
             actor.save()
             movie.actors.add(cast.get('id'))
@@ -76,7 +85,7 @@ def create_json(request):
             if not d.get('id') or not d.get('name'):
                 continue
             director = Director()
-            director.id = d.get('id')
+            director.director_id = d.get('id')
             director.name = d.get('name')
             director.save()
             movie.directors.add(d.get('id'))
@@ -84,27 +93,61 @@ def create_json(request):
     # print('성공!')
     return HttpResponse()
 
+
 @api_view(['GET'])
-def movie(request):
+def movie_list(request):
     movies = Movie.objects.all()
-    serializers = MovieSerializer(movies, many=True)
-    # pprint(serializers.data)
-    return Response(serializers.data)
+    serializer = MovieListSerializer(movies, many=True)
+    return Response(serializer.data)
+
 
 @api_view(['GET'])
-def genre(request):
-    genres = Genre.objects.all()
-    serializers = Genrename(genres, many=True)
-    return Response(serializers.data)
+def movie_detail(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    serializer = MovieDetailSerializer(movie)
 
-@api_view(['GET'])
-def actor(request):
-    actors = Actor.objects.all()
-    serializers = Actorname(actors, many=True)
-    return Response(serializers.data)
+    return Response(serializer.data)
 
-@api_view(['GET'])
-def director(request):
-    directors = Director.objects.all()
-    serializers = Directorname(directors, many=True)
-    return Response(serializers.data)
+
+def like(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+
+    if movie.like_users.filter(pk=movie_id).exists():
+        movie.like_users.remove(request.user)
+        is_liked = False
+    
+    else:
+        movie.like_users.add(request.user)
+        is_liked = True
+    
+    context = {
+        'is_liked': is_liked,
+        'like_count' : movie.like_users.count()
+    }
+    return JsonResponse(context)
+
+
+@api_view(['POST'])
+def review_create(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    serializer = ReviewSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(movie=movie)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def review_detail(request, review_pk):
+    review = get_object_or_404(Review, pk=review_pk)
+
+    # 댓글 삭제
+    if request.method == 'DELETE':
+        review.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    # 댓글 수정
+    elif request.method == 'PUT':
+        serializer = ReviewSerializer(review, data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save()
+            return Response(serializer.data)
