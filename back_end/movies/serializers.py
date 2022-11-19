@@ -1,32 +1,52 @@
 from rest_framework import serializers
-from .models import Movie, Genre, Actor, Director
+from .models import Movie, Genre, Actor, Director, Review
 
-class Genrename(serializers.ModelSerializer):
+class GenrenameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Genre
         fields = ('name',)
 
-class Actorname(serializers.ModelSerializer):
+class ActornameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Actor
         fields = ('name',)
 
-class Directorname(serializers.ModelSerializer):
+class DirectornameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Director
         fields = ('name',)
 
-class MovieSerializer(serializers.ModelSerializer):
-    actors = Actorname(many=True, read_only=True)
-    genres = Genrename(many=True, read_only=True)
-    directors = Directorname(many=True, read_only=True)
-    print(actors)
+class MovieListSerializer(serializers.ModelSerializer):
+    genres = GenrenameSerializer(many=True, read_only=True)
+    
     class Meta:
         model = Movie
         fields = '__all__'
+        read_only_fields = ('like_users', 'actors')
+
+class ReviewSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username', read_only=True)
+    
+    class Meta:
+        model = Review
+        fields = '__all__'
+        read_only_fields = ('movie', 'user')
+
+class MovieDetailSerializer(serializers.ModelSerializer):
+    actors = ActornameSerializer(many=True, read_only=True)
+    genres = GenrenameSerializer(many=True, read_only=True)
+    directors = DirectornameSerializer(many=True, read_only=True)
+    review_set = ReviewSerializer(many=True, read_only=True)
+    review_count = serializers.IntegerField(source='review_set.count', read_only=True)
+    
+    # print(actors)
+    class Meta:
+        model = Movie
+        fields = '__all__'
+        read_only_fields = ('like_users',)
 
 # class GenreSerializer(serializers.ModelSerializer):
 

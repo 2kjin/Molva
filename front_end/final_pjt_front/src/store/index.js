@@ -1,107 +1,133 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import axios from 'axios'
-import createPersistedState from 'vuex-persistedstate'
-import router from '@/router'
+import Vue from "vue"
+import Vuex from "vuex"
+import axios from "axios"
+// 일단 comment 완성하려고 토큰 저장
+import createPersistedState from "vuex-persistedstate"
+
+const API_URL = "http://127.0.0.1:8000"
 
 Vue.use(Vuex)
 
-
-const API_URL = 'http://127.0.0.1:8000'
-
-
 export default new Vuex.Store({
-  plugins: [
-    createPersistedState()
+  plugins:[
+    createPersistedState(),
   ],
   state: {
-    movieList: null,
-    communities: [],
     token: null,
+    movies: null,
+    movie:null,
+    moviesPopular: null,
+    moviesRecent: null,
+    loading: true,
+
   },
-  getters: {
-    isLogin(state) {
-      return state.token ? true : false
-    }
-  },
+  getters: {},
   mutations: {
-    GET_MOIVE(state, movieList){
-      state.movieList = movieList
+    SET_LOADING(state, data){
+      state.loading = data;
     },
-    GET_COMMUNITIES(state, communities) {
-      state.communities = communities
-    },
-    // 회원가입 && 로그인
     SAVE_TOKEN(state, token) {
       state.token = token
-      router.push({ name: 'CommunityPage' })
+    },
+    GET_MOVIES(state, payload) {
+      const sortValue = payload.sorted
+
+      if (sortValue === undefined) {
+        state.movies = payload.movies
+      } else if (sortValue === "popular") {
+        state.moviesPopular = payload.movies
+      } else if (sortValue === "recent") {
+        state.moviesRecent = payload.movies
+      }
+    },
+    GET_DETAIL(state, payload) {
+      state.movie = payload
     }
   },
   actions: {
-    getMovie(context) {
-      axios({
-        method: 'get',
-        url: `${API_URL}/api/v1/movie/`,
-        // headers: {
-        //   Authorization: `Token ${context.state.token}`
-        // }
-      })
-        .then((res) => {
-          console.log(res, context)
-          const movieList = res.data
-          context.commit('GET_MOIVE',movieList)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    },
-    getCommunities(context) {
-      axios({
-        method: 'get',
-        url: `${API_URL}/api/v1/communities/`,
-        headers: {
-          Authorization: `Token ${context.state.token}`
-        }
-      })
-        .then((res) => {
-          // console.log(res, context)
-          // console.log(res.data)
-          context.commit('GET_COMMUNITIES', res.data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    },
+    // SIGN_UP
     signUp(context, payload) {
+      const username = payload.username
+      const password1 = payload.password1
+      const password2 = payload.password2
+
       axios({
-        method: 'post',
+        method: "post",
         url: `${API_URL}/accounts/signup/`,
         data: {
-          username: payload.username,
-          password1: payload.password1,
-          password2: payload.password2,
-        }
+          username,
+          password1,
+          password2,
+        },
       })
         .then((res) => {
-          // console.log(res)
-          context.commit('SAVE_TOKEN', res.data.key)
+          // 생성된 토큰 넘겨주기
+          context.commit("SAVE_TOKEN", res.data.key)
+        })
+        .catch((err) => {
+          console.log(err)
         })
     },
-    logIn(context, payload) {
+    // Login
+    login(context, payload) {
+      const username = payload.username
+      const password = payload.password
+
       axios({
-        method: 'post',
+        method: "post",
         url: `${API_URL}/accounts/login/`,
         data: {
-          username: payload.username,
-          password: payload.password,
+          username,
+          password,
         }
       })
+      .then((res) => {
+        context.commit("SAVE_TOKEN", res.data.key)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    },
+    // GET_MOVIES
+    getMovies(context, payload) {
+      let params = null
+
+      if (payload) {
+        params = {
+          sorted: payload,
+        }
+      }
+
+      axios({
+        method: "get",
+        url: `${API_URL}/movies/`,
+        params: params,
+      })
         .then((res) => {
-          // console.log(res)
-          context.commit('SAVE_TOKEN', res.data.key)
+          const moviePayload = {
+            sorted: payload,
+            movies: res.data,
+          }
+          context.commit("GET_MOVIES", moviePayload)
+        })
+        .catch((err) => {
+          console.log(err)
         })
     },
+    // GET MOVIE DETAIL
+    getDetail(context, movieId){
+      axios({
+        method: "get",
+        url: `${API_URL}/movies/${movieId}/`,
+      })
+        .then((res)=>{
+          context.commit("GET_DETAIL", res.data)
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+
+    }
   },
-  modules: {
-  }
+  modules: {},
 })

@@ -1,14 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
-import HomePage from '@/views/HomePage'
-import MovieList from '@/views/MovieList'
-import MyProfile from '@/views/MyProfile'
-import SignUpPage from '@/views/SignUpPage'
-import LoginPage from '@/views/LoginPage'
-import CommunityPage from '@/views/CommunityPage'
-import CreatePage from '@/views/CreatePage'
-import DetailPage from '@/views/DetailPage'
+import HomeView from '@/views/HomeView'
+import DetailView from '@/views/DetailView'
+import BlogView from '@/views/BlogView'
+import NotFound404 from '@/views/NotFound404'
+
 
 Vue.use(VueRouter)
 
@@ -20,44 +17,34 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'HomePage',
-    component: HomePage
+    name: 'home',
+    component: HomeView,
   },
   {
-    path: '/movielist',
-    name: 'MovieList',
-    component: MovieList
+    path: '/detail/:id',
+    name:'DetailView',
+    component: DetailView,
   },
   {
-    path: '/myprofile',
-    name: 'MyProfile',
-    component: MyProfile
+    path:"/search",
+    name:"Search",
+    component:Search
   },
   {
-    path: '/singup',
-    name: 'SignUpPage',
-    component: SignUpPage
+    // username dynamic params => /:str
+    path: '/blog',
+    name: 'blog',
+    component: BlogView,
   },
   {
-    path: '/login',
-    name: 'LoginPage',
-    component: LoginPage
+    path: '/404-not-found',
+    name: 'NotFound404',
+    component: NotFound404,
   },
   {
-    path: '/community',
-    name: 'CommunityPage',
-    component: CommunityPage
-  },
-  {
-    path: '/:id',
-    name: 'DetailPage',
-    component: DetailPage
-  },
-  {
-    path: '/create',
-    name: 'CreatePage',
-    component: CreatePage
-  },
+    path: '*',
+    redirect: { name: 'NotFound404' },
+  }
 ]
 
 const router = new VueRouter({
