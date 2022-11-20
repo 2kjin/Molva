@@ -14,6 +14,7 @@ import MovieText from "@/components/MovieText";
 import { movieApi } from '../utils/axios';
 import { mapMutations } from "vuex";
 export default {
+    name: 'SearchView',
     data(){
         return {
             keyword:"",

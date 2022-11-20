@@ -10,3 +10,5 @@ urlpatterns = [
     path('<int:movie_id>/reviews/', views.review_create),
     path('reviews/<int:review_pk>', views.review_detail),
 ]
+
+# python manage.py loaddata actors.json directors.json genres.json movies.json

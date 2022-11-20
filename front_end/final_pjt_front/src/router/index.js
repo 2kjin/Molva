@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
 import HomeView from '@/views/HomeView'
-import DetailView from '@/views/DetailView'
+// import DetailView from '@/views/DetailView'
 import BlogView from '@/views/BlogView'
+import SearchView from '@/views/SearchView'
 import NotFound404 from '@/views/NotFound404'
 
 
@@ -21,25 +22,25 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/detail/:id',
-    name:'DetailView',
-    component: DetailView,
+    path: '/404-not-found',
+    name: 'NotFound404',
+    component: NotFound404,
   },
+  // {
+  //   path: '/:id',
+  //   name:'DetailView',
+  //   component: DetailView,
+  // },
   {
     path:"/search",
-    name:"Search",
-    component:Search
+    name:"SearchView",
+    component: SearchView
   },
   {
     // username dynamic params => /:str
     path: '/blog',
     name: 'blog',
     component: BlogView,
-  },
-  {
-    path: '/404-not-found',
-    name: 'NotFound404',
-    component: NotFound404,
   },
   {
     path: '*',

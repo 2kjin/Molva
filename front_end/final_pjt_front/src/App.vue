@@ -46,7 +46,7 @@ export default {
   },
   components: {
     ModalViewContent,
-    ModalView
+    ModalView,
     ...mapState(["loading"]),
   },  
 };
