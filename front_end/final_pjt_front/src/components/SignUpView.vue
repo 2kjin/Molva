@@ -27,9 +27,10 @@ export default {
   },
   methods:{
     signUp(){
-      const username = this.username;
-      const password1 = this.password1;
-      const password2 = this.password2;
+      const username = this.username
+      const password1 = this.password1
+      const password2 = this.password2
+
       const payload ={
         username,
         password1,
@@ -83,7 +84,7 @@ label{
   box-shadow: 0 5px rgb(97, 97, 97)83a;
   transform: translateY(4px);
 }
-input[type=text]:focus{
+/* input[type=text]:focus{
   outline: none;
   caret-color: #F8F9FA;
   color: #F8F9FA;
@@ -92,5 +93,5 @@ input[type=text]:focus{
   outline: none;
   caret-color: #F8F9FA;
   color: #F8F9FA;
-}
+} */
 </style>

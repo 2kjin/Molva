@@ -1,16 +1,18 @@
 <template>
   <div>
-    <b-form @submit.prevent="onSearch">
-        <b-form-input class="border-black" v-model="keyword" placeholder="영화 제목을 입력하세요."></b-form-input>
-    </b-form>
-    <SearchMovieText v-if="movieList" :text="'Search Result'"></SearchMovieText>
-    <SearchMovieLists :movieList="movieList"></SearchMovieLists>
+    <div style="margin: 20px 20px 30px 20px;">
+        <b-form @submit.prevent="onSearch">
+            <b-form-input class="border-black" v-model="keyword" placeholder="영화 제목을 입력하세요."></b-form-input>
+        </b-form>
+        <MovieText v-if="movieList" :text="'Search Result'"></MovieText>
+        <MovieLists :movieList="movieList"></MovieLists>
+    </div>
   </div>
 </template>
 
 <script>
-import SearchMovieLists from "../components/SearchMovieLists";
-import SearchMovieText from "../components/SearchMovieText";
+import MovieLists from "../components/MovieLists";
+import MovieText from "../components/MovieText";
 import { movieApi } from '../utils/axios';
 import { mapMutations } from "vuex";
 export default {
@@ -21,8 +23,8 @@ export default {
         }
     },
 components:{
-    SearchMovieText,
-    SearchMovieLists
+    MovieText,
+    MovieLists
 },
 created(){
   this.SET_LOADING(false);
@@ -49,6 +51,11 @@ methods:{
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato');
+* {
+  font-family: 'Lato', sans-serif;
+}
+
 .search-input{
     color:black;
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="carouselItem">
-    <img :src="imgSrc">
+    <!-- <img :src="imgSrc"> -->
     <img :src="imgSrc" @click="goDetail(movie?.movie_id)">
       <div id="carouselContent">
         <!-- <h6 style="font-weight:bold">{{movie.title}}</h6> -->

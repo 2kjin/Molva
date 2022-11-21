@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
   props: ['movieList'],
   data(){

@@ -32,8 +32,9 @@ export default {
 
 <style scoped>
 #carousel{
-  margin: 100px auto;
-  margin-bottom: 150px;
+  margin: 80px auto;
+  margin-bottom: 50px;
+  border-radius: 10px;
 }
 /* .carousel-3d {
     width: 150%;

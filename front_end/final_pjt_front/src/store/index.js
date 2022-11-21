@@ -1,7 +1,6 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import axios from "axios"
-// 일단 comment 완성하려고 토큰 저장
 import createPersistedState from "vuex-persistedstate"
 import router from '@/router'
 
@@ -17,36 +16,29 @@ export default new Vuex.Store({
     token: null,
     movies: null,
     movie:null,
-    moviesPopular: null,
-    moviesRecent: null,
     loading: true,
-
   },
-  getters: {},
+  getters: {
+    isLogin(state) {
+      return state.token ? true : false
+    }
+  },
   mutations: {
     SET_LOADING(state, data){
       state.loading = data;
     },
     SAVE_TOKEN(state, token) {
       state.token = token
+      // router.push({ name: 'home' })
     },
     GET_MOVIES(state, payload) {
-      const sortValue = payload.sorted
-
-      if (sortValue === undefined) {
         state.movies = payload.movies
-      } else if (sortValue === "popular") {
-        state.moviesPopular = payload.movies
-      } else if (sortValue === "recent") {
-        state.moviesRecent = payload.movies
-      }
     },
     GET_DETAIL(state, payload) {
       state.movie = payload
     }
   },
   actions: {
-    // SIGN_UP
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
@@ -62,14 +54,12 @@ export default new Vuex.Store({
         },
       })
         .then((res) => {
-          // 생성된 토큰 넘겨주기
           context.commit("SAVE_TOKEN", res.data.key)
         })
         .catch((err) => {
           console.log(err)
         })
     },
-    // Login
     login(context, payload) {
       const username = payload.username
       const password = payload.password
@@ -89,6 +79,7 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
+
     // GET_MOVIES
     getMovies(context, payload) {
       let params = null

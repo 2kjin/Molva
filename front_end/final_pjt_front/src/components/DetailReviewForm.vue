@@ -25,7 +25,6 @@ export default {
   methods:{
     drawStar(event) {
       document.querySelector('.star span').style.width = `${event.target.value * 15}px`;
-      // console.log(document.querySelector('.star input').value)
   }
   }
 }

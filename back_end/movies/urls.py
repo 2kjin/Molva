@@ -11,7 +11,7 @@ urlpatterns = [
     path('reviews/<int:review_pk>', views.review_detail),
 ]
 
-# python manage.py loaddata actors.json directors.json genres.json movies.json
+# python manage.py loaddata actors.json directors.json genres.json movies.json otts.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Movie > movies.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Genre > genres.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Actor > actors.json
