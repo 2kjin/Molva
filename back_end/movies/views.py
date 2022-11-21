@@ -55,8 +55,8 @@ def create_json(request):
             if lst_ott.get('rent'):
                 for p in lst_ott.get('rent'):
                     set1.add((p.get('provider_id'),p.get('logo_path')))
-            if lst_ott.get('flatrate"'):
-                for p in lst_ott.get('flatrate"'):
+            if lst_ott.get('flatrate'):
+                for p in lst_ott.get('flatrate'):
                     set1.add((p.get('provider_id'),p.get('logo_path')))
         lst = list(set1)
         

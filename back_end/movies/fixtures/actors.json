@@ -2929,6 +2929,14 @@
 },
 {
     "model": "movies.actor",
+    "pk": 4812,
+    "fields": {
+        "name": "Isaach De Bankolé",
+        "profile_path": "/tIihjWrBfzZahWaAwf8XFuYO0JS.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 4937,
     "fields": {
         "name": "Vince Vaughn",
@@ -3525,6 +3533,14 @@
     "fields": {
         "name": "Sam Rockwell",
         "profile_path": "/vYpWxV0bnUgKo7SdasfGP9HttUq.jpg"
+    }
+},
+{
+    "model": "movies.actor",
+    "pk": 6818,
+    "fields": {
+        "name": "Werner Herzog",
+        "profile_path": "/izA2CVVphluvszmMgZ0g02KFjoD.jpg"
     }
 },
 {
@@ -4705,6 +4721,14 @@
 },
 {
     "model": "movies.actor",
+    "pk": 10882,
+    "fields": {
+        "name": "Rosamund Pike",
+        "profile_path": "/8ObNklHDi2hjdz0ayzJFB9jtqzm.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 10883,
     "fields": {
         "name": "Rick Yune",
@@ -5100,7 +5124,7 @@
     "pk": 11701,
     "fields": {
         "name": "Angelina Jolie",
-        "profile_path": "/uhZjq4yYujg2xOASVH1SR56E3xv.jpg"
+        "profile_path": "/k3W1XXddDOH2zibPkNotIh5amHo.jpg"
     }
 },
 {
@@ -7609,6 +7633,14 @@
 },
 {
     "model": "movies.actor",
+    "pk": 23429,
+    "fields": {
+        "name": "Adam Godley",
+        "profile_path": "/xOM0zOb2KZ2q8M6lRrDo9bEBeJE.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 23459,
     "fields": {
         "name": "Sienna Miller",
@@ -7785,14 +7817,6 @@
 },
 {
     "model": "movies.actor",
-    "pk": 25451,
-    "fields": {
-        "name": "Spencer Wilding",
-        "profile_path": "/7sSwsMl9RHVIwewwkdHtTV3kCGn.jpg"
-    }
-},
-{
-    "model": "movies.actor",
     "pk": 25540,
     "fields": {
         "name": "Sandra Oh",
@@ -7853,14 +7877,6 @@
     "fields": {
         "name": "Roger Cross",
         "profile_path": "/7EmrR0CojKlFkp9bObqWGomJeKF.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 25911,
-    "fields": {
-        "name": "Cecilia Suárez",
-        "profile_path": "/m2lUTpivduEiRwyPIrdg8hcI8zq.jpg"
     }
 },
 {
@@ -8173,14 +8189,6 @@
     "fields": {
         "name": "Ben Cross",
         "profile_path": "/11gObExUG7lFCA7WeYgHabnZjDg.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 29221,
-    "fields": {
-        "name": "Brittany Snow",
-        "profile_path": "/vbcVzoIhSScfJ2XQWFVpB9jS7IV.jpg"
     }
 },
 {
@@ -9357,14 +9365,6 @@
     "fields": {
         "name": "Colleen Wheeler",
         "profile_path": "/d7OMP8wjeKEB940J3JpQqJWbHeE.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 44649,
-    "fields": {
-        "name": "Violante Placido",
-        "profile_path": "/qVs8LdHIU2E5RlSuSr4MK0zyf7B.jpg"
     }
 },
 {
@@ -13961,6 +13961,14 @@
 },
 {
     "model": "movies.actor",
+    "pk": 95875,
+    "fields": {
+        "name": "Andrew Daly",
+        "profile_path": "/mBbtTnfcxkFXH3RPomSO4VCyxYS.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 96053,
     "fields": {
         "name": "Charles Judels",
@@ -15252,7 +15260,7 @@
     "pk": 130414,
     "fields": {
         "name": "Emily Beecham",
-        "profile_path": "/knR5avTlO4Xnxw7Nc3xxUj3rtjh.jpg"
+        "profile_path": "/cwBsTcY0FLnVYvRUY6cTutZsfPs.jpg"
     }
 },
 {
@@ -15317,14 +15325,6 @@
     "fields": {
         "name": "Ezra Miller",
         "profile_path": "/6wmTpbYpmhthaxzM5ss3377F9IV.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 132220,
-    "fields": {
-        "name": "Owen Campbell",
-        "profile_path": "/fB0j0Y7pwMSaQcAlQl3OaKw5wwl.jpg"
     }
 },
 {
@@ -16157,6 +16157,14 @@
     "fields": {
         "name": "Gina Rodriguez",
         "profile_path": "/4EMA7VtkMobfGpswEclm65xC9s8.jpg"
+    }
+},
+{
+    "model": "movies.actor",
+    "pk": 182272,
+    "fields": {
+        "name": "Cynthia Addai-Robinson",
+        "profile_path": "/5eZAiWHtgiECm666CRemqMYdOlj.jpg"
     }
 },
 {
@@ -17273,14 +17281,6 @@
 },
 {
     "model": "movies.actor",
-    "pk": 438798,
-    "fields": {
-        "name": "Cristina Alcázar",
-        "profile_path": "/rydmoKafPOEdpaTEoHDiEQvgDPV.jpg"
-    }
-},
-{
-    "model": "movies.actor",
     "pk": 439097,
     "fields": {
         "name": "César Domboy",
@@ -17369,14 +17369,6 @@
 },
 {
     "model": "movies.actor",
-    "pk": 484359,
-    "fields": {
-        "name": "Kid Cudi",
-        "profile_path": "/z5TRmx4WQB9Ge1WQa6VdxBKnwmC.jpg"
-    }
-},
-{
-    "model": "movies.actor",
     "pk": 487207,
     "fields": {
         "name": "Mariana Otero",
@@ -17420,7 +17412,7 @@
     "pk": 505710,
     "fields": {
         "name": "Zendaya",
-        "profile_path": "/lLmgBSNvcSTDPApM5TLQlQ5eAXi.jpg"
+        "profile_path": "/fx021UHsIzrWVZBxLV0GdpuTv1L.jpg"
     }
 },
 {
@@ -19101,6 +19093,14 @@
     "fields": {
         "name": "Tait Fletcher",
         "profile_path": "/zAVsHT2GBLPaQ4RpTopnHvIrCbv.jpg"
+    }
+},
+{
+    "model": "movies.actor",
+    "pk": 1107296,
+    "fields": {
+        "name": "Ben Platt",
+        "profile_path": "/iklBiGKKs28gNcZ3vrbegLlpmfK.jpg"
     }
 },
 {
@@ -22097,6 +22097,14 @@
 },
 {
     "model": "movies.actor",
+    "pk": 1394670,
+    "fields": {
+        "name": "RJ Cyler",
+        "profile_path": "/9baPsx4DJn2vy7AOfcfEe6IH5JN.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 1394758,
     "fields": {
         "name": "Ine Marie Wilmann",
@@ -22397,14 +22405,6 @@
     "fields": {
         "name": "Leah Jeffries",
         "profile_path": "/2aQr7WF6GmwKflnHiIdtd1MX5NX.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 1440014,
-    "fields": {
-        "name": "Stephen Ure",
-        "profile_path": "/g5sLvAz07eZgJ5A6vg5d4totVXz.jpg"
     }
 },
 {
@@ -23057,10 +23057,26 @@
 },
 {
     "model": "movies.actor",
+    "pk": 1525689,
+    "fields": {
+        "name": "Ludi Lin",
+        "profile_path": "/9Ila4K8POeuVWRO9hzyekFjvCDk.jpg"
+    }
+},
+{
+    "model": "movies.actor",
     "pk": 1526694,
     "fields": {
         "name": "Pooya Mohseni",
         "profile_path": "/k9KebLQpIfsBKAT5DUkMS5O8vOv.jpg"
+    }
+},
+{
+    "model": "movies.actor",
+    "pk": 1529446,
+    "fields": {
+        "name": "Becky G",
+        "profile_path": "/yF6UVV10zIdWhDOREouC9c8ZEPV.jpg"
     }
 },
 {
@@ -23357,14 +23373,6 @@
     "fields": {
         "name": "Anthony Ramos",
         "profile_path": "/2Stnm8PQI7xHkVwINb4MhS7LOuR.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 1561072,
-    "fields": {
-        "name": "Paula Gallego",
-        "profile_path": "/68cvtcV3qxE84LZj6GfXalZjeav.jpg"
     }
 },
 {
@@ -23773,14 +23781,6 @@
     "fields": {
         "name": "Magdalena Lamparska",
         "profile_path": "/52eglsEGV71N5LcWj6I0YqGw8ke.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 1637068,
-    "fields": {
-        "name": "Ramiro Blas",
-        "profile_path": "/dvK9IRC7wrTd9wxpMLzVxYVRpvP.jpg"
     }
 },
 {
@@ -27021,14 +27021,6 @@
     "fields": {
         "name": "Raquelle Stevens",
         "profile_path": "/khe8Ag6GRAMaEqdNT614IOl301d.jpg"
-    }
-},
-{
-    "model": "movies.actor",
-    "pk": 2757971,
-    "fields": {
-        "name": "Carmen Ibeas",
-        "profile_path": "/5Wt44hWW0ciNtUI2NDTOANGoHTZ.jpg"
     }
 },
 {

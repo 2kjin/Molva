@@ -414,6 +414,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 9033,
+    "fields": {
+        "name": "Christopher McQuarrie"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 9049,
     "fields": {
         "name": "Victor Fleming"
@@ -3172,6 +3179,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1099862,
+    "fields": {
+        "name": "Dean Israelite"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1102370,
     "fields": {
         "name": "L. Gustavo Cooper"
@@ -3560,6 +3574,13 @@
     "pk": 1294594,
     "fields": {
         "name": "Moon Hyun-sung"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1296522,
+    "fields": {
+        "name": "Claire Scanlon"
     }
 },
 {
@@ -4040,13 +4061,6 @@
 },
 {
     "model": "movies.director",
-    "pk": 1679853,
-    "fields": {
-        "name": "Fernando González Gómez"
-    }
-},
-{
-    "model": "movies.director",
     "pk": 1685734,
     "fields": {
         "name": "Berkun Oya"
@@ -4442,13 +4456,6 @@
     "pk": 2549422,
     "fields": {
         "name": "Julien Fournet"
-    }
-},
-{
-    "model": "movies.director",
-    "pk": 2596472,
-    "fields": {
-        "name": "Raúl Cerezo"
     }
 },
 {
