@@ -89,6 +89,7 @@ export default {
   },
   methods:{
     // form button 클릭시 form 열고 닫기 (innertext 변경)
+    
     formClicked(){
       const btnText = document.querySelector('.form-btn')
       if (this.isFormViewed){

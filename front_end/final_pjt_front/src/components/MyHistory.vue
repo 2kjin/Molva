@@ -43,11 +43,11 @@ export default {
   display:none;
 }
 .card-container::-webkit-scrollbar-thumb {
-  background-color:#C3DDEC;
+  background-color:#e0d598;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
-  box-shadow: inset 0 0 2px #c3ddecc5;
+  box-shadow: inset 0 0 2px #e0d598;
 }
 .cardbox{
   border-radius: 10px;

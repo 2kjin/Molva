@@ -1,26 +1,26 @@
 <template>
   <div id="carouselItem">
     <img :src="imgSrc">
-    <div id="carouselContent">
-      <h6 style="font-weight:bold">{{movie.title}}</h6>
-      <v-rating
-      class="rating"
-      background-color="amber"
-      :value="movie.vote_average / 2"
-      color="amber"
-      dense
-      half-increments
-      readonly
-      size="18"
-      style="margin: 3px 0"
-    ></v-rating>
-      <hr>
-      <p>Genre | {{ movie?.genres[0]["name"] }}</p>
-      <p>Release Date | {{movie?.release_date}}</p>
-      <p>Vote Count | {{movie?.vote_count}}</p>
-      <button @click="goDetail(movie?.movie_id)">MORE</button>
-      <hr>
-      
+    <img :src="imgSrc" @click="goDetail(movie?.movie_id)">
+      <div id="carouselContent">
+        <!-- <h6 style="font-weight:bold">{{movie.title}}</h6> -->
+        <v-rating
+        class="rating"
+        background-color="amber"
+        :value="movie.vote_average / 2"
+        color="amber"
+        dense
+        half-increments
+        readonly
+        size="18"
+        style="margin: 3px 0"
+      ></v-rating>
+        <!-- <hr>
+        <p>Genre | {{ movie?.genres[0]["name"] }}</p>
+        <p>Release Date | {{movie?.release_date}}</p>
+        <p>Vote Count | {{movie?.vote_count}}</p>
+        <button @click="goDetail(movie?.movie_id)">MORE</button>
+        <hr> -->
     </div>
     
   </div>
@@ -53,7 +53,10 @@ export default {
 }
 
 img{
-  width: 54%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -83,7 +86,7 @@ button{
   width: 60px;
   height: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 0.5px 0.5px #678699;
+  box-shadow: 0 0 0.5px 0.5px #e4d36d;
   transition: transform 0.3s;
 }
 

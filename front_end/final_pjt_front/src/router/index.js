@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
 import HomeView from '@/views/HomeView'
-// import DetailView from '@/views/DetailView'
-import BlogView from '@/views/BlogView'
+import DetailView from '@/views/DetailView'
+import MyProfileView from '@/views/MyProfileView'
 import SearchView from '@/views/SearchView'
 import NotFound404 from '@/views/NotFound404'
 
@@ -26,21 +26,21 @@ const routes = [
     name: 'NotFound404',
     component: NotFound404,
   },
-  // {
-  //   path: '/:id',
-  //   name:'DetailView',
-  //   component: DetailView,
-  // },
+  {
+    path: '/:id',
+    name:'DetailView',
+    component: DetailView,
+  },
   {
     path:"/search",
-    name:"SearchView",
+    name:"search",
     component: SearchView
   },
   {
     // username dynamic params => /:str
-    path: '/blog',
-    name: 'blog',
-    component: BlogView,
+    path: '/myprofile',
+    name: 'MyProfileView',
+    component: MyProfileView,
   },
   {
     path: '*',

@@ -1,5 +1,5 @@
 <template>
-  <div id="blog">
+  <div id="myprofile">
     <!-- SIDEBAR -->
     <div id="sidebar">
       <span>Hello, <span style="font-size: 24px ">Username</span></span>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import MyReview from '../components/MyReview.vue'
-import MyFavorites from '../components/MyFavorites.vue'
-import MyHistory from '../components/MyHistory.vue'
+import MyReview from '@/components/MyReview'
+import MyFavorites from '@/components/MyFavorites'
+import MyHistory from '@/components/MyHistory'
 export default {
-  name:'BlogView',
+  name:'MyProfileView',
   components:{
     MyReview,
     MyFavorites,
@@ -60,14 +60,14 @@ export default {
 </script>
 
 <style scoped>
-#blog {
+#myprofile {
   display:flex;
   justify-content: center;
   margin-top: 7vh;
 }
 #sidebar,
 #content {
-  border: 3px solid #c3ddecd0;
+  border: 3px solid #e0d598;
   border-radius: 10px;
   height: 80vh;
   margin: 0 20px;
@@ -104,6 +104,6 @@ export default {
 .is-selected{
   font-size: 22px;
   font-weight: bold;
-  color:#C3DDEC;
+  color:#e0d598;
 }
 </style>

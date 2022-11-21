@@ -55,7 +55,7 @@ a{
   margin: 0;
   width: 50%;
   min-height: 500px;
-  background-color:#C3DDEC;
+  background-color:#e0d598;
   border-radius: 10px 0 0 10px;;
 }
 #buttons{
@@ -76,7 +76,7 @@ a{
   transform: scale(1.2)
 }
 .is_selected{
-  border-bottom: 1px solid #C3DDEC;
+  border-bottom: 1px solid #e0d598;
 }
 #forms{
   max-width: 50%;

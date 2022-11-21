@@ -54,7 +54,7 @@ export default {
   margin-left: 10px;
 }
 #homeMovie .genre {
-  color: #c3ddec;
+  color: #e0d598;
   margin-top: 10px;
   font-size: 12px;
 }

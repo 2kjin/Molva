@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 .selected {
-  border-bottom: 3px solid #c3ddec;
+  border-bottom: 3px solid #e0d598;
 }
 #head {
   margin: 20px 0;

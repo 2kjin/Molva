@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 id="banner">Your weekend buddy for this week</h1>
+    <h1 id="banner"> 페어 구합니다...</h1>
     
     <carousel-content />
     <movie-content />
@@ -31,7 +31,7 @@ div {
 #banner {
   margin-top: 100px;
   text-align: center;
-  color: #c3ddec;
+  color: #e0d598;
   transition: transform 0.5s linear;
 }
 #banner:hover {

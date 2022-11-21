@@ -3,10 +3,10 @@
     <div id="appbar">
       <router-link :to="{ name:'home' }"><img src="@/assets/f_molva.png" alt="logo" id="logo"/></router-link>
       <v-tabs>
-        <v-tab><router-link :to="{name:'home'}" style="text-decoration: none; color:#C3DDEC ">HOME</router-link></v-tab>
-        <v-tab style="color:#C3DDEC">COMMUNITY</v-tab>
-        <v-tab><router-link :to="{name:'blog'}" style="text-decoration: none; color:#C3DDEC">MY BLOG</router-link></v-tab>
-        <router-link to="/search">Search</router-link>
+        <v-tab><router-link :to="{name:'home'}" style="text-decoration: none; color:#e0d598 ">HOME</router-link></v-tab>
+        <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">Search</router-link></v-tab>
+        <v-tab style="color:#e0d598">COMMUNITY</v-tab>
+        <v-tab><router-link :to="{name:'blog'}" style="text-decoration: none; color:#e0d598">MY PROFILE</router-link></v-tab>
         <b-spinner
           class="d-block ml-auto mr-auto"
           v-if="loading"
@@ -55,12 +55,15 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap");
 * {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #app{
   background-color: #23262b;
-  color: #F8F9FA;
+  color: #ffffff;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 #modalView{
   position: absolute;
@@ -70,7 +73,7 @@ div.v-tabs{
 }
 div.v-slide-group__wrapper{
   background-color: #23262b;
-  color:#C3DDEC;
+  color:#e0d598;
 }
 div.v-tab{
   margin-left: 5px;
@@ -91,7 +94,7 @@ div.v-slide-group__content{
   color: #353A40;
   width: 100px;
   height: 40px;
-  background-color: #C3DDEC;
+  background-color: #e0d598;
   border-radius: 10px;
   margin-right: 20px;
   box-shadow: 0 0 3px 3px #35383a;
@@ -104,7 +107,7 @@ div.v-slide-group__content{
 }
 #logout:active,
 #login:active {
-  background-color: #C3DDEC;
+  background-color: #e0d598;
   box-shadow: 0 5px rgb(97, 97, 97)83a;
   transform: translateY(4px);
 }

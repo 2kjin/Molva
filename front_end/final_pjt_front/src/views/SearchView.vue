@@ -3,18 +3,17 @@
     <b-form @submit.prevent="onSearch">
         <b-form-input class="border-black" v-model="keyword" placeholder="영화 제목을 입력하세요."></b-form-input>
     </b-form>
-    <MovieText v-if="movieList" :text="'Search Result'"></MovieText>
-    <MovieLists :movieList="movieList"></MovieLists>
+    <SearchMovieText v-if="movieList" :text="'Search Result'"></SearchMovieText>
+    <SearchMovieLists :movieList="movieList"></SearchMovieLists>
   </div>
 </template>
 
 <script>
-import MovieLists from "@/components/MovieLists";
-import MovieText from "@/components/MovieText";
+import SearchMovieLists from "../components/SearchMovieLists";
+import SearchMovieText from "../components/SearchMovieText";
 import { movieApi } from '../utils/axios';
 import { mapMutations } from "vuex";
 export default {
-    name: 'SearchView',
     data(){
         return {
             keyword:"",
@@ -22,8 +21,8 @@ export default {
         }
     },
 components:{
-    MovieText,
-    MovieLists
+    SearchMovieText,
+    SearchMovieLists
 },
 created(){
   this.SET_LOADING(false);

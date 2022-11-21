@@ -1,7 +1,7 @@
 <template>
   <div id="carousel">
-    <carousel-3d @after-slide-change="onAfterSlideChange" @before-slide-change="onBeforeSlideChange" @last-slide="onLastSlide"
-    :autoplay="true" :autoplay-timeout="2300">
+    <carousel-3d :width="350" :height="500"
+    :autoplay="true" :autoplay-timeout="1800">
       <slide v-for="(movie, i) in movies" 
       :index="i"
       :key="movie.id">
@@ -35,6 +35,10 @@ export default {
   margin: 100px auto;
   margin-bottom: 150px;
 }
+/* .carousel-3d {
+    width: 150%;
+    height: 200px;
+} */
 div.carousel-3d-container {
   background: none;
   overflow: visible;

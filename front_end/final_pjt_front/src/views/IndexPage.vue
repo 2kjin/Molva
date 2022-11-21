@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Index</h1>
+    <img src="@/assets/f_molva.png" alt="logo" id="Indexlogo" @click="goToHome"/>
   </div>
 </template>
 
@@ -10,6 +10,21 @@
 export default {
   name: 'IndexPage',
   components: {
+  },
+  methods: {
+    goToHome() {
+      this.$router.push({name: 'home'})
+    },
   }
 }
 </script>
+<style>
+#Indexlogo{
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>

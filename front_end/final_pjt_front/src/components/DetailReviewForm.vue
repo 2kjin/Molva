@@ -66,7 +66,7 @@ textarea::-webkit-scrollbar-corner{
   display:none;
 }
 textarea::-webkit-scrollbar-thumb {
-  background-color:#C3DDEC;
+  background-color:#e0d598;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;

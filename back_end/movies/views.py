@@ -74,11 +74,13 @@ def create_json(request):
 
         # ott_path 연동
         for o in lst:
-            ott = Watch_Provider()
-            ott.ott_id = o[0]
-            ott.ott_path = o[1]
-            ott.save()
-            movie.ott_paths.add(o[0])
+            chk = int(o[0])
+            if chk == 8 or 300 <= chk < 400:
+                ott = Watch_Provider()
+                ott.ott_id = o[0]
+                ott.ott_path = o[1]
+                ott.save()
+                movie.ott_paths.add(o[0])
 
         # 장르 연동
         for k in j.get('genre_ids'):

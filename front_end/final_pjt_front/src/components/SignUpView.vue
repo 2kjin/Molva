@@ -79,7 +79,7 @@ label{
 }
 .signup-btn:active,
 .login-btn:active {
-  background-color: #C3DDEC;
+  background-color: #e0d598;
   box-shadow: 0 5px rgb(97, 97, 97)83a;
   transform: translateY(4px);
 }

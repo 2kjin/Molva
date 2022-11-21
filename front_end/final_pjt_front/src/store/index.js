@@ -3,6 +3,7 @@ import Vuex from "vuex"
 import axios from "axios"
 // 일단 comment 완성하려고 토큰 저장
 import createPersistedState from "vuex-persistedstate"
+import router from '@/router'
 
 const API_URL = "http://127.0.0.1:8000"
 
@@ -124,7 +125,9 @@ export default new Vuex.Store({
           context.commit("GET_DETAIL", res.data)
         })
         .catch((err)=>{
+          router.push('/404-not-found')
           console.log(err)
+          
         })
 
     }
