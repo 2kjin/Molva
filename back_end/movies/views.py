@@ -6,17 +6,17 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer
 
-from .models import Movie, Genre, Actor, Director, Review
+from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.http import HttpResponse
 from django.http import JsonResponse
 # Create your views here.
-# from pprint import pprint
+from pprint import pprint
 
 def create_json(request):
     lst_movie = []
     # movie.json 생성
-    for i in range(1,20):
+    for i in range(1,50):
         url_movies = f'https://api.themoviedb.org/3/movie/popular?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr&page={i}'
         dict_movies = requests.get(url_movies).json()
         lst_movie += dict_movies.get('results')
@@ -33,13 +33,33 @@ def create_json(request):
 
     for j in lst_movie:
         tmdb_id = j.get('id')
+        # movie_detail 정보
         url_movie = f'https://api.themoviedb.org/3/movie/{tmdb_id}?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr'
         dict_movie = requests.get(url_movie).json()
-        # pprint(dict_movie.get('runtime'))
-        # lst_movie += dict_movie.get('results')
+
+        # ott 관련 정보
+        url_ott = f'https://api.themoviedb.org/3/movie/{tmdb_id}/watch/providers?api_key=b0aa983e176b4c8d5f9a1c93be84107b'
+        dict_ott = requests.get(url_ott).json()
+        lst_ott = dict_ott.get('results').get('KR')
+        
         if not j.get('overview') or not j.get('poster_path') or not j.get('backdrop_path') or not j.get('backdrop_path'):
             continue
+
         movie = Movie()
+        # ott 관련 정보가 있는 경우에만 받기
+        set1 = set()
+        if lst_ott:
+            if lst_ott.get('buy'):
+                for p in lst_ott.get('buy'):
+                    set1.add((p.get('provider_id'),p.get('logo_path')))
+            if lst_ott.get('rent'):
+                for p in lst_ott.get('rent'):
+                    set1.add((p.get('provider_id'),p.get('logo_path')))
+            if lst_ott.get('flatrate"'):
+                for p in lst_ott.get('flatrate"'):
+                    set1.add((p.get('provider_id'),p.get('logo_path')))
+        lst = list(set1)
+        
         movie.movie_id = j.get('id')
         movie.title = j.get('title')
         movie.overview = j.get('overview')
@@ -51,6 +71,14 @@ def create_json(request):
         movie.vote_average = j.get('vote_average')
         movie.backdrop_path = j.get('backdrop_path')
         movie.save()
+
+        # ott_path 연동
+        for o in lst:
+            ott = Watch_Provider()
+            ott.ott_id = o[0]
+            ott.ott_path = o[1]
+            ott.save()
+            movie.ott_paths.add(o[0])
 
         # 장르 연동
         for k in j.get('genre_ids'):
@@ -66,11 +94,12 @@ def create_json(request):
         casts = movie_credits['cast']
 
         for cast in casts[:7]:
-            if not cast.get('id') or not cast.get('name'):
+            if not cast.get('id') or not cast.get('name') or not cast.get('profile_path'):
                 continue
             actor = Actor()
             actor.actor_id = cast.get('id')
             actor.name = cast.get('name')
+            actor.profile_path = cast.get('profile_path')
             actor.save()
             movie.actors.add(cast.get('id'))
 
@@ -103,6 +132,8 @@ def movie_list(request):
 
 @api_view(['GET'])
 def movie_detail(request, movie_id):
+    # movie = get_object_or_404(Movie.objects.prefetch_related('actors','genres','directors', 'ott_paths'), pk=movie_id)
+
     movie = get_object_or_404(Movie, pk=movie_id)
     serializer = MovieDetailSerializer(movie)
 

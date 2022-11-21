@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, Genre, Actor, Director, Review
+from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
 
 class GenrenameSerializer(serializers.ModelSerializer):
 
@@ -11,13 +11,19 @@ class ActornameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Actor
-        fields = ('name',)
+        fields = ('name','profile_path')
 
 class DirectornameSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Director
         fields = ('name',)
+
+class OttpathSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Watch_Provider
+        fields = ('ott_path',)
 
 class MovieListSerializer(serializers.ModelSerializer):
     genres = GenrenameSerializer(many=True, read_only=True)
@@ -39,6 +45,7 @@ class MovieDetailSerializer(serializers.ModelSerializer):
     actors = ActornameSerializer(many=True, read_only=True)
     genres = GenrenameSerializer(many=True, read_only=True)
     directors = DirectornameSerializer(many=True, read_only=True)
+    ott_paths = OttpathSerializer(many=True, read_only=True)
     review_set = ReviewSerializer(many=True, read_only=True)
     review_count = serializers.IntegerField(source='review_set.count', read_only=True)
     

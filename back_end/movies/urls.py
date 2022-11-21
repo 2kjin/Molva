@@ -12,3 +12,7 @@ urlpatterns = [
 ]
 
 # python manage.py loaddata actors.json directors.json genres.json movies.json
+# python -Xutf8 manage.py dumpdata --indent 4 movies.Movie > movies.json
+# python -Xutf8 manage.py dumpdata --indent 4 movies.Genre > genres.json
+# python -Xutf8 manage.py dumpdata --indent 4 movies.Actor > actors.json
+# python -Xutf8 manage.py dumpdata --indent 4 movies.Director > directors.json
