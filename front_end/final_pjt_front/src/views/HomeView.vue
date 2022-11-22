@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1 id="banner">  I’M JUST EXACTLY WHAT I'VE WANTED TO BE </h1>
-    
     <carousel-content />
     <!-- <movie-content /> -->
   </div>

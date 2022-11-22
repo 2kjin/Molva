@@ -9,9 +9,12 @@
         <!-- <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
         <v-tab><router-link :to="{name:'MyProfile'}" style="text-decoration: none; color:#e0d598">MY PROFILE</router-link></v-tab>
         <!-- 토큰 여부에 따라 login / logout 버튼 교체 -->
-        <div id="logout" v-if="this.$store.state.token">LOGOUT</div>
+        <div id="logout" v-if="this.$store.state.token"
+          @click="logOut"
+        >LOGOUT</div>
         <div id="login" v-else-if="!this.$store.state.token"
         @click="isModalViewed=true"
+        @send-close-path="isModalViewed=false"
         >LOGIN/SIGNUP</div>
       </v-tabs>
     </div>
@@ -51,7 +54,12 @@ export default {
   components: {
     ModalViewContent,
     ModalView,
-  },  
+  },
+  methods: {
+    logOut(){
+      this.$store.dispatch('logOut')
+    }
+  }  
 };
 </script>
 
@@ -126,8 +134,8 @@ div.v-slide-group__content{
   align-items: center;
 }
 #logo{
-  margin: 20px 0 0 40px;
-  width: 170px;
+  margin: 30px 0 0 40px;
+  width: 200px;
 }
 footer{
   margin-top: 30px;

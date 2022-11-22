@@ -10,7 +10,7 @@
     <label for="password2">Password confirmation </label>  
     <input type="password" id="password2" v-model="password2" class="userInput">  <br>
 
-    <input type="submit" value="Sign Up" class="signup-btn">
+    <input type="submit" value="Sign Up" class="signup-btn" @click="closeModal">
   </form>
 
 </template>
@@ -37,6 +37,12 @@ export default {
         password2
       }
       this.$store.dispatch('signUp', payload)
+      this.username = null
+      this.password1 = null
+      this.password2 = null
+    },
+    closeModal () {
+      this.$emit('send-close-sign')
     }
   }
 }

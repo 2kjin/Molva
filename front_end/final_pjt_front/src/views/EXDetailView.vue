@@ -108,7 +108,7 @@
   // mounted(){
   //   this.$store.dispatch('getDetail', this.$route.params.id)
   // }
-}
+// }
 </script>
 
 <style scoped>

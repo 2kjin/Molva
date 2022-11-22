@@ -29,7 +29,11 @@ export default new Vuex.Store({
     },
     SAVE_TOKEN(state, token) {
       state.token = token
-      // router.push({ name: 'home' })
+      router.push({ name: 'home' })
+    },
+    LOG_OUT(state) {
+      state.token = null
+      router.push({ name: 'home' })
     },
     GET_MOVIES(state, payload) {
         state.movies = payload.movies
@@ -39,6 +43,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    // 회원가입
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
@@ -55,15 +60,17 @@ export default new Vuex.Store({
       })
         .then((res) => {
           context.commit("SAVE_TOKEN", res.data.key)
+          
         })
         .catch((err) => {
           console.log(err)
         })
     },
+    // 로그인
     login(context, payload) {
       const username = payload.username
       const password = payload.password
-
+      
       axios({
         method: "post",
         url: `${API_URL}/accounts/login/`,
@@ -79,7 +86,19 @@ export default new Vuex.Store({
         console.log(err)
       })
     },
-
+    // 로그아웃
+    logOut(context) {
+      axios({
+        method: "post",
+        url: `${API_URL}/accounts/logout/`,
+      })
+      .then((res) => {
+        context.commit("LOG_OUT", res.data.key)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    },
     // GET_MOVIES
     getMovies(context, payload) {
       let params = null

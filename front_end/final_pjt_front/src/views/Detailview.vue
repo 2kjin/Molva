@@ -28,7 +28,7 @@
             >
               {{ genre.name }}
             </div>
-            <span class="ml-1"></span>
+            <span class="ml-1">ㆍ</span>
             <!-- <v-rating
             style="display:inline-block; margin-bottom: 5px;"
             class="rating"
@@ -118,6 +118,12 @@ export default {
   },
   methods: {
     ...mapMutations(["SET_LOADING"]),
+    beforeCreate(){
+      this.$store.dispatch('getDetail', this.$route.params.id)
+      },
+    mounted(){
+    this.$store.dispatch('getDetail', this.$route.params.id)
+    },
     image(img) {
       console.log();
       return `https://image.tmdb.org/t/p/original/${img}`;
