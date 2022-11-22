@@ -1,4 +1,6 @@
 import axios from "axios";
+import router from '@/router'
+
 
 const request = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
@@ -17,7 +19,10 @@ export const movieApi = {
   movieDetail: (id) =>
     request.get(`movie/${id}`, {
       params: { append_to_response: "videos" },
-    }),
+    })
+      .catch(() => {
+        router.push('/404-not-found')
+      }),
 
   search: (keyword) =>
     request.get("search/movie", {

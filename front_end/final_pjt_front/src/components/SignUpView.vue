@@ -10,7 +10,7 @@
     <label for="password2">Password confirmation </label>  
     <input type="password" id="password2" v-model="password2" class="userInput">  <br>
 
-    <input type="submit" value="Sign Up" class="signup-btn" @click="closeModal">
+    <input type="submit" value="Sign Up" class="signup-btn" >
   </form>
 
 </template>
@@ -41,8 +41,20 @@ export default {
       this.password1 = null
       this.password2 = null
     },
-    closeModal () {
-      this.$emit('send-close-sign')
+  },
+  computed: {
+    isLogin () {
+      return this.$store.getters.isLogin
+    }
+  },
+  watch:{
+    isLogin(){
+      if (this.isLogin){
+        this.$emit('send-close-sign')
+        window.location.reload() 
+      } else {
+        alert('login failed !')
+      }
     }
   }
 }

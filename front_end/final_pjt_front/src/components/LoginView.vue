@@ -6,8 +6,7 @@
     <label for="password">Password </label>
     <input type="password" id="password" v-model="password" class="userInput"> <br>
 
-    <input type="submit" value="Login" class="login-btn"
-    @click="checkLogin">
+    <input type="submit" value="Login" class="login-btn">
   </form>
 </template>
 
@@ -29,15 +28,23 @@ export default {
         password,
       }
       this.$store.dispatch('login', payload)
+
     },
-    checkLogin(){
-      if (this.$store.state.token){
+  },
+  computed: {
+    isLogin () {
+      return this.$store.getters.isLogin
+    }
+  },
+  watch:{
+    isLogin(){
+      if (this.isLogin){
+        this.$emit('send-close-sign')
         window.location.reload()
       } else {
         alert('login failed !')
       }
     }
-    
   }
 }
 </script>

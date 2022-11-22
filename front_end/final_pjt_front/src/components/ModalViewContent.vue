@@ -8,11 +8,9 @@
         <span :class="{is_selected:signupViewed}"
         @click="isClicked('signup')">Signup</span>
       </div>
-      <login-view v-if="loginViewed"/>
       <signup-view 
-        v-if="signupViewed"
-        @send-close-sign="closeModalSub"
-      />
+        v-if="signupViewed"/>
+      <login-view v-if="loginViewed"/>
     </div>
   </div>
 
@@ -43,9 +41,6 @@ export default {
         this.loginViewed = false
       }
     },
-    closeModalSub () {
-      this.$emit('send-close-path')
-    }
   }
 }
 </script>

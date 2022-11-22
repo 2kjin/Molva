@@ -14,7 +14,6 @@
         >LOGOUT</div>
         <div id="login" v-else-if="!this.$store.state.token"
         @click="isModalViewed=true"
-        @send-close-path="isModalViewed=false"
         >LOGIN/SIGNUP</div>
       </v-tabs>
     </div>
@@ -22,8 +21,9 @@
     <modal-view
     id="modalView"
     v-if="isModalViewed"
-    @close-modal="isModalViewed=false">
-      <modal-view-content/>
+    @close-modal="isModalViewed=false"
+    >
+    <modal-view-content/>
     </modal-view>
     <b-spinner
       class="d-block ml-auto mr-auto"

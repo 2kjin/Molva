@@ -137,9 +137,7 @@ export default new Vuex.Store({
         .catch((err)=>{
           router.push('/404-not-found')
           console.log(err)
-          
         })
-
     }
   },
   modules: {},
