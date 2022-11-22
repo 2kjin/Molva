@@ -29,7 +29,7 @@
               {{ genre.name }}
             </div>
             <span class="ml-1"></span>
-            <v-rating
+            <!-- <v-rating
             style="display:inline-block; margin-bottom: 5px;"
             class="rating"
             background-color="amber"
@@ -39,7 +39,7 @@
             half-increments
             readonly
             size="22"
-          ></v-rating>
+          ></v-rating> -->
           </div>
           <span v-if="movieDetail.homepage" class="ml-1">ㆍ</span>
           <a

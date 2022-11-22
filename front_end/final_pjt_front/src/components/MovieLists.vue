@@ -33,7 +33,7 @@ export default {
     },
      goDetail(id){
       // console.log(id);
-      this.$router.push(`detail/${id}`);
+      this.$router.push(`${id}`);
     }
   },
 };
