@@ -5,6 +5,7 @@
       <v-tabs>
         <v-tab><router-link :to="{name:'home'}" style="text-decoration: none; color:#e0d598 ">HOME</router-link></v-tab>
         <v-tab><router-link :to="{name:'movie'}" style="text-decoration: none; color:#e0d598 ">MOVIE</router-link></v-tab>
+        <v-tab><router-link :to="{name:'today'}" style="text-decoration: none; color:#e0d598 ">TODAY?</router-link></v-tab>
         <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
         <!-- <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
         <v-tab><router-link :to="{name:'MyProfile'}" style="text-decoration: none; color:#e0d598">MY PROFILE</router-link></v-tab>

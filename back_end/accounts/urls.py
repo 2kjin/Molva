@@ -4,5 +4,5 @@ from . import views
 urlpatterns = [
     # path('profile/', include('accounts.urls')),
     # path('delete/', views.user_delete),
-    # path('<str:username>/', views.profile),
+    path('<str:username>/', views.profile),
 ]

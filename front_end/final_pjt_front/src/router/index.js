@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
 import HomeView from '@/views/HomeView'
 import MovieView from '@/views/MovieView'
+import TodayView from '@/views/TodayView'
 import DetailView from '@/views/DetailView'
 import MyProfile from '@/views/MyProfile'
 import SearchView from '@/views/SearchView'
@@ -26,6 +27,11 @@ const routes = [
     path: '/movie',
     name: 'movie',
     component: MovieView,
+  },
+  {
+    path: '/today',
+    name: 'today',
+    component: TodayView,
   },
   {
     path: '/404-not-found',

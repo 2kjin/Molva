@@ -42,8 +42,8 @@ export default new Vuex.Store({
     GET_DETAIL(state, payload) {
       state.movie = payload
     },
-    GET_OTT_MOVIE(state, payload) {
-      state.ott_movies = payload.ott_movies
+    GET_OTT_MOVIE(state, ott_movies) {
+      state.ott_movies = ott_movies
     }
   },
   actions: {

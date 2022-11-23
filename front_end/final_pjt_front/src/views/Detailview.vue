@@ -29,39 +29,21 @@
               {{ genre.name }}
             </div>
             <span class="ml-1">ㆍ</span>
-            <!-- <v-rating
+            <v-rating
             style="display:inline-block; margin-bottom: 5px;"
             class="rating"
             background-color="amber"
-            :value="movie.vote_average/2"
+            :value="movieDetail.vote_average/2"
             color="amber"
             dense
             half-increments
             readonly
             size="22"
-          ></v-rating> -->
+          ></v-rating>
           </div>
-          <span v-if="movieDetail.homepage" class="ml-1">ㆍ</span>
-          <a
-            v-if="movieDetail.homepage"
-            class="ml-1 h4 homepage-link"
-            target="_blank"
-            :href="movieDetail.homepage"
-            ><svg
-              width="1em"
-              height="1em"
-              viewBox="0 0 16 16"
-              class="bi bi-link-45deg"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"
-              />
-              <path
-                d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"
-              /></svg
-          ></a>
+        </div>
+        <div class="movie-information-wrapper mt-4 d-flex align-items-center">
+        <div>{{ movieDetail.actors }}</div>
         </div>
         <div class="movie-overview mt-3">{{ movieDetail.overview }}</div>
         <div v-if="movieDetail.videos && movieDetail.videos.results">
@@ -109,11 +91,17 @@ export default {
     movie(){
       return this.$store.state.movie
     },
+    vote(){
+      return this.movie?.vote_average/2
+    },
     imgSrc(){
-      return `https://image.tmdb.org/t/p/original${this.movie.poster_path}`
+      return `https://image.tmdb.org/t/p/original${this.movie?.poster_path}`
     },
     backdropImgSrc(){
-      return `https://image.tmdb.org/t/p/original${this.movie.backdrop_path}`
+      return `https://image.tmdb.org/t/p/original${this.movie?.backdrop_path}`
+    },
+    isLiked(){
+      return this.$store.state.movieLike
     },
   },
   methods: {
@@ -122,8 +110,11 @@ export default {
       this.$store.dispatch('getDetail', this.$route.params.id)
       },
     mounted(){
-    this.$store.dispatch('getDetail', this.$route.params.id)
+      this.$store.dispatch('getDetail', this.$route.params.id)
     },
+      getLike(){
+        this.$store.dispatch('getLike', this.$route.params.id)
+      },
     image(img) {
       console.log();
       return `https://image.tmdb.org/t/p/original/${img}`;

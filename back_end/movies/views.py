@@ -168,6 +168,13 @@ def like(request, movie_id):
     }
     return JsonResponse(context)
 
+@api_view(['GET'])
+def review_list(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    review = movie.reviews.all()
+    serializer = ReviewSerializer(review, many=True)
+    return Response(serializer.data)
+
 
 @api_view(['POST'])
 def review_create(request, movie_id):

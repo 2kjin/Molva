@@ -33,6 +33,13 @@ class MovieListSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('like_users', 'actors')
 
+class MovieTitleSerializer(serializers.ModelSerializer):
+    genres = GenrenameSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Movie
+        fields = ('movie_id', 'title', 'poster_path', 'genres', 'watched_users')
+
 class ReviewSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
     
