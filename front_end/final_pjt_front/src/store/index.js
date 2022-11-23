@@ -15,8 +15,9 @@ export default new Vuex.Store({
   state: {
     token: null,
     movies: null,
-    movie:null,
+    movie: null,
     loading: true,
+    ott_movies: null,
   },
   getters: {
     isLogin(state) {
@@ -36,10 +37,13 @@ export default new Vuex.Store({
       router.push({ name: 'home' })
     },
     GET_MOVIES(state, payload) {
-        state.movies = payload.movies
+      state.movies = payload.movies
     },
     GET_DETAIL(state, payload) {
       state.movie = payload
+    },
+    GET_OTT_MOVIE(state, payload) {
+      state.ott_movies = payload.ott_movies
     }
   },
   actions: {
@@ -92,12 +96,12 @@ export default new Vuex.Store({
         method: "post",
         url: `${API_URL}/accounts/logout/`,
       })
-      .then((res) => {
-        context.commit("LOG_OUT", res.data.key)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+        .then((res) => {
+          context.commit("LOG_OUT", res.data.key)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
     // GET_MOVIES
     getMovies(context, payload) {
@@ -133,6 +137,20 @@ export default new Vuex.Store({
       })
         .then((res)=>{
           context.commit("GET_DETAIL", res.data)
+        })
+        .catch((err)=>{
+          router.push('/404-not-found')
+          console.log(err)
+        })
+    },
+    // GET OTT MOVIE
+    getOttMovie(context, ottId){
+      axios({
+        method: "get",
+        url: `${API_URL}/movies/create_ott_list/${ottId}/`,
+      })
+        .then((res) => {
+          context.commit("GET_OTT_MOVIE", res.data)
         })
         .catch((err)=>{
           router.push('/404-not-found')

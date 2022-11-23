@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer
+from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer, OttpathSerializer
 
 from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
 from django.shortcuts import get_object_or_404, get_list_or_404
@@ -12,6 +12,8 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 # Create your views here.
 from pprint import pprint
+
+
 
 def create_json(request):
     lst_movie = []
@@ -123,6 +125,13 @@ def create_json(request):
 
     # print('성공!')
     return HttpResponse()
+
+@api_view(['GET'])
+def create_ott_list(request, ott_pk):
+    ott = get_object_or_404(Watch_Provider, pk = ott_pk)
+    ott_movie = ott.movie_ott.all()
+    serializer = MovieListSerializer(ott_movie, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])

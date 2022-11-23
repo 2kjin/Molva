@@ -8,7 +8,8 @@ urlpatterns = [
     path('<int:movie_id>/', views.movie_detail),
     path('<int:movie_id>/like', views.like),
     path('<int:movie_id>/reviews/', views.review_create),
-    path('reviews/<int:review_pk>', views.review_detail),
+    path('reviews/<int:review_pk>/', views.review_detail),
+    path('create_ott_list/<int:ott_pk>/', views.create_ott_list),
 ]
 
 # python manage.py loaddata actors.json directors.json genres.json movies.json otts.json

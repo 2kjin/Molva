@@ -2,23 +2,26 @@
   <div>
     <h1 id="banner">  I’M JUST EXACTLY WHAT I'VE WANTED TO BE </h1>
     <carousel-content />
+    <MovieWatcha/>
     <!-- <movie-content /> -->
   </div>
 </template>
 
 <script>
 // import MovieContent from "@/components/Movie.vue"
+import MovieWatcha from "@/components/MovieWatcha.vue"
 import CarouselContent from "@/components/Carousel.vue"
 export default {
   name: "HomeView",
   components: {
     // MovieContent,
     CarouselContent,
+    MovieWatcha,
   },
-  beforeCreate() {
-    this.$store.dispatch("getMovies") // main
-    // this.$store.dispatch("getMovies", "popular") // popular
-  },
+  // beforeCreate() {
+  //   this.$store.dispatch("getMovies") // main
+  //   // this.$store.dispatch("getMovies", "popular") // popular
+  // },
 }
 </script>
 
