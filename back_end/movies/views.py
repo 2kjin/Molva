@@ -18,7 +18,7 @@ from pprint import pprint
 def create_json(request):
     lst_movie = []
     # movie.json 생성
-    for i in range(1,60):
+    for i in range(1,101):
         url_movies = f'https://api.themoviedb.org/3/movie/popular?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr&page={i}'
         dict_movies = requests.get(url_movies).json()
         lst_movie += dict_movies.get('results')
@@ -74,10 +74,11 @@ def create_json(request):
         movie.backdrop_path = j.get('backdrop_path')
         movie.save()
 
-        # 왓챠, 넷플릭스, 디지니플러스, 애플 Tv만 가져오기
+        # netflix, watcha, disney plus, wavve만 가져오기
         for o in lst:
             chk = int(o[0])
-            if chk == 8 or 300 <= chk < 400:
+            ott_lst = [8, 97, 337, 356] # netflix, watcha, disney plus, wavve
+            if chk in ott_lst:
                 ott = Watch_Provider()
                 ott.ott_id = o[0]
                 ott.ott_path = o[1]

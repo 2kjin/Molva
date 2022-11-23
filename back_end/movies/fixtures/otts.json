@@ -8,16 +8,16 @@
 },
 {
     "model": "movies.watch_provider",
-    "pk": 337,
+    "pk": 97,
     "fields": {
-        "ott_path": "/7rwgEs15tFwyR9NPQ5vpzxTj19Q.jpg"
+        "ott_path": "/vXXZx0aWQtDv2klvObNugm4dQMN.jpg"
     }
 },
 {
     "model": "movies.watch_provider",
-    "pk": 350,
+    "pk": 337,
     "fields": {
-        "ott_path": "/6uhKBfmtzFqOcLousHwZuzcrScK.jpg"
+        "ott_path": "/7rwgEs15tFwyR9NPQ5vpzxTj19Q.jpg"
     }
 },
 {

@@ -21,7 +21,6 @@ export default {
   },
   computed: {
     ottMovie(){
-      console.log(1111111111111111111)
       const check = this.$store.state.ott_movies
       console.log(check)
       return check

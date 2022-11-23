@@ -3,7 +3,7 @@
     <br>
     <TodayMovieNetflix/>
     <TodayMovieDisney/>
-    <!-- <TodayMovieWatcha/> -->
+    <TodayMovieWatcha/>
     <TodayMovieWavve/>
 
   </div>
@@ -12,7 +12,7 @@
 <script>
 import TodayMovieNetflix from "@/components/TodayMovieNetflix.vue"
 import TodayMovieDisney from "@/components/TodayMovieDisney.vue"
-// import TodayMovieWatcha from "@/components/TodayMovieWatcha.vue"
+import TodayMovieWatcha from "@/components/TodayMovieWatcha.vue"
 import TodayMovieWavve from "@/components/TodayMovieWavve.vue"
 
 export default {
@@ -20,7 +20,7 @@ export default {
   components: {
     TodayMovieNetflix,
     TodayMovieDisney,
-    // TodayMovieWatcha,
+    TodayMovieWatcha,
     TodayMovieWavve
   },
 }

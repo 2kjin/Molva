@@ -1,6 +1,13 @@
 [
 {
     "model": "movies.director",
+    "pk": 1,
+    "fields": {
+        "name": "George Lucas"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 7,
     "fields": {
         "name": "Andrew Stanton"
@@ -18,6 +25,13 @@
     "pk": 24,
     "fields": {
         "name": "Robert Zemeckis"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 39,
+    "fields": {
+        "name": "Sam Mendes"
     }
 },
 {
@@ -43,6 +57,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 187,
+    "fields": {
+        "name": "Tensai Okamura"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 190,
     "fields": {
         "name": "Clint Eastwood"
@@ -57,6 +78,48 @@
 },
 {
     "model": "movies.director",
+    "pk": 201,
+    "fields": {
+        "name": "Michel Gondry"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 223,
+    "fields": {
+        "name": "Alejandro González Iñárritu"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 224,
+    "fields": {
+        "name": "David Cronenberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 240,
+    "fields": {
+        "name": "Stanley Kubrick"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 357,
+    "fields": {
+        "name": "Hany Abu-Assad"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 366,
+    "fields": {
+        "name": "James Mangold"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 488,
     "fields": {
         "name": "Steven Spielberg"
@@ -67,6 +130,13 @@
     "pk": 510,
     "fields": {
         "name": "Tim Burton"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 518,
+    "fields": {
+        "name": "Danny DeVito"
     }
 },
 {
@@ -99,6 +169,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 638,
+    "fields": {
+        "name": "Michael Mann"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 865,
     "fields": {
         "name": "Michael Bay"
@@ -106,9 +183,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 880,
+    "fields": {
+        "name": "Ben Affleck"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 893,
     "fields": {
         "name": "Tony Scott"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 932,
+    "fields": {
+        "name": "John Logan"
     }
 },
 {
@@ -127,9 +218,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 1011,
+    "fields": {
+        "name": "Susanne Bier"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1032,
     "fields": {
         "name": "Martin Scorsese"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1071,
+    "fields": {
+        "name": "Tom Tykwer"
     }
 },
 {
@@ -151,6 +256,13 @@
     "pk": 1150,
     "fields": {
         "name": "Brian De Palma"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1176,
+    "fields": {
+        "name": "Lone Scherfig"
     }
 },
 {
@@ -183,6 +295,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1721,
+    "fields": {
+        "name": "Stephen E. Rivkin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1723,
+    "fields": {
+        "name": "Walter Hill"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1776,
     "fields": {
         "name": "Francis Ford Coppola"
@@ -211,9 +337,44 @@
 },
 {
     "model": "movies.director",
+    "pk": 2042,
+    "fields": {
+        "name": "Stephen Hopkins"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2127,
     "fields": {
         "name": "James Wan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2128,
+    "fields": {
+        "name": "Leigh Whannell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2150,
+    "fields": {
+        "name": "Kevin Greutert"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2199,
+    "fields": {
+        "name": "Scott Frank"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2293,
+    "fields": {
+        "name": "Frank Miller"
     }
 },
 {
@@ -246,6 +407,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 2690,
+    "fields": {
+        "name": "Peter Weir"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2710,
     "fields": {
         "name": "James Cameron"
@@ -253,9 +421,51 @@
 },
 {
     "model": "movies.director",
+    "pk": 2945,
+    "fields": {
+        "name": "Stephen Gaghan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3045,
+    "fields": {
+        "name": "P.J. Hogan"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 3288,
     "fields": {
         "name": "Chris Weitz"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3289,
+    "fields": {
+        "name": "Paul Weitz"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3415,
+    "fields": {
+        "name": "Jerry Zucker"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3451,
+    "fields": {
+        "name": "Mel Stuart"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3950,
+    "fields": {
+        "name": "Len Wiseman"
     }
 },
 {
@@ -274,6 +484,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 4499,
+    "fields": {
+        "name": "Tom Shadyac"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 4723,
     "fields": {
         "name": "Brian Helgeland"
@@ -284,6 +501,27 @@
     "pk": 4746,
     "fields": {
         "name": "Robert Lorenz"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 4755,
+    "fields": {
+        "name": "David R. Ellis"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 4818,
+    "fields": {
+        "name": "Roberto Benigni"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 4945,
+    "fields": {
+        "name": "Joe Johnston"
     }
 },
 {
@@ -302,9 +540,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 5140,
+    "fields": {
+        "name": "Wes Craven"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 5174,
     "fields": {
         "name": "Barry Sonnenfeld"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5216,
+    "fields": {
+        "name": "Gus Van Sant"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5231,
+    "fields": {
+        "name": "Wolfgang Petersen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5306,
+    "fields": {
+        "name": "Lasse Hallström"
     }
 },
 {
@@ -316,9 +582,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 5501,
+    "fields": {
+        "name": "Gary Fleder"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 5524,
     "fields": {
         "name": "Andrew Adamson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5690,
+    "fields": {
+        "name": "James Algar"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5691,
+    "fields": {
+        "name": "Samuel Armstrong"
     }
 },
 {
@@ -358,6 +645,34 @@
 },
 {
     "model": "movies.director",
+    "pk": 5953,
+    "fields": {
+        "name": "Spike Jonze"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 5970,
+    "fields": {
+        "name": "Pier Paolo Pasolini"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 6037,
+    "fields": {
+        "name": "Colin Strause"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 6038,
+    "fields": {
+        "name": "Greg Strause"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 6046,
     "fields": {
         "name": "Roland Emmerich"
@@ -386,6 +701,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 6482,
+    "fields": {
+        "name": "John Singleton"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 6495,
     "fields": {
         "name": "Mira Nair"
@@ -396,6 +718,13 @@
     "pk": 6733,
     "fields": {
         "name": "Dan Mazer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 6767,
+    "fields": {
+        "name": "Larry Charles"
     }
 },
 {
@@ -414,6 +743,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 7213,
+    "fields": {
+        "name": "Jonathan Mostow"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 7270,
     "fields": {
         "name": "Adrian Lyne"
@@ -421,9 +757,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 7314,
+    "fields": {
+        "name": "Nick Park"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 7395,
+    "fields": {
+        "name": "Bobby Farrelly"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 7396,
     "fields": {
         "name": "Peter Farrelly"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 7409,
+    "fields": {
+        "name": "J.B. Rogers"
     }
 },
 {
@@ -470,9 +827,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 8029,
+    "fields": {
+        "name": "Jimmy Hayward"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 8042,
+    "fields": {
+        "name": "Andrew L. Schmidt"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 8636,
+    "fields": {
+        "name": "Cecil B. DeMille"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 8676,
     "fields": {
         "name": "Dean Devlin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 8685,
+    "fields": {
+        "name": "Andrew Niccol"
     }
 },
 {
@@ -512,6 +897,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 9181,
+    "fields": {
+        "name": "Edward Zwick"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 9339,
     "fields": {
         "name": "Lilly Wachowski"
@@ -533,6 +925,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 10491,
+    "fields": {
+        "name": "Paul Verhoeven"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 10702,
     "fields": {
         "name": "Martin Campbell"
@@ -543,6 +942,20 @@
     "pk": 10723,
     "fields": {
         "name": "Mike Newell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 10781,
+    "fields": {
+        "name": "Michael Apted"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 10808,
+    "fields": {
+        "name": "Stephen Norrington"
     }
 },
 {
@@ -571,6 +984,20 @@
     "pk": 11012,
     "fields": {
         "name": "Michael Dougherty"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 11090,
+    "fields": {
+        "name": "Edgar Wright"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 11091,
+    "fields": {
+        "name": "Brett Ratner"
     }
 },
 {
@@ -631,9 +1058,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 11428,
+    "fields": {
+        "name": "Paul Satterfield"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 11429,
     "fields": {
         "name": "Hamilton Luske"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 11430,
+    "fields": {
+        "name": "Jim Handley"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 11431,
+    "fields": {
+        "name": "Ford Beebe"
     }
 },
 {
@@ -652,6 +1100,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 11447,
+    "fields": {
+        "name": "Albert Hughes"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 11614,
     "fields": {
         "name": "M. Night Shyamalan"
@@ -666,9 +1121,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 11770,
+    "fields": {
+        "name": "John Carpenter"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 11873,
     "fields": {
         "name": "Roger Kumble"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 11887,
+    "fields": {
+        "name": "Brad Silberling"
     }
 },
 {
@@ -694,6 +1163,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 12095,
+    "fields": {
+        "name": "Cody Cameron"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 12098,
     "fields": {
         "name": "Chris Miller"
@@ -704,6 +1180,13 @@
     "pk": 12786,
     "fields": {
         "name": "Simon West"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 12881,
+    "fields": {
+        "name": "Gary Goldman"
     }
 },
 {
@@ -750,6 +1233,41 @@
 },
 {
     "model": "movies.director",
+    "pk": 13426,
+    "fields": {
+        "name": "Peter Segal"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 13581,
+    "fields": {
+        "name": "Brian Levant"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 14597,
+    "fields": {
+        "name": "Gaspar Noé"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 15002,
+    "fields": {
+        "name": "Dean Parisot"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 15045,
+    "fields": {
+        "name": "Michael Lembeck"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 15175,
     "fields": {
         "name": "William Friedkin"
@@ -781,6 +1299,13 @@
     "pk": 15287,
     "fields": {
         "name": "Niki Caro"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 15344,
+    "fields": {
+        "name": "J.J. Abrams"
     }
 },
 {
@@ -855,9 +1380,44 @@
 },
 {
     "model": "movies.director",
+    "pk": 16513,
+    "fields": {
+        "name": "John G. Avildsen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 16566,
+    "fields": {
+        "name": "George P. Cosmatos"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 16808,
     "fields": {
         "name": "Matthias Schweighöfer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 16837,
+    "fields": {
+        "name": "Mark Steven Johnson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 16842,
+    "fields": {
+        "name": "Stephen J. Anderson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 16847,
+    "fields": {
+        "name": "Eli Roth"
     }
 },
 {
@@ -876,9 +1436,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 17119,
+    "fields": {
+        "name": "Kim Sung-soo"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 17268,
     "fields": {
         "name": "Ronny Yu"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 17282,
+    "fields": {
+        "name": "Takashi Miike"
     }
 },
 {
@@ -900,6 +1474,13 @@
     "pk": 17510,
     "fields": {
         "name": "Ol Parker"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 17597,
+    "fields": {
+        "name": "Juan Carlos Fresnadillo"
     }
 },
 {
@@ -1016,6 +1597,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 19274,
+    "fields": {
+        "name": "Seth Rogen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 19303,
+    "fields": {
+        "name": "Kevin Smith"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 19311,
+    "fields": {
+        "name": "Stephen Chbosky"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 19769,
     "fields": {
         "name": "David Ayer"
@@ -1079,6 +1681,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 20646,
+    "fields": {
+        "name": "Gabriele Muccino"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 20739,
     "fields": {
         "name": "Adam Shankman"
@@ -1093,9 +1702,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 21007,
+    "fields": {
+        "name": "Jonah Hill"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 21085,
     "fields": {
         "name": "Alex Proyas"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 21136,
+    "fields": {
+        "name": "Michael Cristofer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 21183,
+    "fields": {
+        "name": "Nicolas Winding Refn"
     }
 },
 {
@@ -1110,6 +1740,13 @@
     "pk": 21475,
     "fields": {
         "name": "John Putch"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 21673,
+    "fields": {
+        "name": "Ericson Core"
     }
 },
 {
@@ -1135,9 +1772,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 21792,
+    "fields": {
+        "name": "George Gallo"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 21981,
     "fields": {
         "name": "Harald Zwart"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 23227,
+    "fields": {
+        "name": "Steven Knight"
     }
 },
 {
@@ -1149,9 +1800,65 @@
 },
 {
     "model": "movies.director",
+    "pk": 23683,
+    "fields": {
+        "name": "Tony Cervone"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 23964,
+    "fields": {
+        "name": "Gary Ross"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 24618,
     "fields": {
         "name": "Paloma Baeza"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 25645,
+    "fields": {
+        "name": "Hirokazu Kore-eda"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 25882,
+    "fields": {
+        "name": "Brad Turner"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 26205,
+    "fields": {
+        "name": "James Bobin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 26473,
+    "fields": {
+        "name": "Fisher Stevens"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 26713,
+    "fields": {
+        "name": "Chuck Russell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 26714,
+    "fields": {
+        "name": "John R. Leonetti"
     }
 },
 {
@@ -1166,6 +1873,20 @@
     "pk": 27571,
     "fields": {
         "name": "David Slade"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 28233,
+    "fields": {
+        "name": "Wisit Sasanatieng"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 28239,
+    "fields": {
+        "name": "David Twohy"
     }
 },
 {
@@ -1205,9 +1926,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 31024,
+    "fields": {
+        "name": "Betty Thomas"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 31119,
+    "fields": {
+        "name": "Sylvain White"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 31211,
+    "fields": {
+        "name": "Clive Barker"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 32278,
     "fields": {
         "name": "Matt Reeves"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 33183,
+    "fields": {
+        "name": "David Bowers"
     }
 },
 {
@@ -1219,9 +1968,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 34682,
+    "fields": {
+        "name": "Jeremiah S. Chechik"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 34891,
     "fields": {
         "name": "Mike Johnson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 35452,
+    "fields": {
+        "name": "Corey Yuen"
     }
 },
 {
@@ -1233,9 +1996,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 35475,
+    "fields": {
+        "name": "Sean S. Cunningham"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 35689,
     "fields": {
         "name": "Keenen Ivory Wayans"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 35896,
+    "fields": {
+        "name": "Richard Berry"
     }
 },
 {
@@ -1247,9 +2024,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 36588,
+    "fields": {
+        "name": "Joe Wright"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 36602,
     "fields": {
         "name": "Peter Berg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 36697,
+    "fields": {
+        "name": "Gábor Csupó"
     }
 },
 {
@@ -1264,6 +2055,13 @@
     "pk": 37932,
     "fields": {
         "name": "F. Gary Gray"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 37948,
+    "fields": {
+        "name": "Brad Anderson"
     }
 },
 {
@@ -1289,6 +2087,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 39104,
+    "fields": {
+        "name": "Abel Ferrara"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 40223,
+    "fields": {
+        "name": "Joe Carnahan"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 40256,
     "fields": {
         "name": "D. J. Caruso"
@@ -1299,6 +2111,13 @@
     "pk": 40336,
     "fields": {
         "name": "Masashi Ando"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 40345,
+    "fields": {
+        "name": "Don Bluth"
     }
 },
 {
@@ -1331,6 +2150,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 42111,
+    "fields": {
+        "name": "Bryan Spicer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 43652,
+    "fields": {
+        "name": "Takashi Yamazaki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 44113,
+    "fields": {
+        "name": "Steve Hickner"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 44114,
     "fields": {
         "name": "Simon J. Smith"
@@ -1345,6 +2185,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 45400,
+    "fields": {
+        "name": "Greta Gerwig"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 45916,
+    "fields": {
+        "name": "Owen Hurley"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 45996,
+    "fields": {
+        "name": "Ryûhei Kitamura"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 47005,
     "fields": {
         "name": "Alan Taylor"
@@ -1352,9 +2213,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 47506,
+    "fields": {
+        "name": "Drew Goddard"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 49903,
     "fields": {
         "name": "Tim Hill"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 50099,
+    "fields": {
+        "name": "Shuki Levy"
     }
 },
 {
@@ -1369,6 +2244,13 @@
     "pk": 50949,
     "fields": {
         "name": "Alek Keshishian"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 51329,
+    "fields": {
+        "name": "Bradley Cooper"
     }
 },
 {
@@ -1401,6 +2283,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 52044,
+    "fields": {
+        "name": "David Winning"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 52139,
     "fields": {
         "name": "Seth MacFarlane"
@@ -1422,9 +2311,51 @@
 },
 {
     "model": "movies.director",
+    "pk": 52576,
+    "fields": {
+        "name": "José Padilha"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 52609,
+    "fields": {
+        "name": "Breck Eisner"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 52701,
+    "fields": {
+        "name": "Fergal Reilly"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 52842,
     "fields": {
         "name": "Garth Jennings"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 52870,
+    "fields": {
+        "name": "Tim Johnson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 52935,
+    "fields": {
+        "name": "John Francis Daley"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 52961,
+    "fields": {
+        "name": "Dennis Gansel"
     }
 },
 {
@@ -1450,9 +2381,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 53177,
+    "fields": {
+        "name": "Brian Robbins"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 53304,
+    "fields": {
+        "name": "Peter Lord"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 53334,
     "fields": {
         "name": "Jim Sheridan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 53925,
+    "fields": {
+        "name": "Jared Hess"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54025,
+    "fields": {
+        "name": "Karyn Kusama"
     }
 },
 {
@@ -1471,6 +2430,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 54248,
+    "fields": {
+        "name": "Christopher Landon"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54507,
+    "fields": {
+        "name": "Jon M. Chu"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 54525,
     "fields": {
         "name": "Jaume Balagueró"
@@ -1478,9 +2451,58 @@
 },
 {
     "model": "movies.director",
+    "pk": 54526,
+    "fields": {
+        "name": "Paco Plaza"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54584,
+    "fields": {
+        "name": "Jesse Dylan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54590,
+    "fields": {
+        "name": "Steve Rash"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54597,
+    "fields": {
+        "name": "Joe Nussbaum"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 54733,
     "fields": {
         "name": "Greg Mottola"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54734,
+    "fields": {
+        "name": "Evan Goldberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54868,
+    "fields": {
+        "name": "Christian Gudegast"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 54869,
+    "fields": {
+        "name": "Paul Scheuring"
     }
 },
 {
@@ -1499,6 +2521,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 55299,
+    "fields": {
+        "name": "Mark Herman"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 55499,
     "fields": {
         "name": "Scott Derrickson"
@@ -1509,6 +2538,13 @@
     "pk": 55615,
     "fields": {
         "name": "Megan Park"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 55710,
+    "fields": {
+        "name": "Adam McKay"
     }
 },
 {
@@ -1541,6 +2577,41 @@
 },
 {
     "model": "movies.director",
+    "pk": 56370,
+    "fields": {
+        "name": "Ruben Östlund"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 56411,
+    "fields": {
+        "name": "Glenn Ficarra"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 56412,
+    "fields": {
+        "name": "John Requa"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 56501,
+    "fields": {
+        "name": "Michael Spierig"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 56502,
+    "fields": {
+        "name": "Peter Spierig"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 56578,
     "fields": {
         "name": "Jeff Tremaine"
@@ -1555,9 +2626,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 56891,
+    "fields": {
+        "name": "Rachel Talalay"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 56998,
+    "fields": {
+        "name": "Dwight H. Little"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 57048,
     "fields": {
         "name": "Casey La Scala"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 57113,
+    "fields": {
+        "name": "Dan Gilroy"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 57125,
+    "fields": {
+        "name": "Greg Marcks"
     }
 },
 {
@@ -1590,6 +2689,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 57214,
+    "fields": {
+        "name": "Prachya Pinkaew"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 57270,
     "fields": {
         "name": "Robert Schwentke"
@@ -1611,9 +2717,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 57434,
+    "fields": {
+        "name": "Amy Heckerling"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 57521,
     "fields": {
         "name": "Steve Beck"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 57581,
+    "fields": {
+        "name": "Neil Marshall"
     }
 },
 {
@@ -1674,9 +2794,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 58072,
+    "fields": {
+        "name": "John Pasquin"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 58189,
     "fields": {
         "name": "Justin Lin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 58260,
+    "fields": {
+        "name": "Martin Weisz"
     }
 },
 {
@@ -1709,9 +2843,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 58897,
+    "fields": {
+        "name": "Sam Fell"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 59026,
     "fields": {
         "name": "Peyton Reed"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 59126,
+    "fields": {
+        "name": "Alister Grierson"
     }
 },
 {
@@ -1723,9 +2871,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 59290,
+    "fields": {
+        "name": "Grégory Levasseur"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 59291,
+    "fields": {
+        "name": "Alexandre Aja"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 59315,
     "fields": {
         "name": "Olivia Wilde"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 59328,
+    "fields": {
+        "name": "John Pogue"
     }
 },
 {
@@ -1765,6 +2934,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 60725,
+    "fields": {
+        "name": "Jim Kammerud"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 60922,
     "fields": {
         "name": "Josh Gordon"
@@ -1775,6 +2951,13 @@
     "pk": 60923,
     "fields": {
         "name": "Will Speck"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 61175,
+    "fields": {
+        "name": "John Whitesell"
     }
 },
 {
@@ -1793,6 +2976,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 61847,
+    "fields": {
+        "name": "Ethan Maniquis"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 61949,
     "fields": {
         "name": "Robert Walker"
@@ -1803,6 +2993,20 @@
     "pk": 61952,
     "fields": {
         "name": "Aaron Blaise"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 61970,
+    "fields": {
+        "name": "Ben Gluck"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 62020,
+    "fields": {
+        "name": "Jack Sholder"
     }
 },
 {
@@ -1828,6 +3032,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 62514,
+    "fields": {
+        "name": "Tommy O'Haver"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 62768,
     "fields": {
         "name": "William Brent Bell"
@@ -1835,9 +3046,51 @@
 },
 {
     "model": "movies.director",
+    "pk": 62773,
+    "fields": {
+        "name": "Anna Mastro"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 62797,
+    "fields": {
+        "name": "John Gulager"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 62854,
     "fields": {
         "name": "Akiva Schaffer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 62941,
+    "fields": {
+        "name": "John Hyams"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 63099,
+    "fields": {
+        "name": "Michael Fimognari"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 63820,
+    "fields": {
+        "name": "Christian Ditter"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 63973,
+    "fields": {
+        "name": "Matteo Garrone"
     }
 },
 {
@@ -1852,6 +3105,13 @@
     "pk": 64151,
     "fields": {
         "name": "Mike Mitchell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 64195,
+    "fields": {
+        "name": "Joseph Zito"
     }
 },
 {
@@ -1891,6 +3151,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 64901,
+    "fields": {
+        "name": "Gordon Chan"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 65167,
     "fields": {
         "name": "Scott Cooper"
@@ -1905,9 +3172,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 65314,
+    "fields": {
+        "name": "Giuseppe Tornatore"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 65429,
     "fields": {
         "name": "Kunihiko Yuyama"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 65530,
+    "fields": {
+        "name": "Mike Gabriel"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 65531,
+    "fields": {
+        "name": "Eric Goldberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 65629,
+    "fields": {
+        "name": "Bibo Bergeron"
     }
 },
 {
@@ -1996,9 +3291,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 67367,
+    "fields": {
+        "name": "Rian Johnson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 67604,
+    "fields": {
+        "name": "Ted Berman"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 67607,
+    "fields": {
+        "name": "Art Stevens"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 67813,
     "fields": {
         "name": "Baltasar Kormákur"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 67925,
+    "fields": {
+        "name": "Kazuhisa Takenouchi"
     }
 },
 {
@@ -2020,6 +3343,27 @@
     "pk": 68844,
     "fields": {
         "name": "Hayden Schlossberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 69081,
+    "fields": {
+        "name": "Kim Jee-woon"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 69416,
+    "fields": {
+        "name": "Bradley Raymond"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 69593,
+    "fields": {
+        "name": "M. J. Bassett"
     }
 },
 {
@@ -2052,6 +3396,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 70287,
+    "fields": {
+        "name": "Will Finn"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 70651,
     "fields": {
         "name": "Stephen Hillenburg"
@@ -2073,9 +3424,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 71600,
+    "fields": {
+        "name": "Seth Gordon"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 71729,
     "fields": {
         "name": "Steve Martino"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 71849,
+    "fields": {
+        "name": "Lynne Southerland"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 71923,
+    "fields": {
+        "name": "Shane Acker"
     }
 },
 {
@@ -2087,9 +3459,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 72036,
+    "fields": {
+        "name": "Susan Johnson"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 72611,
     "fields": {
         "name": "Fabrice Du Welz"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 73161,
+    "fields": {
+        "name": "Frank Nissen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 73833,
+    "fields": {
+        "name": "Bo Zenga"
     }
 },
 {
@@ -2111,6 +3504,34 @@
     "pk": 74619,
     "fields": {
         "name": "Sean Anders"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 74629,
+    "fields": {
+        "name": "Jon Keeyes"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 74924,
+    "fields": {
+        "name": "Mabrouk El Mechri"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 74943,
+    "fields": {
+        "name": "Daniel Monzón"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 74950,
+    "fields": {
+        "name": "Makoto Kamiya"
     }
 },
 {
@@ -2157,6 +3578,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 77003,
+    "fields": {
+        "name": "Gavin O'Connor"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 77147,
+    "fields": {
+        "name": "John Erick Dowdle"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 77162,
+    "fields": {
+        "name": "Rodrigo García"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 77357,
     "fields": {
         "name": "Rupert Wyatt"
@@ -2164,9 +3606,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 77921,
+    "fields": {
+        "name": "Hideaki Anno"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 77964,
     "fields": {
         "name": "Mike Barker"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 77965,
+    "fields": {
+        "name": "Morten Tyldum"
     }
 },
 {
@@ -2206,6 +3662,41 @@
 },
 {
     "model": "movies.director",
+    "pk": 78268,
+    "fields": {
+        "name": "Ryuichi Hiroki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 78914,
+    "fields": {
+        "name": "Noam Murro"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 80215,
+    "fields": {
+        "name": "Charles Stone III"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 80602,
+    "fields": {
+        "name": "Tyler Perry"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 80671,
+    "fields": {
+        "name": "John Sanford"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 80672,
     "fields": {
         "name": "Peggy Holmes"
@@ -2216,6 +3707,20 @@
     "pk": 80675,
     "fields": {
         "name": "Evan Spiliotopoulos"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 80699,
+    "fields": {
+        "name": "Howy Parkins"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 80751,
+    "fields": {
+        "name": "Hirotsugu Kawasaki"
     }
 },
 {
@@ -2241,6 +3746,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 80948,
+    "fields": {
+        "name": "William Lau"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 80978,
     "fields": {
         "name": "Brian Goodman"
@@ -2262,6 +3774,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 81251,
+    "fields": {
+        "name": "Banjong Pisanthanakun"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 81328,
     "fields": {
         "name": "Andrew Traucki"
@@ -2272,6 +3791,13 @@
     "pk": 81718,
     "fields": {
         "name": "Mamoru Hosoda"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 81850,
+    "fields": {
+        "name": "Duncan Jones"
     }
 },
 {
@@ -2297,9 +3823,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 82724,
+    "fields": {
+        "name": "Fernando González Molina"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 82885,
+    "fields": {
+        "name": "Zoe Lister-Jones"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 84124,
     "fields": {
         "name": "Tina Gordon Chism"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 84196,
+    "fields": {
+        "name": "Toshiyuki Tsuru"
     }
 },
 {
@@ -2332,6 +3879,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 84439,
+    "fields": {
+        "name": "Julien Leclercq"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 84496,
     "fields": {
         "name": "Josh Cooley"
@@ -2360,9 +3914,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 84839,
+    "fields": {
+        "name": "Atsuji Shimizu"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 84969,
     "fields": {
         "name": "Kim Yong-hwa"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 85809,
+    "fields": {
+        "name": "Shane van Dyke"
     }
 },
 {
@@ -2437,6 +4005,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 88084,
+    "fields": {
+        "name": "Luis Prieto"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 88253,
     "fields": {
         "name": "Barbara Bialowas"
@@ -2458,6 +4033,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 89112,
+    "fields": {
+        "name": "Tony Leondis"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 89596,
     "fields": {
         "name": "Joaquim Dos Santos"
@@ -2468,6 +4050,13 @@
     "pk": 89972,
     "fields": {
         "name": "Hajime Kamegaki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 90048,
+    "fields": {
+        "name": "Noriyuki Abe"
     }
 },
 {
@@ -2514,6 +4103,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 93107,
+    "fields": {
+        "name": "Masaaki Yuasa"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 93214,
     "fields": {
         "name": "Steven Quale"
@@ -2531,6 +4127,13 @@
     "pk": 93364,
     "fields": {
         "name": "Jeff Fowler"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 93406,
+    "fields": {
+        "name": "Elem Klimov"
     }
 },
 {
@@ -2556,9 +4159,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 94471,
+    "fields": {
+        "name": "Jon Gunn"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 95972,
+    "fields": {
+        "name": "Hans Petter Moland"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 96677,
     "fields": {
         "name": "Nora Twomey"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 97026,
+    "fields": {
+        "name": "John Luessenhop"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 97180,
+    "fields": {
+        "name": "Steve Loter"
     }
 },
 {
@@ -2598,6 +4229,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 102402,
+    "fields": {
+        "name": "Rick Jacobson"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 104025,
     "fields": {
         "name": "David M. Rosenthal"
@@ -2626,6 +4264,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 107274,
+    "fields": {
+        "name": "Richard Rich"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 107446,
+    "fields": {
+        "name": "Phil Lord"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 107658,
     "fields": {
         "name": "Lev L. Spiro"
@@ -2636,6 +4288,20 @@
     "pk": 108536,
     "fields": {
         "name": "Lee Hae-jun"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 109191,
+    "fields": {
+        "name": "Hiroyuki Imaishi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 111736,
+    "fields": {
+        "name": "Klay Hall"
     }
 },
 {
@@ -2703,6 +4369,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 118606,
+    "fields": {
+        "name": "Janus Metz"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 118639,
+    "fields": {
+        "name": "Tom Six"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 119293,
     "fields": {
         "name": "Tarik Saleh"
@@ -2717,9 +4397,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 119406,
+    "fields": {
+        "name": "Elliott Lester"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 119419,
+    "fields": {
+        "name": "Deon Taylor"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 120245,
     "fields": {
         "name": "Daniel Stamm"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 121471,
+    "fields": {
+        "name": "Gustavo Loza"
     }
 },
 {
@@ -2734,6 +4435,13 @@
     "pk": 122186,
     "fields": {
         "name": "Daisuke Nishio"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 123238,
+    "fields": {
+        "name": "Brian Skiba"
     }
 },
 {
@@ -2773,6 +4481,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 125637,
+    "fields": {
+        "name": "Brian Baugh"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 125738,
     "fields": {
         "name": "Daniel Espinosa"
@@ -2808,6 +4523,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 126932,
+    "fields": {
+        "name": "Elisabeth Röhm"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 127723,
+    "fields": {
+        "name": "Barbara Topsøe-Rothenborg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 128452,
+    "fields": {
+        "name": "Elisa Amoruso"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 128636,
     "fields": {
         "name": "Liam O'Donnell"
@@ -2825,6 +4561,20 @@
     "pk": 129718,
     "fields": {
         "name": "Shana Feste"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 129894,
+    "fields": {
+        "name": "Gareth Edwards"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 130938,
+    "fields": {
+        "name": "Sergei Bodrov"
     }
 },
 {
@@ -2850,6 +4600,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 132239,
+    "fields": {
+        "name": "Babak Najafi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 132360,
+    "fields": {
+        "name": "Wanuri Kahiu"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 132876,
     "fields": {
         "name": "Brad Peyton"
@@ -2857,9 +4621,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 133202,
+    "fields": {
+        "name": "Takanori Tsujimoto"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 133691,
+    "fields": {
+        "name": "Yoshihiro Fukagawa"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 135113,
+    "fields": {
+        "name": "André Øvredal"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 135651,
     "fields": {
         "name": "Michael B. Jordan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 136495,
+    "fields": {
+        "name": "Damien Chazelle"
     }
 },
 {
@@ -2878,6 +4670,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 137903,
+    "fields": {
+        "name": "Brian Smith"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 138781,
     "fields": {
         "name": "Robert Eggers"
@@ -2888,6 +4687,13 @@
     "pk": 139135,
     "fields": {
         "name": "Lena Dunham"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 139474,
+    "fields": {
+        "name": "Glen Keane"
     }
 },
 {
@@ -2948,6 +4754,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 144393,
+    "fields": {
+        "name": "Bill Kopp"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 144816,
     "fields": {
         "name": "Chris McKay"
@@ -2958,6 +4771,20 @@
     "pk": 145509,
     "fields": {
         "name": "Ozan Açıktan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 145750,
+    "fields": {
+        "name": "Toru Kamei"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 146439,
+    "fields": {
+        "name": "James Ward Byrkit"
     }
 },
 {
@@ -2990,9 +4817,44 @@
 },
 {
     "model": "movies.director",
+    "pk": 154705,
+    "fields": {
+        "name": "Chris Butler"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 154865,
+    "fields": {
+        "name": "Siân Heder"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 155267,
+    "fields": {
+        "name": "Christopher Miller"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 165787,
     "fields": {
         "name": "Rich Moore"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 170820,
+    "fields": {
+        "name": "Ben Falcone"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 172874,
+    "fields": {
+        "name": "Kirk Caouette"
     }
 },
 {
@@ -3025,6 +4887,34 @@
 },
 {
     "model": "movies.director",
+    "pk": 190103,
+    "fields": {
+        "name": "Alain Desrochers"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 197803,
+    "fields": {
+        "name": "Rob Greenberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 203808,
+    "fields": {
+        "name": "Kellie Madison"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 204553,
+    "fields": {
+        "name": "Ethan Spaulding"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 206574,
     "fields": {
         "name": "Mark Williams"
@@ -3039,9 +4929,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 208664,
+    "fields": {
+        "name": "Kay Cannon"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 210053,
     "fields": {
         "name": "Roberts Gannaway"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 210355,
+    "fields": {
+        "name": "Brea Grant"
     }
 },
 {
@@ -3053,9 +4957,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 212687,
+    "fields": {
+        "name": "Daniel Calparsoro"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 217174,
     "fields": {
         "name": "Paul Tibbitt"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 219961,
+    "fields": {
+        "name": "Kim Farrant"
     }
 },
 {
@@ -3095,6 +5013,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 224870,
+    "fields": {
+        "name": "Paco León"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 225571,
     "fields": {
         "name": "Konosuke Uda"
@@ -3123,6 +5048,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 228134,
+    "fields": {
+        "name": "Rupert Sanders"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 229359,
+    "fields": {
+        "name": "Toshikazu Nagae"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 229962,
     "fields": {
         "name": "Mike Thurmeier"
@@ -3133,6 +5072,34 @@
     "pk": 230217,
     "fields": {
         "name": "Adrián Caetano"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 230767,
+    "fields": {
+        "name": "Mehmet Ada Öztekin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 231084,
+    "fields": {
+        "name": "Chee Keong Cheung"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 232858,
+    "fields": {
+        "name": "Sarik Andreasyan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 234551,
+    "fields": {
+        "name": "Tony Kaplan"
     }
 },
 {
@@ -3186,9 +5153,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 429728,
+    "fields": {
+        "name": "Quinn Shephard"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 437833,
     "fields": {
         "name": "Patricia Riggen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 440763,
+    "fields": {
+        "name": "Greg Richardson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 447777,
+    "fields": {
+        "name": "Magnus Martens"
     }
 },
 {
@@ -3200,9 +5188,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 531105,
+    "fields": {
+        "name": "Demián Rugna"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 548646,
     "fields": {
         "name": "Jung Byung-gil"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 549310,
+    "fields": {
+        "name": "Justin Kurzel"
     }
 },
 {
@@ -3214,6 +5216,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 551463,
+    "fields": {
+        "name": "Mike Flanagan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 555094,
+    "fields": {
+        "name": "Akiyuki Simbo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 557383,
+    "fields": {
+        "name": "Marc Meyers"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 557736,
     "fields": {
         "name": "Park Hoon-jung"
@@ -3221,9 +5244,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 558929,
+    "fields": {
+        "name": "David Robert Mitchell"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 561061,
+    "fields": {
+        "name": "Neil Nightingale"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 562730,
     "fields": {
         "name": "Danila Kozlovsky"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 566109,
+    "fields": {
+        "name": "Jan Komasa"
     }
 },
 {
@@ -3284,6 +5328,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 577473,
+    "fields": {
+        "name": "Lee Kae-byeok"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 582827,
     "fields": {
         "name": "RJ Collins"
@@ -3301,6 +5352,20 @@
     "pk": 589402,
     "fields": {
         "name": "Adrian Grünberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 922344,
+    "fields": {
+        "name": "Kitao Sakurai"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 928490,
+    "fields": {
+        "name": "Camille Delamarre"
     }
 },
 {
@@ -3333,6 +5398,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 932248,
+    "fields": {
+        "name": "Fede Álvarez"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 932317,
     "fields": {
         "name": "Małgorzata Szumowska"
@@ -3347,9 +5419,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 932759,
+    "fields": {
+        "name": "Brett Haley"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 933176,
     "fields": {
         "name": "Damien Leone"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 933276,
+    "fields": {
+        "name": "Emma Cooper"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 933735,
+    "fields": {
+        "name": "Roberto Santucci"
     }
 },
 {
@@ -3375,9 +5468,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 937340,
+    "fields": {
+        "name": "Harold Cronk"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 937713,
     "fields": {
         "name": "Mo Hong-jin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 937788,
+    "fields": {
+        "name": "Adrian Langley"
     }
 },
 {
@@ -3396,6 +5503,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 991868,
+    "fields": {
+        "name": "Ari Sandel"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 995521,
     "fields": {
         "name": "Kristina Buozyte"
@@ -3410,6 +5524,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 1002647,
+    "fields": {
+        "name": "Cédric Jimenez"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1003245,
+    "fields": {
+        "name": "Donovan Marsh"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1021765,
+    "fields": {
+        "name": "Jorge Olguín"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1025684,
     "fields": {
         "name": "Douglas Attal"
@@ -3417,9 +5552,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 1032011,
+    "fields": {
+        "name": "Afonso Poyart"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1032536,
     "fields": {
         "name": "Robert Stromberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1033661,
+    "fields": {
+        "name": "Travis Knight"
     }
 },
 {
@@ -3438,6 +5587,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1040707,
+    "fields": {
+        "name": "Sid Bennett"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1040955,
+    "fields": {
+        "name": "Valeri Milev"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1042761,
     "fields": {
         "name": "Fran Torres"
@@ -3448,6 +5611,13 @@
     "pk": 1046225,
     "fields": {
         "name": "Rodo Sayagues"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1046494,
+    "fields": {
+        "name": "Kris Pearn"
     }
 },
 {
@@ -3473,6 +5643,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1051305,
+    "fields": {
+        "name": "Oriol Paulo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1053420,
+    "fields": {
+        "name": "Josh Boone"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1056121,
     "fields": {
         "name": "Ryan Coogler"
@@ -3487,9 +5671,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 1057579,
+    "fields": {
+        "name": "Tatsuya Nagamine"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1059129,
     "fields": {
         "name": "Han Jae-rim"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1059578,
+    "fields": {
+        "name": "Jeymes Samuel"
     }
 },
 {
@@ -3511,6 +5709,13 @@
     "pk": 1065384,
     "fields": {
         "name": "Asif Akbar"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1066705,
+    "fields": {
+        "name": "Vince Marcello"
     }
 },
 {
@@ -3592,6 +5797,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1086497,
+    "fields": {
+        "name": "Jo Sung-hee"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1087746,
     "fields": {
         "name": "Niki Lindroth von Bahr"
@@ -3602,6 +5814,13 @@
     "pk": 1088096,
     "fields": {
         "name": "James Nunn"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1089653,
+    "fields": {
+        "name": "Bethany Ashton Wolf"
     }
 },
 {
@@ -3620,9 +5839,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1098783,
+    "fields": {
+        "name": "Tom Hammock"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1099862,
     "fields": {
         "name": "Dean Israelite"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1100748,
+    "fields": {
+        "name": "Frant Gwo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1101410,
+    "fields": {
+        "name": "Dave Green"
     }
 },
 {
@@ -3662,6 +5902,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1116780,
+    "fields": {
+        "name": "José Luis Ucha"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1120694,
     "fields": {
         "name": "Jennifer Lee"
@@ -3697,6 +5944,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1138129,
+    "fields": {
+        "name": "Filip Zylber"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1140790,
+    "fields": {
+        "name": "Choi Jin-sung"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1140975,
     "fields": {
         "name": "Ascanio Malgarini"
@@ -3707,6 +5968,13 @@
     "pk": 1141683,
     "fields": {
         "name": "Theodore Melfi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1141883,
+    "fields": {
+        "name": "R.D. Braunstein"
     }
 },
 {
@@ -3732,9 +6000,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1145368,
+    "fields": {
+        "name": "Souichi Masui"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1145520,
+    "fields": {
+        "name": "Ari Aster"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1148353,
     "fields": {
         "name": "Tetsuro Araki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1149583,
+    "fields": {
+        "name": "B. J. McDonnell"
     }
 },
 {
@@ -3781,9 +6070,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1173102,
+    "fields": {
+        "name": "Garth Davis"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1179066,
     "fields": {
         "name": "Wes Ball"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1179419,
+    "fields": {
+        "name": "Matt Duffer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1179422,
+    "fields": {
+        "name": "Ross Duffer"
     }
 },
 {
@@ -3830,6 +6140,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1191828,
+    "fields": {
+        "name": "Francisco Ruiz Velasco"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1192152,
     "fields": {
         "name": "Tomasz Mandes"
@@ -3844,6 +6161,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1198724,
+    "fields": {
+        "name": "Riley Stearns"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1208584,
     "fields": {
         "name": "Tommy Faircloth"
@@ -3851,9 +6175,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1209832,
+    "fields": {
+        "name": "Renaud Gauthier"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1211000,
     "fields": {
         "name": "Tom Gormican"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1211636,
+    "fields": {
+        "name": "James Cullen Bressack"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1212755,
+    "fields": {
+        "name": "Gail Mancuso"
     }
 },
 {
@@ -3875,6 +6220,27 @@
     "pk": 1214641,
     "fields": {
         "name": "Millicent Shelton"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1215399,
+    "fields": {
+        "name": "Taylor Sheridan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1215646,
+    "fields": {
+        "name": "Matt Thompson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1216147,
+    "fields": {
+        "name": "Anthony Hemingway"
     }
 },
 {
@@ -3914,6 +6280,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1223658,
+    "fields": {
+        "name": "Raymond S. Persi"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1224778,
     "fields": {
         "name": "Monika Mitchell"
@@ -3928,9 +6301,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 1230593,
+    "fields": {
+        "name": "Loren Bouchard"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1231927,
+    "fields": {
+        "name": "Colm McCarthy"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1234311,
     "fields": {
         "name": "Mitch Schauer"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1236679,
+    "fields": {
+        "name": "Jonathan M. Goldstein"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1236788,
+    "fields": {
+        "name": "Gail Lerner"
     }
 },
 {
@@ -3949,6 +6350,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 1244720,
+    "fields": {
+        "name": "Katsushi Sakurabi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1245730,
+    "fields": {
+        "name": "Thurop Van Orman"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1245934,
+    "fields": {
+        "name": "Mark Gustafson"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1247470,
     "fields": {
         "name": "Shin Oonuma"
@@ -3959,6 +6381,20 @@
     "pk": 1250035,
     "fields": {
         "name": "Takayuki Hamana"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1251913,
+    "fields": {
+        "name": "Craig David Wallace"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1257117,
+    "fields": {
+        "name": "Mari Okada"
     }
 },
 {
@@ -3977,6 +6413,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1262867,
+    "fields": {
+        "name": "Babak Anvari"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1264876,
     "fields": {
         "name": "Lê Văn Kiệt"
@@ -3987,6 +6430,27 @@
     "pk": 1265056,
     "fields": {
         "name": "Jorge R. Gutierrez"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1265060,
+    "fields": {
+        "name": "Dave Rosenbaum"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1274468,
+    "fields": {
+        "name": "Lukas Dhont"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1281387,
+    "fields": {
+        "name": "Clay Kaytis"
     }
 },
 {
@@ -4015,6 +6479,13 @@
     "pk": 1284691,
     "fields": {
         "name": "Yoshihiro Ueda"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1286519,
+    "fields": {
+        "name": "Mark Raso"
     }
 },
 {
@@ -4061,6 +6532,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1296524,
+    "fields": {
+        "name": "Stuart McDonald"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1299380,
     "fields": {
         "name": "Nima Nourizadeh"
@@ -4078,6 +6556,13 @@
     "pk": 1302082,
     "fields": {
         "name": "David F. Sandberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1306608,
+    "fields": {
+        "name": "Adam Robitel"
     }
 },
 {
@@ -4110,6 +6595,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1311031,
+    "fields": {
+        "name": "Svyatoslav Podgaevsky"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1311591,
+    "fields": {
+        "name": "Ryuichi Yagi"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1317685,
     "fields": {
         "name": "Scott Beck"
@@ -4134,6 +6633,13 @@
     "pk": 1318201,
     "fields": {
         "name": "Jared Bush"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1318471,
+    "fields": {
+        "name": "Ferdinando Cito Filomarino"
     }
 },
 {
@@ -4166,6 +6672,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1331465,
+    "fields": {
+        "name": "Andrew Hyatt"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1336980,
     "fields": {
         "name": "Mike Hostench"
@@ -4187,6 +6700,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1362698,
+    "fields": {
+        "name": "Tomohiko Ito"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1362815,
     "fields": {
         "name": "David Yarovesky"
@@ -4194,9 +6714,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 1363098,
+    "fields": {
+        "name": "Alejandra Márquez Abella"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1373229,
+    "fields": {
+        "name": "Tomohisa Taguchi"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1374429,
     "fields": {
         "name": "Wes Miller"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1376224,
+    "fields": {
+        "name": "Santiago Menghini"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1381495,
+    "fields": {
+        "name": "Iris K. Shim"
     }
 },
 {
@@ -4285,6 +6833,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1410007,
+    "fields": {
+        "name": "Skye Borgman"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1413740,
     "fields": {
         "name": "Aleksander Bach"
@@ -4292,9 +6847,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 1415665,
+    "fields": {
+        "name": "Reinaldo Marcus Green"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1416379,
     "fields": {
         "name": "Jayro Bustamante"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1419579,
+    "fields": {
+        "name": "Christian Rivers"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1422671,
+    "fields": {
+        "name": "Hèctor Hernández Vicens"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1435027,
+    "fields": {
+        "name": "George J. Bennett"
     }
 },
 {
@@ -4316,6 +6899,13 @@
     "pk": 1443386,
     "fields": {
         "name": "Brian Fee"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1445916,
+    "fields": {
+        "name": "Robert Jabbaz"
     }
 },
 {
@@ -4362,9 +6952,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1454884,
+    "fields": {
+        "name": "Cedric Nicolas-Troyan"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1458106,
+    "fields": {
+        "name": "Pietro Loprieno"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1462081,
     "fields": {
         "name": "Declan Whitebloom"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1464049,
+    "fields": {
+        "name": "Michael Mullen"
     }
 },
 {
@@ -4383,6 +6994,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1490566,
+    "fields": {
+        "name": "Tian Xiao Peng"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1491592,
     "fields": {
         "name": "Daniel Chong"
@@ -4397,6 +7015,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1495470,
+    "fields": {
+        "name": "Roman Perez Jr."
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1498113,
     "fields": {
         "name": "Ayako Kono"
@@ -4404,9 +7029,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 1501227,
+    "fields": {
+        "name": "Michał Rogalski"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1507476,
+    "fields": {
+        "name": "David Gidali"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1511274,
     "fields": {
         "name": "Kim Tae-Soo"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1512798,
+    "fields": {
+        "name": "Jamie Christopher"
     }
 },
 {
@@ -4439,6 +7085,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1539858,
+    "fields": {
+        "name": "Dominic Cooke"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1548846,
     "fields": {
         "name": "Alexandre Avancini"
@@ -4460,6 +7113,34 @@
 },
 {
     "model": "movies.director",
+    "pk": 1554277,
+    "fields": {
+        "name": "Andrew Ahn"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1554996,
+    "fields": {
+        "name": "Mark Fattibene"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1555604,
+    "fields": {
+        "name": "Kim Jin-sung"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1556959,
+    "fields": {
+        "name": "Sam Wrench"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1557607,
     "fields": {
         "name": "Agnieszka Smoczyńska"
@@ -4477,6 +7158,13 @@
     "pk": 1565301,
     "fields": {
         "name": "Thomas Astruc"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1577606,
+    "fields": {
+        "name": "Türkan Derya"
     }
 },
 {
@@ -4544,6 +7232,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1630357,
+    "fields": {
+        "name": "Lee Yong-ju"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1637776,
+    "fields": {
+        "name": "Matt Peters"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1652349,
     "fields": {
         "name": "Luke Armstrong"
@@ -4558,6 +7260,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1661032,
+    "fields": {
+        "name": "Haruka Fujita"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1661695,
     "fields": {
         "name": "Damien Power"
@@ -4568,6 +7277,20 @@
     "pk": 1664196,
     "fields": {
         "name": "Chiaki Kon"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1665497,
+    "fields": {
+        "name": "Zhao Ji"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1667260,
+    "fields": {
+        "name": "Adam Randall"
     }
 },
 {
@@ -4593,6 +7316,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 1679853,
+    "fields": {
+        "name": "Fernando González Gómez"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1681678,
+    "fields": {
+        "name": "Choi Sang-hoon"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1685734,
     "fields": {
         "name": "Berkun Oya"
@@ -4610,6 +7347,20 @@
     "pk": 1698684,
     "fields": {
         "name": "Scott Jeffrey"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1698778,
+    "fields": {
+        "name": "Michael Pearce"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1702039,
+    "fields": {
+        "name": "Choi Woo-seong"
     }
 },
 {
@@ -4635,9 +7386,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 1715773,
+    "fields": {
+        "name": "Namimi Sanjo"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1719706,
     "fields": {
         "name": "Aaron Horvath"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1720838,
+    "fields": {
+        "name": "Park Hee-kon"
     }
 },
 {
@@ -4684,6 +7449,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 1762584,
+    "fields": {
+        "name": "Jeremy Zag"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1773871,
+    "fields": {
+        "name": "Dave Wilson"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1795072,
+    "fields": {
+        "name": "Nia DaCosta"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1808592,
     "fields": {
         "name": "James Clayton"
@@ -4691,9 +7477,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 1809758,
+    "fields": {
+        "name": "Will Wernick"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1814510,
     "fields": {
         "name": "Tom George"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1815481,
+    "fields": {
+        "name": "Bernard Derriman"
     }
 },
 {
@@ -4719,6 +7519,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 1835944,
+    "fields": {
+        "name": "Eamonn Butler"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1844423,
     "fields": {
         "name": "Goran Stolevski"
@@ -4726,9 +7533,51 @@
 },
 {
     "model": "movies.director",
+    "pk": 1869796,
+    "fields": {
+        "name": "Tatsuma Minamikawa"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1891091,
+    "fields": {
+        "name": "Johane Matte"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1904110,
+    "fields": {
+        "name": "Charlotte Wells"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1905014,
+    "fields": {
+        "name": "Robert Cullen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1907723,
+    "fields": {
+        "name": "Lee Do-si"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1908510,
     "fields": {
         "name": "No Hyun-jin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1910480,
+    "fields": {
+        "name": "Lee Won-tae"
     }
 },
 {
@@ -4768,9 +7617,58 @@
 },
 {
     "model": "movies.director",
+    "pk": 1938744,
+    "fields": {
+        "name": "Shinichiro Ushijima"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 1947876,
     "fields": {
         "name": "Tetsuo Yajima"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1955394,
+    "fields": {
+        "name": "Tim Travers Hawkins"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1962443,
+    "fields": {
+        "name": "Juergen Peretzki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1962444,
+    "fields": {
+        "name": "Stacey Peretzki"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1967383,
+    "fields": {
+        "name": "Bob Bowen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1969948,
+    "fields": {
+        "name": "Chae Gil-byeong"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 1972912,
+    "fields": {
+        "name": "Michael Mason"
     }
 },
 {
@@ -4817,9 +7715,23 @@
 },
 {
     "model": "movies.director",
-    "pk": 2023979,
+    "pk": 2025698,
     "fields": {
-        "name": "EROPING"
+        "name": "Bruce Macdonald"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2036264,
+    "fields": {
+        "name": "Don Paul"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2042738,
+    "fields": {
+        "name": "Park Jun-soo"
     }
 },
 {
@@ -4848,6 +7760,20 @@
     "pk": 2093022,
     "fields": {
         "name": "Jennifer Kluska"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2114371,
+    "fields": {
+        "name": "Alexandre Moratto"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2119504,
+    "fields": {
+        "name": "Andrew Baird"
     }
 },
 {
@@ -4894,9 +7820,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 2217620,
+    "fields": {
+        "name": "Amp Wong"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2218465,
     "fields": {
         "name": "Parker Finn"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2259647,
+    "fields": {
+        "name": "Mandlakayise Walter Dube, Jr."
     }
 },
 {
@@ -4918,6 +7858,34 @@
     "pk": 2320943,
     "fields": {
         "name": "Tsuneo Kobayashi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2335448,
+    "fields": {
+        "name": "Natalie Nourigat"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2336699,
+    "fields": {
+        "name": "Zhang Zhulin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2359485,
+    "fields": {
+        "name": "Cho Il"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2374023,
+    "fields": {
+        "name": "Galder Gaztelu-Urrutia"
     }
 },
 {
@@ -4957,9 +7925,23 @@
 },
 {
     "model": "movies.director",
+    "pk": 2404074,
+    "fields": {
+        "name": "Kwon Oh-seung"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2410737,
     "fields": {
         "name": "Sophia Banks"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2423925,
+    "fields": {
+        "name": "Jo Ba-reun"
     }
 },
 {
@@ -4985,6 +7967,13 @@
 },
 {
     "model": "movies.director",
+    "pk": 2446649,
+    "fields": {
+        "name": "Andy Mitchell"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2450843,
     "fields": {
         "name": "Gareth Crocker"
@@ -4999,6 +7988,27 @@
 },
 {
     "model": "movies.director",
+    "pk": 2455571,
+    "fields": {
+        "name": "Karl Holt"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2465196,
+    "fields": {
+        "name": "Yoshinobu Sena"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2473962,
+    "fields": {
+        "name": "Jo Tae-ho"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2542498,
     "fields": {
         "name": "Aakash Bhatia"
@@ -5009,6 +8019,27 @@
     "pk": 2549422,
     "fields": {
         "name": "Julien Fournet"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2564771,
+    "fields": {
+        "name": "Hikaru Yamaguchi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2579481,
+    "fields": {
+        "name": "Christina Sotta"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2596472,
+    "fields": {
+        "name": "Raúl Cerezo"
     }
 },
 {
@@ -5041,9 +8072,30 @@
 },
 {
     "model": "movies.director",
+    "pk": 2646243,
+    "fields": {
+        "name": "Kim Jin-woo-II"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2669990,
     "fields": {
         "name": "Viktor Glukhushin"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2691195,
+    "fields": {
+        "name": "Ahn Byoung-wook"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2702890,
+    "fields": {
+        "name": "Leah Artwick"
     }
 },
 {
@@ -5055,9 +8107,37 @@
 },
 {
     "model": "movies.director",
+    "pk": 2710465,
+    "fields": {
+        "name": "Li Xijie"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 2725552,
     "fields": {
         "name": "Jesse Harris"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2741073,
+    "fields": {
+        "name": "Ken Cunningham"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2749934,
+    "fields": {
+        "name": "Michael Lewen"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2765298,
+    "fields": {
+        "name": "Talia Osteen"
     }
 },
 {
@@ -5072,6 +8152,20 @@
     "pk": 2886717,
     "fields": {
         "name": "Kazuto Arai"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 2934273,
+    "fields": {
+        "name": "Steve Cox"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3031994,
+    "fields": {
+        "name": "Cassi Simonds"
     }
 },
 {
@@ -5097,6 +8191,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 3111522,
+    "fields": {
+        "name": "Eddie Sternberg"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3158582,
+    "fields": {
+        "name": "Scott Pleydell-Pearce"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 3183304,
     "fields": {
         "name": "Serik Beyseu"
@@ -5118,6 +8226,20 @@
 },
 {
     "model": "movies.director",
+    "pk": 3276587,
+    "fields": {
+        "name": "Zhao Renqi"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3326242,
+    "fields": {
+        "name": "Fletcher Moules"
+    }
+},
+{
+    "model": "movies.director",
     "pk": 3505167,
     "fields": {
         "name": "Rosalind Ross"
@@ -5135,6 +8257,13 @@
     "pk": 3744992,
     "fields": {
         "name": "Fabian Medea"
+    }
+},
+{
+    "model": "movies.director",
+    "pk": 3787961,
+    "fields": {
+        "name": "Eric Elrod"
     }
 }
 ]
