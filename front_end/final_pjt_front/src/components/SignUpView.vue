@@ -1,7 +1,7 @@
 <template>
 
   <form @submit.prevent="signUp">
-    <label for="username">Username </label>
+    <label for="username">Name </label>
     <input type="text" id="username" v-model="username" class="userInput">  <br>
 
     <label for="password1">Password </label>
@@ -10,7 +10,7 @@
     <label for="password2">Password confirmation </label>  
     <input type="password" id="password2" v-model="password2" class="userInput">  <br>
 
-    <input type="submit" value="Sign Up" class="signup-btn" >
+    <input type="submit" value="Signup" class="signup-btn" >
   </form>
 
 </template>
@@ -71,7 +71,7 @@ label{
 #password{
   padding: 10px;
   width: 100%;
-  border-bottom: 1px solid #c3ddecd0;
+  border-bottom: 1px solid #e4d790;
 }
 .signup-btn,
 .login-btn{
@@ -83,9 +83,8 @@ label{
   color: #353A40;
   width: 80px;
   height: 40px;
-  background-color: #C3DDEC;
+  background-color: #e4d790;
   border-radius: 10px;
-  box-shadow: 0 0 3px 3px #35383a;
   transition: transform 0.1s;
 }
 .login-btn{
@@ -98,7 +97,7 @@ label{
 }
 .signup-btn:active,
 .login-btn:active {
-  background-color: #e0d598;
+  background-color: #e4d790;
   box-shadow: 0 5px rgb(97, 97, 97)83a;
   transform: translateY(4px);
 }

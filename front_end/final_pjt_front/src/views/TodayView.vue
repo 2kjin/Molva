@@ -2,12 +2,13 @@
   <!-- - npm install -D pug-plain-loader pug
   - npm install sass-loader sass webpack --save-dev
   - npm i lodash -->
-  <div>
+  <div style="padding:auto; margin:auto;">
     <br>
-    <TodayMovieNetflix/><hr>
+    <br>
+    <TodayMovieNetflix /><hr>
     <TodayMovieDisney/><hr>
     <TodayMovieWatcha/><hr>
-    <TodayMovieWavve/><hr>
+    <TodayMovieWavve/>
 
   </div>
 </template>

@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h4>wavve Top 10</h4>
+    <h4 style="margin: 2% 0px;">Wavve Top 10</h4>
     <TodayMovieWavveItem
       :ott-movie="ottData"
+      style="margin: 3% 0px;"
     />
   </div>
 </template>

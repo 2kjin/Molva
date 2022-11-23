@@ -5,6 +5,8 @@ import createPersistedState from "vuex-persistedstate"
 import router from '@/router'
 
 const API_URL = "http://127.0.0.1:8000"
+const YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
+const YOUTUBE_KEY = process.env.VUE_APP_YOUTUBE_API
 
 Vue.use(Vuex)
 
@@ -19,6 +21,8 @@ export default new Vuex.Store({
     loading: true,
     ott_movies: null,
     genre_movies: null,
+    reviews:null,
+    youtubeVideos: [],
   },
   getters: {
     isLogin(state) {
@@ -42,6 +46,9 @@ export default new Vuex.Store({
     },
     GET_DETAIL(state, payload) {
       state.movie = payload
+    },
+    GET_REVIEWS(state, payload) {
+      state.reviews = payload
     },
     GET_OTT_MOVIE(state, ott_movies) {
       state.ott_movies = ott_movies
@@ -147,6 +154,19 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    // GET REVIEWS
+    getReviews(context, movieId){
+      axios({
+        method:'get',
+        url: `${API_URL}/movies/${movieId}/reviews/`,
+      })
+        .then((res)=>{
+          context.commit('GET_REVIEWS', res.data)
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+    },
     // GET OTT MOVIE
     getOttMovie(context, ottId){
       axios({
@@ -174,7 +194,26 @@ export default new Vuex.Store({
           router.push('/404-not-found')
           console.log(err)
         })
-    }
+    },
+    // Search Youtube
+    searchYoutube: function ({ commit }, searchText) {
+      const params = {
+        q: searchText+'movie',
+        key: YOUTUBE_KEY,
+        part: 'snippet',
+        type: 'video'
+      }
+      axios({
+        method: 'get',
+        url: YOUTUBE_URL,
+        params,
+      })
+      .then(res => {
+        // console.log(res.data.items)
+        commit('SEARCH_YOUTUBE', res)
+      })
+      .catch(err => console.log(err))
+    },
   },
   modules: {},
 })

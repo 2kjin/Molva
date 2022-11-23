@@ -1,12 +1,12 @@
 <template>
   <div id="modal-content" >
-    <div class="modal-content-half" ></div>
+    <div class="modal-content-half"></div>
     <div id="forms">
       <div id="buttons">
         <span :class="{is_selected:loginViewed}"
-        @click="isClicked('login')">Login</span>
+        @click="isClicked('login')">LOGIN</span>
         <span :class="{is_selected:signupViewed}"
-        @click="isClicked('signup')">Signup</span>
+        @click="isClicked('signup')">SIGNUP</span>
       </div>
       <signup-view 
         v-if="signupViewed"/>
@@ -56,7 +56,7 @@ a{
   margin: 0;
   width: 50%;
   min-height: 500px;
-  background-color:#e0d598;
+  background-image: url("@/assets/odeung2.png");
   border-radius: 10px 0 0 10px;;
 }
 #buttons{
@@ -77,7 +77,7 @@ a{
   transform: scale(1.2)
 }
 .is_selected{
-  border-bottom: 1px solid #e0d598;
+  border-bottom: 1px solid #e4d790;
 }
 #forms{
   max-width: 50%;

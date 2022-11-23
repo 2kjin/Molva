@@ -65,11 +65,11 @@ textarea::-webkit-scrollbar-corner{
   display:none;
 }
 textarea::-webkit-scrollbar-thumb {
-  background-color:#e0d598;
+  background-color:#e4d790;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
-  box-shadow: inset 0 0 2px #c3ddecc5;
+  box-shadow: inset 0 0 2px #e4d790;
 }
 .star {
     position: relative;
@@ -97,7 +97,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 .review-btn,
 .form-btn{
-  border: 1px solid #F8F9FA; 
+  border: 1px solid #e4d790; 
   transition: transform 0.3;
   border-radius: 10px; 
 }

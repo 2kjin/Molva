@@ -1,13 +1,13 @@
 <template>
   <div>
-    <h1>MyProfile</h1>
+    <h1>Profile</h1>
   </div>
 </template>
 <script>
 // @ is an alias to /src
 
 export default {
-  name: 'MyProfile',
+  name: 'ProfileView',
   components: {
     
   }

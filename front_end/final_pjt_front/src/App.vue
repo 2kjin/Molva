@@ -8,7 +8,7 @@
         <v-tab><router-link :to="{name:'today'}" style="text-decoration: none; color:#e0d598 ">TODAY?</router-link></v-tab>
         <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
         <!-- <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
-        <v-tab><router-link :to="{name:'MyProfile'}" style="text-decoration: none; color:#e0d598">MY PROFILE</router-link></v-tab>
+        <v-tab><router-link :to="{name:'profile'}" style="text-decoration: none; color:#e0d598">PROFILE</router-link></v-tab>
         <!-- 토큰 여부에 따라 login / logout 버튼 교체 -->
         <div id="logout" v-if="this.$store.state.token"
           @click="logOut"
@@ -92,7 +92,7 @@ div.v-tabs{
 }
 div.v-slide-group__wrapper{
   background-color: #23262b;
-  color:#e0d598;
+  color:#e4d790;
 }
 div.v-tab{
   margin-left: 5px;
@@ -113,7 +113,7 @@ div.v-slide-group__content{
   color: #353A40;
   width: 100px;
   height: 40px;
-  background-color: #e0d598;
+  background-color: #e4d790;
   border-radius: 10px;
   margin-right: 20px;
   box-shadow: 0 0 3px 3px #35383a;
@@ -126,7 +126,7 @@ div.v-slide-group__content{
 }
 #logout:active,
 #login:active {
-  background-color: #e0d598;
+  background-color: #e4d790;
   box-shadow: 0 5px rgb(97, 97, 97)83a;
   transform: translateY(4px);
 }

@@ -45,7 +45,6 @@ div.carousel-3d-container {
   overflow: visible;
 }
 div.carousel-3d-slide{
-  background-color:#F8F9FA;
   border-radius: 10px;
   border:none;
   transition: transform .5s;

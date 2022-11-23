@@ -5,7 +5,7 @@ import HomeView from '@/views/HomeView'
 import MovieView from '@/views/MovieView'
 import TodayView from '@/views/TodayView'
 import DetailView from '@/views/DetailView'
-import MyProfile from '@/views/MyProfile'
+import ProfileView from '@/views/ProfileView'
 import SearchView from '@/views/SearchView'
 import NotFound404 from '@/views/NotFound404'
 
@@ -50,9 +50,9 @@ const routes = [
   },
   {
     // username dynamic params => /:str
-    path: '/myprofile',
-    name: 'MyProfile',
-    component: MyProfile,
+    path: '/profile',
+    name: 'profile',
+    component: ProfileView,
   },
   {
     path: '*',

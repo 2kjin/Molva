@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h4>Watcha Top 10</h4>
+    <h4 style="margin: 2% 0px;">Watcha Top 10</h4>
     <TodayMovieWatchaItem
       :ott-movie="ottData"
+      style="margin: 3% 0px;"
     />
   </div>
 </template>

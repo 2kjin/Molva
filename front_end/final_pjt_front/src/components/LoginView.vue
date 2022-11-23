@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="login">
-    <label for="username">Username </label>
+    <label for="username">Name </label>
     <input type="text" id="username" v-model="username" class="userInput">  <br>
 
     <label for="password">Password </label>

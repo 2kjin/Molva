@@ -36,7 +36,7 @@ export default {
   position: relative;
   min-width: 800px;
   margin: 100px 25vw;
-  background-color: #23262b;
+  background-color: #8b8b8b;
   z-index:10;
   /* opacity: 3; */
 }

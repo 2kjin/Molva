@@ -3,8 +3,7 @@
     <!-- <img :src="imgSrc"> -->
     <img :src="imgSrc" @click="goDetail(movie?.movie_id)">
       <div id="carouselContent">
-        <!-- <h6 style="font-weight:bold">{{movie.title}}</h6> -->
-        <v-rating
+        <!-- <v-rating
         class="rating"
         background-color="amber"
         :value="movie.vote_average / 2"
@@ -14,13 +13,7 @@
         readonly
         size="18"
         style="margin: 3px 0"
-      ></v-rating>
-        <!-- <hr>
-        <p>Genre | {{ movie?.genres[0]["name"] }}</p>
-        <p>Release Date | {{movie?.release_date}}</p>
-        <p>Vote Count | {{movie?.vote_count}}</p>
-        <button @click="goDetail(movie?.movie_id)">MORE</button>
-        <hr> -->
+      ></v-rating> -->
     </div>
     
   </div>
@@ -49,7 +42,6 @@ export default {
 
 #carouselItem{
   display: flex;
-  color: #353A40;
 }
 
 img{
@@ -59,43 +51,10 @@ img{
   align-items: center;
 }
 
-
-#carouselContent{
-  width: 49%;
-  padding: 15px;
-}
-
-#carouselContent p{
-  font-size: 12px;
-  margin: 3px 0;
-}
-
-#carouselContent h6{
-  margin: 0;
-  margin-left: 3px;
-}
-
 /* more button */
-button{
-  margin: 12px 40px;
-  padding: 2px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 11px;
-  color: #353A40;
-  width: 60px;
-  height: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 0.5px 0.5px #e4d36d;
-  transition: transform 0.3s;
-}
-
-button:hover{
+/* button:hover{
   cursor: pointer;
   transform: scale(1.4);
-}
+} */
 
-hr{
-  margin: 0;
-}
 </style>

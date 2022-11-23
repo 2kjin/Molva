@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h4>Disney Plus Top 10</h4>
+    <h4 style="margin: 2% 0px;" >Disney Plus Top 10</h4>
     <TodayMovieDisneyItem
       :ott-movie="ottData"
+      style="margin: 3% 0px;"
     />
   </div>
 </template>
