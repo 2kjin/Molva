@@ -3,13 +3,14 @@ from . import views
 
 app_name = 'movies'
 urlpatterns = [
-    path('get_data/', views.create_json),
     path('', views.movie_list),
-    path('<int:movie_id>/', views.movie_detail),
+    path('get_data/', views.create_json),
     path('<int:movie_id>/like', views.like),
+    path('<int:movie_id>/', views.movie_detail),
     path('<int:movie_id>/reviews/', views.review_list),
     path('<int:movie_id>/reviews/', views.review_create),
     path('reviews/<int:review_pk>/', views.review_detail),
+    path('create_genre_list/<int:genre_pk>/', views.genre_list),
     path('create_ott_list/<int:ott_pk>/', views.create_ott_list),
 ]
 

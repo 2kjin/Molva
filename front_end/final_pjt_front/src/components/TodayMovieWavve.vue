@@ -1,29 +1,30 @@
 <template>
   <div>
-    <h4> Wavve Top 10</h4>
-    <div v-for="(movie,key) in ottMovie" :key="key">
-      {{ movie.title }}
-    </div>
-    <!-- {{ ottMovie }} -->
+    <h4>wavve Top 10</h4>
+    <TodayMovieWavveItem
+      :ott-movie="ottData"
+    />
   </div>
 </template>
 
 <script>
+import TodayMovieWavveItem from "@/components/TodayMovieWavveItem"
 export default {
   name: 'TodayMovieWavve',
+  components: {
+    TodayMovieWavveItem,
+  },
   methods: {
     getOttMovie() {
-      this.$store.dispatch('getOttMovie', '356')
-    },
+      this.$store.dispatch('getOttMovie', 356)
+    }
   },
   created() {
     this.getOttMovie()
   },
-  computed: {
-    ottMovie(){
-      const check = this.$store.state.ott_movies
-      console.log(check)
-      return check
+  computed:{
+    ottData() {
+      return this.$store.state.ott_movies
     }
   }
 }

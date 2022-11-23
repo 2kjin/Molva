@@ -18,6 +18,7 @@ export default new Vuex.Store({
     movie: null,
     loading: true,
     ott_movies: null,
+    genre_movies: null,
   },
   getters: {
     isLogin(state) {
@@ -44,6 +45,9 @@ export default new Vuex.Store({
     },
     GET_OTT_MOVIE(state, ott_movies) {
       state.ott_movies = ott_movies
+    },
+    GET_GENRE_MOVIE(state, genre_movies) {
+      state.genre_movies = genre_movies
     }
   },
   actions: {
@@ -151,6 +155,20 @@ export default new Vuex.Store({
       })
         .then((res) => {
           context.commit("GET_OTT_MOVIE", res.data)
+        })
+        .catch((err)=>{
+          router.push('/404-not-found')
+          console.log(err)
+        })
+    },
+    // GET GENRE MOVIE
+    getgenreMovie(context, genreId){
+      axios({
+        method: "get",
+        url: `${API_URL}/movies/create_genre_list/${genreId}/`,
+      })
+        .then((res) => {
+          context.commit("GET_GENRE_MOVIE", res.data)
         })
         .catch((err)=>{
           router.push('/404-not-found')

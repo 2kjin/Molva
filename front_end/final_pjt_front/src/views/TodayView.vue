@@ -1,18 +1,21 @@
 <template>
+  <!-- - npm install -D pug-plain-loader pug
+  - npm install sass-loader sass webpack --save-dev
+  - npm i lodash -->
   <div>
     <br>
-    <TodayMovieNetflix/>
-    <TodayMovieDisney/>
-    <TodayMovieWatcha/>
-    <TodayMovieWavve/>
+    <TodayMovieNetflix/><hr>
+    <TodayMovieDisney/><hr>
+    <TodayMovieWatcha/><hr>
+    <TodayMovieWavve/><hr>
 
   </div>
 </template>
 
 <script>
-import TodayMovieNetflix from "@/components/TodayMovieNetflix.vue"
-import TodayMovieDisney from "@/components/TodayMovieDisney.vue"
-import TodayMovieWatcha from "@/components/TodayMovieWatcha.vue"
+import TodayMovieNetflix from "@/components/TodayMovieNetflix"
+import TodayMovieDisney from "@/components/TodayMovieDisney"
+import TodayMovieWatcha from "@/components/TodayMovieWatcha"
 import TodayMovieWavve from "@/components/TodayMovieWavve.vue"
 
 export default {

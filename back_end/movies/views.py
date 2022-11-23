@@ -128,12 +128,18 @@ def create_json(request):
     return HttpResponse()
 
 @api_view(['GET'])
+def genre_list(request, genre_pk):
+    genre = get_object_or_404(Genre, pk = genre_pk)
+    genre_movie = genre.movie_genre.all()
+    serializer = MovieListSerializer(genre_movie, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
 def create_ott_list(request, ott_pk):
     ott = get_object_or_404(Watch_Provider, pk = ott_pk)
     ott_movie = ott.movie_ott.all()
     serializer = MovieListSerializer(ott_movie, many=True)
     return Response(serializer.data)
-
 
 @api_view(['GET'])
 def movie_list(request):

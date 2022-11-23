@@ -1,29 +1,30 @@
 <template>
   <div>
-    <h4> Netflix Top 10</h4>
-    <div v-for="(movie,key) in ottMovie" :key="key">
-      {{ movie.title }}
-    </div>
-    <!-- {{ ottMovie }} -->
+    <h4>Netflix Top 10</h4>
+    <TodayMovieNetflixItem
+      :ott-movie="ottData"
+    />
   </div>
 </template>
 
 <script>
+import TodayMovieNetflixItem from "@/components/TodayMovieNetflixItem"
 export default {
   name: 'TodayMovieNetflix',
+  components: {
+    TodayMovieNetflixItem,
+  },
   methods: {
     getOttMovie() {
-      this.$store.dispatch('getOttMovie', '8')
-    },
+      this.$store.dispatch('getOttMovie', 8)
+    }
   },
   created() {
     this.getOttMovie()
   },
   computed: {
-    ottMovie(){
-      const check = this.$store.state.ott_movies
-      console.log(check)
-      return check
+    ottData() {
+      return this.$store.state.ott_movies
     }
   }
 }

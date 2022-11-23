@@ -1,29 +1,30 @@
 <template>
   <div>
     <h4>Watcha Top 10</h4>
-    <div v-for="(movie,key) in ottMovie" :key="key">
-      {{ movie.title }}
-    </div>
-    <!-- {{ ottMovie }} -->
+    <TodayMovieWatchaItem
+      :ott-movie="ottData"
+    />
   </div>
 </template>
 
 <script>
+import TodayMovieWatchaItem from "@/components/TodayMovieWatchaItem"
 export default {
   name: 'TodayMovieWatcha',
+  components: {
+    TodayMovieWatchaItem,
+  },
   methods: {
     getOttMovie() {
-      this.$store.dispatch('getOttMovie', '97')
-    },
+      this.$store.dispatch('getOttMovie', 97)
+    }
   },
   created() {
     this.getOttMovie()
   },
-  computed: {
-    ottMovie(){
-      const check = this.$store.state.ott_movies
-      console.log(check)
-      return check
+  computed:{
+    ottData() {
+      return this.$store.state.ott_movies
     }
   }
 }
