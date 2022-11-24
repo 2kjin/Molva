@@ -3,10 +3,12 @@ import requests
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer, GenreSerializer
 
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer, GenreSerializer
 from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
+
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.http import HttpResponse
 from django.http import JsonResponse
@@ -18,7 +20,7 @@ from pprint import pprint
 def create_json(request):
     lst_movie = []
     # movie.json 생성
-    for i in range(1,101):
+    for i in range(1,251):
         url_movies = f'https://api.themoviedb.org/3/movie/popular?api_key=b0aa983e176b4c8d5f9a1c93be84107b&language=ko-kr&page={i}'
         dict_movies = requests.get(url_movies).json()
         lst_movie += dict_movies.get('results')
@@ -161,20 +163,34 @@ def movie_detail(request, movie_id):
     # movie = get_object_or_404(Movie, pk=movie_id)
     serializer = MovieDetailSerializer(movie)
 
-    return Response(serializer.data)
+    is_liked = False
 
+    if request.user:
+        if movie.like_users.filter(pk=request.user.pk).exists():
+            is_liked = True
+        else:
+            is_liked = False
 
+    context = {
+        'data': serializer.data,
+        'is_liked': is_liked
+    }
+
+    return Response(context)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def like(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
-
-    if movie.like_users.filter(pk=movie_id).exists():
+    
+    if movie.like_users.filter(pk=request.user.pk).exists():
         movie.like_users.remove(request.user)
         is_liked = False
     
     else:
         movie.like_users.add(request.user)
         is_liked = True
-    
+        
     context = {
         'is_liked': is_liked,
         'like_count' : movie.like_users.count()
@@ -189,16 +205,17 @@ def review_list(request, movie_id):
     return Response(serializer.data)
 
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
 def review_create(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     serializer = ReviewSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(movie=movie)
+        serializer.save(movie=movie, user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-
 @api_view(['GET', 'PUT', 'DELETE'])
+@permission_classes([IsAuthenticated])
 def review_detail(request, review_pk):
     review = get_object_or_404(Review, pk=review_pk)
 

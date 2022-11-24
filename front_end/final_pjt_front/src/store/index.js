@@ -20,6 +20,7 @@ export default new Vuex.Store({
     reviews:null,
     movies: null,
     loading: true,
+    movieLike: null,
     genre_menu: null,
     youtubeVideos: [],
     genre_movies: null,
@@ -49,7 +50,8 @@ export default new Vuex.Store({
       state.movies = payload.movies
     },
     GET_DETAIL(state, payload) {
-      state.movie = payload
+      state.movie = payload.data
+      state.movieLike = payload.is_liked
     },
     GET_REVIEWS(state, payload) {
       state.reviews = payload

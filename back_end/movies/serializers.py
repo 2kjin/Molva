@@ -42,11 +42,12 @@ class MovieTitleSerializer(serializers.ModelSerializer):
 
 class ReviewSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source='user.username', read_only=True)
+    movie = MovieTitleSerializer(read_only=True)
     
     class Meta:
         model = Review
         fields = '__all__'
-        read_only_fields = ('movie', 'user')
+        read_only_fields = ('user')
 
 class MovieDetailSerializer(serializers.ModelSerializer):
     actors = ActornameSerializer(many=True, read_only=True)
@@ -60,7 +61,7 @@ class MovieDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
         fields = '__all__'
-        read_only_fields = ('like_users',)
+        read_only_fields = ('like_users','reviews')
 
 class GenreSerializer(serializers.ModelSerializer):
 

@@ -107,7 +107,7 @@
             <hr>
             <MovieText :text="'Recommendation Movie'"></MovieText>
             <DetailViewRecommendations :send-id="sendId"/>
-            <YoutubeList :title="movie.title"/>
+            <!-- <YoutubeList :title="movie.title"/> -->
           </div>
 
         </div>
@@ -119,18 +119,18 @@
 
 <script>
 import { mapMutations } from "vuex";
-import MovieText from "../components/MovieText"
-import YoutubeList from '@/components/YoutubeList'
+import MovieText from "@/components/MovieText"
+// import YoutubeList from '@/components/YoutubeList'
 import DetailViewSimilar from '@/components/DetailViewSimilar'
-import DetailReviewForm from '../components/DetailReviewForm.vue'
-import DetailReviewList from '../components/DetailReviewList.vue'
+import DetailReviewForm from '@/components/DetailReviewForm'
+import DetailReviewList from '@/components/DetailReviewList'
 import DetailViewRecommendations from '@/components/DetailViewRecommendations'
 
 export default {
   name:'DetailView',
   components:{
     MovieText,
-    YoutubeList,
+    // YoutubeList,
     DetailReviewForm,
     DetailReviewList,
     DetailViewSimilar,

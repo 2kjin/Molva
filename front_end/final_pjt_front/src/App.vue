@@ -3,19 +3,32 @@
     <div id="appbar">
       <router-link :to="{ name:'home' }"><img src="@/assets/f_molva.png" alt="logo" id="logo"/></router-link>
       <v-tabs>
-        <v-tab><router-link :to="{name:'home'}" style="text-decoration: none; color:#e0d598 ">HOME</router-link></v-tab>
-        <v-tab><router-link :to="{name:'movie'}" style="text-decoration: none; color:#e0d598 ">MOVIE</router-link></v-tab>
-        <v-tab><router-link :to="{name:'today'}" style="text-decoration: none; color:#e0d598 ">TODAY?</router-link></v-tab>
-        <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
-        <!-- <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
-        <v-tab><router-link :to="{name:'profile'}" style="text-decoration: none; color:#e0d598">PROFILE</router-link></v-tab>
-        <!-- 토큰 여부에 따라 login / logout 버튼 교체 -->
-        <div id="logout" v-if="this.$store.state.token"
-          @click="logOut"
-        >LOGOUT</div>
-        <div id="login" v-else-if="!this.$store.state.token"
-        @click="isModalViewed=true"
-        >LOGIN/SIGNUP</div>
+        <span>
+          <v-tab><router-link :to="{name:'home'}" style="text-decoration: none; color:#e0d598 ">HOME</router-link></v-tab>
+        </span>
+        <span v-if="isLogin">
+          <v-tab><router-link :to="{name:'today'}" style="text-decoration: none; color:#e0d598 ">TODAY?</router-link></v-tab>
+        </span>
+        <span v-if="isLogin">
+          <v-tab><router-link :to="{name:'random'}" style="text-decoration: none; color:#e0d598 ">RANDOM</router-link></v-tab>
+        </span>
+        <span v-if="isLogin">
+          <v-tab><router-link :to="{name:'movie'}" style="text-decoration: none; color:#e0d598 ">NOW?</router-link></v-tab>
+        </span>
+        <span v-if="isLogin">
+          <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
+        </span>
+        <span v-if="isLogin">
+          <!-- <v-tab><router-link :to="{name:'community'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
+          <v-tab><router-link :to="{name:'profile'}" style="text-decoration: none; color:#e0d598">PROFILE</router-link></v-tab>
+        </span>
+          <!-- 토큰 여부에 따라 login / logout 버튼 교체 -->
+          <div id="logout" v-if="this.$store.state.token"
+            @click="logOut"
+          >LOGOUT</div>
+          <div id="login" v-else-if="!this.$store.state.token"
+          @click="isModalViewed=true"
+          >LOGIN/SIGNUP</div>
       </v-tabs>
     </div>
 
@@ -44,17 +57,21 @@ import ModalViewContent from '@/components/ModalViewContent.vue'
 import ModalView from '@/components/ModalView.vue'
 export default {
   name: 'App',
-  computed: {
-  ...mapState(["loading"]),
-  },
   data(){
     return {
       isModalViewed: false,
+      loginSwitch: false,
     }
   },
   components: {
     ModalViewContent,
     ModalView,
+  },
+  computed: {
+    ...mapState(["loading"]),
+    isLogin(){
+      return this.$store.getters.isLogin
+    },
   },
   methods: {
     logOut(){
@@ -70,12 +87,6 @@ export default {
   font-family: 'Lato', sans-serif;
 }
 
-/* $big: 'Abril Fatface', serif;
-$body: 'Lato', sans-serif; */
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap"); */
-/* * {
-  font-family: "Noto Sans KR", sans-serif;
-} */
 #app{
   background-color: #23262b;
   color: #ffffff;

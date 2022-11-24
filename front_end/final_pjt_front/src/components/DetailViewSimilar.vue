@@ -30,8 +30,6 @@
           .slide(
             v-for="(content ,contentIndex) in contentContainer[container]"
             ref="slides"
-            v-mouse:mouseover="{position: slideContainerIndex % 3,handler:selectSlide}"
-            v-mouse:mouseout="{position: slideContainerIndex % 3,handler:unselectSlide}"
             :id="'slide-'+container+'-'+contentIndex"
             :data-container-index="slideContainerIndex"
             :data-content-index="contentIndex"
@@ -39,7 +37,6 @@
             .slider-movie-backdrop_path
               img(
                 :src="imgFnc(`${content.backdrop_path}`)"
-                @click="checkUrl(`${content.id}`)"
               )
             .slider-movie-box
               div
@@ -52,11 +49,12 @@
 <script>
 import _ from 'lodash';
 import { movieApi } from "../utils/axios";
-// import MovieLists from "../components/MovieLists";
-// import MovieText from "../components/MovieText";
 
 export default {
   name: 'DetailViewSimilar',
+  props: {
+    sendId: String,
+  },  
   directives: {
     mouse: {
       bind(el, binding) {
@@ -73,10 +71,6 @@ export default {
       },
     },
   },
-  props: {
-    ottMovie : Array,
-    sendId: String,
-  },  
  data() {
     return {
       bodyMarginLeft: document.body.getBoundingClientRect().left,
@@ -90,7 +84,7 @@ export default {
       contentContainerSize: 6,
       infinityLoop: false,
       similarData: {},
-      chk: null,
+      id: this.$route.params.id
     };
   },
   methods: {
@@ -124,62 +118,6 @@ export default {
         this.slideContainer.shift();
       }
     }, 500),
-    selectSlide(event) {
-      this.timeoutID = setTimeout(() => {
-        if (!this.isSliding && !this.expandShowcase) {
-          const selectedSlide = event.target;
-          this.selectedSlidePos = this.slideIsFirstOrLast(selectedSlide);
-          const transitionDistance = this.transitionDistance(selectedSlide);
-          const selectedContainer = this.containerIndex(selectedSlide);
-          this.popShowcase(selectedSlide);
-          const animationCallback = (currentSlide) => {
-            if (currentSlide !== selectedSlide) {
-              const currentContainer = this.containerIndex(currentSlide);
-              let direction = 0;
-              if (this.selectedSlidePos.isFirst) {
-                if (currentContainer >= 1) {
-                  direction = 1;
-                }
-              } else if (this.selectedSlidePos.isLast) {
-                if (currentContainer <= 1) {
-                  direction = -1;
-                }
-              } else if (currentContainer === selectedContainer) {
-                direction =
-                this.contentIndex(currentSlide) < this.contentIndex(selectedSlide) ? 1 : -1;
-              } else {
-                direction = currentContainer < 1 ? 1 : -1;
-              }
-              this.setStyleProperty(currentSlide, { transform: `translateX(${transitionDistance * direction}px)` });
-            }
-          };
-          this.animateSlideTransition(animationCallback);
-        }
-      }, 500);
-    },
-    unselectSlide() {
-      clearTimeout(this.timeoutID);
-    },
-    containerIndex(element) {
-      return element.dataset.containerIndex * 1;
-    },
-    contentIndex(element) {
-      return element.dataset.contentIndex * 1;
-    },
-    slideIsFirstOrLast(element) {
-      return {
-        isFirst: this.slideIsFirst(element),
-        isLast: this.slideIsLast(element),
-      };
-    },
-    slideIsFirst(element) {
-      return this.contentIndex(element) === 0;
-    },
-    slideIsLast(element) {
-      const containerIndex = this.containerIndex(element);
-      // console.log(this.containerIndex(element))
-      return this.contentIndex(element) === this.contentContainer[containerIndex].length - 1;
-    },
     transitionDistance(element) {
       if (this.selectedSlidePos.isFirst || this.selectedSlidePos.isLast) {
         return element.clientWidth * (this.ratio - 1);
@@ -194,25 +132,6 @@ export default {
     containerTransition() {
       // Triggered by 'transitionend' event from slider container
       this.isSliding = false;
-    },
-    popShowcase(selectedSlide) {
-      const selectedRect = selectedSlide.getBoundingClientRect();
-      const showcaseWidth = selectedRect.left - this.bodyMarginLeft;
-      const showcaseStyle = {
-        left: `${showcaseWidth}px`,
-        width: `${selectedRect.width}px`,
-        height: `${selectedRect.height}px`,
-        'background-color': `${selectedSlide.style.backgroundColor}`,
-      };
-      let transformOrigin = 'center center';
-      if (this.selectedSlidePos.isFirst) {
-        transformOrigin = 'center left';
-      } else if (this.selectedSlidePos.isLast) {
-        transformOrigin = 'center right';
-      }
-      Object.assign(showcaseStyle, { 'transform-origin': transformOrigin });
-      this.setStyleProperty(this.$refs.showcase, showcaseStyle);
-      this.expandShowcase = true;
     },
     hideShowcase(event) {
       if (event.currentTarget.classList.contains('expand')) {
@@ -235,23 +154,11 @@ export default {
       } else {
         this.contentContainerSize = 6;
       }
-      this.contentContainer = _.chunk(this.similarData, this.contentContainerSize);      
+      this.contentContainer = _.chunk(this.similarData, this.contentContainerSize);
     },
     setStyleProperty(element, styles) {
       Object.assign(element.style, styles);
     },
-    checkUrl(id){
-      this.chk = id
-      return this.goDetail(this.chk)
-    },
-    goDetail(id){
-      console.log(id)
-      this.$router.push(`${id}`);
-    },
-  },
-  beforeRouteUpdate(to, from, next) {
-    this.chk = to.params.id   
-    next()
   },
   mounted() {
     this.$el.style.setProperty('--ratio', `${this.ratio}`);

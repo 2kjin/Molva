@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
 import HomeView from '@/views/HomeView'
 import MovieView from '@/views/MovieView'
+import RandomView from '@/views/RandomView'
 import TodayView from '@/views/TodayView'
 import DetailView from '@/views/DetailView'
 import ProfileView from '@/views/ProfileView'
@@ -27,6 +28,11 @@ const routes = [
     path: '/movie',
     name: 'movie',
     component: MovieView,
+  },
+  {
+    path: '/random',
+    name: 'random',
+    component: RandomView,
   },
   {
     path: '/today',

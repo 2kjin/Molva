@@ -1,7 +1,8 @@
 <template>
   <div id="carouselItem">
-    <!-- <img :src="imgSrc"> -->
-    <img :src="imgSrc" @click="goDetail(movie?.movie_id)">
+    <img :src="imgSrc"
+    >
+    <!-- @click="goDetail(movie?.movie_id)" -->
       <div id="carouselContent">
         <!-- <v-rating
         class="rating"
@@ -51,10 +52,5 @@ img{
   align-items: center;
 }
 
-/* more button */
-/* button:hover{
-  cursor: pointer;
-  transform: scale(1.4);
-} */
 
 </style>

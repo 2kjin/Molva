@@ -9,7 +9,7 @@
       <input type="range" @input="drawStar" value="0" step="1" min="0" max="10">
     </span>
     
-    <textarea cols="30" rows="10" placeholder="Write your review !"></textarea>
+    <textarea cols="30" rows="10" placeholder="영화에 대한 당신의 생각은?"></textarea>
     
     <input type="submit" value="write" class="review-btn"
     style="padding: 2px 7px; margin: 10px">

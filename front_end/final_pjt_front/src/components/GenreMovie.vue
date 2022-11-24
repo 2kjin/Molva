@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Genre</h1>
     <button @click="selectGenre">랜덤장르</button>
     <div v-if ="movielst">
       <div v-for="(movie,key) in movielst" :key="key">
@@ -40,7 +39,7 @@ export default {
       this.$store.dispatch('getGenreMenu')
     },
     selectGenre() {
-      const chk = (_.sampleSize(this.$store.state.genre_menu, 4))
+      const chk = (_.sampleSize(this.$store.state.genre_menu, 6))
       this.genreName = chk
       this.movielst = []
       const tmp_lsit = []

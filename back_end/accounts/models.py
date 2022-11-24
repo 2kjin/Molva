@@ -3,15 +3,10 @@ from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
-# def profile_image_path(instance, filename):
-#     return f'profile/{instance.username}/{filename}'
-
-# def backdrop_image_path(instance, filename):
-#     return f'backdrop/{instance.username}/{filename}'
+def profile_image_path(instance, filename):
+    return f'profile/{instance.username}/{filename}'
 
 class User(AbstractUser):
     pass
-    # followings = models.ManyToManyField('self', symmetrical = False, related_name = 'followers')
-    # score = models.IntegerField(default=0)
-    # profile_image = models.ImageField(default='/profile/default.png', blank=True, upload_to=profile_image_path)
-    # backdrop_image = models.ImageField(default='/backdrop/default.jpg', blank=True, upload_to=backdrop_image_path)
+    followings = models.ManyToManyField('self', symmetrical = False, related_name = 'followers')
+    profile_image = models.ImageField(default='/profile/default.png', blank=True, upload_to=profile_image_path)

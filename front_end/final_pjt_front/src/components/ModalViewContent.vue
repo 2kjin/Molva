@@ -8,9 +8,9 @@
         <span :class="{is_selected:signupViewed}"
         @click="isClicked('signup')">SIGNUP</span>
       </div>
-      <signup-view 
+      <SignupView 
         v-if="signupViewed"/>
-      <login-view v-if="loginViewed"/>
+      <LoginView v-if="loginViewed"/>
     </div>
   </div>
 
