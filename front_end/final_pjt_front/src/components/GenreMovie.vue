@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="selectGenre">랜덤장르</button>
+    <hr>
     <div v-if ="movielst">
       <div v-for="(movie,key) in movielst" :key="key">
         <!-- {{movie}} -->

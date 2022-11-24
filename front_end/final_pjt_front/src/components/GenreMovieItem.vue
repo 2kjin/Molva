@@ -1,13 +1,16 @@
 <template>
   <div>
-    <div v-for="(movie,key) in gogoSing" :key="key">
-      {{ movie.title }}
-    </div>
+    <!-- <div v-for="(movie,key) in gogoSing" :key="key"> -->
+      <MovieLists :movieList="gogoSing"></MovieLists>
+      <!-- <MovieText :text="'Popular'"></MovieText>     -->
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
 import _ from "lodash"
+// import MovieText from "../components/MovieText";
+import MovieLists from "../components/MovieLists";
 
 export default {
   name: 'GenreMovieItem',
@@ -15,6 +18,10 @@ export default {
     return {
       randomGenreMovie: null
     }
+  },
+  components: {
+    // MovieText,
+    MovieLists,
   },
   props: {
     genreSel : Object,
