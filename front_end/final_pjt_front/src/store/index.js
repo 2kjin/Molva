@@ -15,12 +15,14 @@ export default new Vuex.Store({
     createPersistedState(),
   ],
   state: {
+    username: null,
     token: null,
+    userInfo: null,
     movie: null,
-    reviews:null,
     movies: null,
-    loading: true,
     movieLike: null,
+    reviews:null,
+    loading: true,
     genre_menu: null,
     youtubeVideos: [],
     genre_movies: null,
@@ -55,6 +57,9 @@ export default new Vuex.Store({
     },
     GET_REVIEWS(state, payload) {
       state.reviews = payload
+    },
+    SAVE_USERINFO(state, payload){
+      state.userInfo = payload
     },
     GET_OTT_MOVIE(state, ott_movies) {
       const ottId = ott_movies['ottId']
@@ -183,6 +188,74 @@ export default new Vuex.Store({
       })
         .then((res)=>{
           context.commit('GET_REVIEWS', res.data)
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+    },
+    // CREATE REVIEW
+    createReview(context, payload){
+      axios({
+        method:'post',
+        url: `${API_URL}/movies/${payload.movieId}/review_create/`,
+        data: payload.data,
+      })
+        .then(()=>{
+          this.dispatch('getReviews', payload.movieId)
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+    },
+    // EDIT REVIEW
+    editReview(context, payload){
+      axios({
+        url: `${API_URL}/movies/reviews/${payload.id}/`,
+        method: payload.type,
+        data: payload.data,
+      })
+      .then (()=>{
+        this.dispatch('getReviews', payload.movieId)
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+    },
+    // GET USER
+    getUser(context, username){
+      axios({
+        method:'get',
+        url: `${API_URL}/profile/${username}/`,
+      })
+        .then((res)=>{
+          context.commit('SAVE_USERINFO', res.data)
+        })
+        .catch((err)=>{
+          console.log(err)
+        })
+    },
+    // LIKES
+    getLike(context, payload){
+      let URL
+
+      if (payload.type === 'movie'){
+        URL = `${API_URL}/movies/${payload.id}/like/`
+      } else {
+        URL = `${API_URL}/community/${payload.id}/like/`
+      }
+
+      axios({
+        method:'get',
+        url: URL,
+      })
+        .then((res)=>{
+          if (payload.type==='movie'){
+            context.state.movieLike = res.data.is_liked
+          } else {
+            context.state.postLike = res.data.is_liked
+            this.dispatch('getPost', payload.id)
+          }
+          
         })
         .catch((err)=>{
           console.log(err)

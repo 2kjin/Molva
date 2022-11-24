@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding:auto; margin:auto;">
     <GenreMovie/>
   </div>
 </template>

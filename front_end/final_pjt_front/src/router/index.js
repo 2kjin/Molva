@@ -56,7 +56,7 @@ const routes = [
   },
   {
     // username dynamic params => /:str
-    path: '/profile',
+    path: '/profile/:username',
     name: 'profile',
     component: ProfileView,
   },

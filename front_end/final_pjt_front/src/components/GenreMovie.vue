@@ -1,17 +1,17 @@
 <template>
   <div>
-    <button @click="selectGenre">랜덤장르</button>
-    <hr>
-    <div v-if ="movielst">
-      <div v-for="(movie,key) in movielst" :key="key">
-        <!-- {{movie}} -->
-        <p>장르 : {{ genreName[key].name }}</p>
-        <hr>
-        <GenreMovieItem
-          :genre-sel="movie"
-        />
-        <br>
-        <hr>
+    <div class="contanier" style="margin: 2% 0 0 0;">
+      <span class="form-btn float-right" style="margin: 0px 0px 5px 0px" @click="selectGenre" >CLICK⭐</span> <br>
+      <div v-if ="movielst">
+        <div v-for="(movie,key) in movielst" :key="key">
+          <!-- {{movie}} -->
+          <p>{{ genreName[key].name }}</p>
+          <hr>
+          <GenreMovieItem
+            :genre-sel="movie"
+          />
+          <br>
+        </div>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@ export default {
       this.$store.dispatch('getGenreMenu')
     },
     selectGenre() {
-      const chk = (_.sampleSize(this.$store.state.genre_menu, 6))
+      const chk = (_.sampleSize(this.$store.state.genre_menu, 5))
       this.genreName = chk
       this.movielst = []
       const tmp_lsit = []

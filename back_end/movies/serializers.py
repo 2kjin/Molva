@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
+from .models import Movie, Genre, Actor, Director, Review, Watch_Provider, MovieLike
 
 class GenrenameSerializer(serializers.ModelSerializer):
 
@@ -62,6 +62,12 @@ class MovieDetailSerializer(serializers.ModelSerializer):
         model = Movie
         fields = '__all__'
         read_only_fields = ('like_users','reviews')
+
+class MovieLikeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MovieLike
+        fields = '__all__'
 
 class GenreSerializer(serializers.ModelSerializer):
 

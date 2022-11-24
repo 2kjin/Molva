@@ -10,6 +10,7 @@ from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSeria
 from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
 
 from django.shortcuts import get_object_or_404, get_list_or_404
+from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.http import JsonResponse
 # Create your views here.
@@ -178,24 +179,31 @@ def movie_detail(request, movie_id):
 
     return Response(context)
 
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def like(request, movie_id):
-    movie = get_object_or_404(Movie, pk=movie_id)
+@api_view(['GET', 'POST'])
+def likes(request, movie_pk):
     
-    if movie.like_users.filter(pk=request.user.pk).exists():
-        movie.like_users.remove(request.user)
+    user = get_object_or_404(get_user_model(), pk=request.user.id)
+    
+    if user.movies.filter(pk=movie_pk).exists():
+        user.movies.remove(movie_pk)
         is_liked = False
-    
     else:
-        movie.like_users.add(request.user)
+        user.movies.add(movie_pk)
         is_liked = True
-        
-    context = {
-        'is_liked': is_liked,
-        'like_count' : movie.like_users.count()
-    }
-    return JsonResponse(context)
+
+    return Response({'is_liked' : is_liked})
+
+# 좋아요 데이터 불러오기    
+@api_view(['GET'])
+def get_likes(request, movie_pk):
+    user = get_object_or_404(get_user_model(), pk=request.user.id)
+    if user.movies.filter(pk=movie_pk).exists():
+        is_liked = True
+    else:
+        is_liked = False
+
+    return Response({'is_liked' : is_liked})
+
 
 @api_view(['GET'])
 def review_list(request, movie_id):

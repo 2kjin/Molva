@@ -10,15 +10,10 @@
         <div style="">
           <img
             class="mt-2"
-            style="height:60vh; border-radius: 10px; box-shadow: 0 10px 15px 0 #000000;"
+            style="height: 60vh; border-radius: 10px; box-shadow: 0 10px 15px 0 #000000;"
             :src="imgSrc"
           />
         </div>
-
-        <font-awesome-icon icon="fa-solid fa-heart" 
-        v-if="isLiked==true" class="heart-btn fa-2x" @click="getLike"/>
-        <font-awesome-icon icon="fa-regular fa-heart" 
-        v-if="isLiked==false" class='heart-btn fa-2x' @click="getLike"/>
 
         <div class="ml-4 w-75">
           <h2 class="movie-title">{{ movie.title }}</h2>
@@ -88,28 +83,27 @@
           </div>
           <br>
           <section>
-            <span style="font-size: 30px;">Reviews</span>
-            <span style="margin: 0 20px 0 10px;">( {{reviews.length}} )</span>
-            <span v-if="reviewBtn" class="form-btn" @click="formClicked" >Write Review</span>
+            <span style="font-size: 25px;">REVIEWS</span>
+            <span style="margin: 0 10px 0 10px;">( {{reviews.length}} )</span>
+            <span v-if="reviewBtn" class="form-btn" @click="formClicked" style="margin: 0 10px 0 10px;" >Write Review</span>
+            <button v-if="!like" @click="postMovieLike(movie.movie_id)">🤍</button>
+            <button v-if="like" @click="postMovieLike(movie.movie_id)">❤️</button>
             <hr>
 
             <DetailReviewForm v-if="isFormViewed" :movie="movie" @close-form="isFormViewed=false" @close-btn="reviewBtn=false"
             style="margin-bottom: 20px;"/>
-
-            <DetailReviewList :reviews="reviews"/>
           </section>
           <br><br>
           <div class="movie-youtube-area">
             관련 영상
             <hr>
-            <MovieText :text="'Similar Movie'"></MovieText>
+            <MovieText :text="'SIMILAR'"></MovieText>
             <DetailViewSimilar :send-id="sendId"/>
             <hr>
-            <MovieText :text="'Recommendation Movie'"></MovieText>
+            <MovieText :text="'RECOMMEND'"></MovieText>
             <DetailViewRecommendations :send-id="sendId"/>
             <!-- <YoutubeList :title="movie.title"/> -->
           </div>
-
         </div>
       </div>
     </div>
@@ -118,12 +112,14 @@
 </template>
 
 <script>
+import axios from 'axios'
+const API_URL = 'http://127.0.0.1:8000'
+
 import { mapMutations } from "vuex";
 import MovieText from "@/components/MovieText"
 // import YoutubeList from '@/components/YoutubeList'
 import DetailViewSimilar from '@/components/DetailViewSimilar'
 import DetailReviewForm from '@/components/DetailReviewForm'
-import DetailReviewList from '@/components/DetailReviewList'
 import DetailViewRecommendations from '@/components/DetailViewRecommendations'
 
 export default {
@@ -132,7 +128,6 @@ export default {
     MovieText,
     // YoutubeList,
     DetailReviewForm,
-    DetailReviewList,
     DetailViewSimilar,
     DetailViewRecommendations,
   },
@@ -142,7 +137,8 @@ export default {
       movieDetail: {},
       genres: [],
       ott: [],
-      sendId: null
+      sendId: null,
+      like : false,
     };
   },
   computed:{
@@ -185,17 +181,55 @@ export default {
         btnText.innerText = 'Hide Form'
       }
     },
-    getLike(){
-      this.$store.dispatch('getLike', this.$route.params.id)
-      },
+    // getLike(){
+    //   const payload = {
+    //     type:'movie',
+    //     id:this.$route.params.id
+    //   }
+    //   this.$store.dispatch('getLike', payload)
+    //   },
     image(img) {
       return `https://image.tmdb.org/t/p/original/${img}`;
+    },
+      getMovieLike(movie_id) {
+        console.log('111111111111')
+        axios({
+          method: 'get',
+          url: `${API_URL}/movies/${movie_id}/getmovielike`,
+        })
+          .then((res) =>{
+            this.like = res.data.is_liked
+            console.log(res)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      },
+    postMovieLike(movie_id) {
+      axios({
+        method: 'post',
+        url: `${API_URL}/movies/${movie_id}/postmovielike/`,
+      })
+        // 좋아요를 했던 상태라면: 즉 좋아요 취소
+        .then((res) => {
+          console.log(res.data.is_liked)
+          this.like = res.data.is_liked
+         console.log('111111111111')
+
+        })
+        // 좋아요가 없는 상태라면: 좋아요로 바꾸기
+        .catch((err) => {
+          console.log(err)
+        })
     },
   },
   created() {
     this.$store.dispatch('getDetail', this.$route.params.id),
     this.$store.dispatch('getReviews', this.$route.params.id),
     this.sendId = this.$route.params.id
+    this.getMovieLike(this.movie.movie_id)
+    // console.log(1111111111111111)
+    // console.log(this.movie.movie_id)
 
   },
 };

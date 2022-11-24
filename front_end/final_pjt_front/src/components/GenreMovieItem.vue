@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <div v-for="(movie,key) in gogoSing" :key="key"> -->
-      <MovieLists :movieList="gogoSing"></MovieLists>
+      <GenreMovieItemList :movieList="gogoSing"></GenreMovieItemList>
       <!-- <MovieText :text="'Popular'"></MovieText>     -->
     <!-- </div> -->
   </div>
@@ -10,7 +10,7 @@
 <script>
 import _ from "lodash"
 // import MovieText from "../components/MovieText";
-import MovieLists from "../components/MovieLists";
+import GenreMovieItemList from "../components/GenreMovieItemList";
 
 export default {
   name: 'GenreMovieItem',
@@ -21,7 +21,7 @@ export default {
   },
   components: {
     // MovieText,
-    MovieLists,
+    GenreMovieItemList,
   },
   props: {
     genreSel : Object,
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     gogoSing() {
-      return _.sampleSize(this.genreSel.data, 6)
+      return _.sampleSize(this.genreSel.data, 8)
     }
   }
 }

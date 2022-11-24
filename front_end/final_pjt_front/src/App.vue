@@ -18,10 +18,10 @@
         <span v-if="isLogin">
           <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
         </span>
-        <span v-if="isLogin">
-          <!-- <v-tab><router-link :to="{name:'community'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab> -->
+        <!-- <span v-if="isLogin">
+          <v-tab><router-link :to="{name:'community'}" style="text-decoration: none; color:#e0d598">COMMUNITY</v-tab>
           <v-tab><router-link :to="{name:'profile'}" style="text-decoration: none; color:#e0d598">PROFILE</router-link></v-tab>
-        </span>
+        </span> -->
           <!-- 토큰 여부에 따라 login / logout 버튼 교체 -->
           <div id="logout" v-if="this.$store.state.token"
             @click="logOut"
@@ -42,7 +42,7 @@
     <b-spinner
       class="d-block ml-auto mr-auto"
       v-if="loading"
-      label="Spinning"
+      label="⭐"
     ></b-spinner>
     <router-view/>
     <footer>
