@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 style="margin: 2% 0px;">Watcha Top 10</h4>
+    <h4 style="margin: 2% 0px;"> Today's Watcha</h4>
     <TodayMovieWatchaItem
       :ott-movie="ottData"
       style="margin: 3% 0px;"
@@ -25,7 +25,7 @@ export default {
   },
   computed:{
     ottData() {
-      return this.$store.state.ott_movies
+      return this.$store.state.ott_watcha_movies
     }
   }
 }

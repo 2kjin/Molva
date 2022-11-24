@@ -39,6 +39,7 @@
             .slider-movie-backdrop_path
               img(
                 :src="imgFnc(`${content.backdrop_path}`)"
+                @click="goDetail(`${content.movie_id}`)"
               )
             .slider-movie-box
               div
@@ -232,6 +233,9 @@ export default {
     setStyleProperty(element, styles) {
       Object.assign(element.style, styles);
     },
+    goDetail(id){
+      this.$router.push(`${id}`);
+    },    
   },
   mounted() {
     this.$el.style.setProperty('--ratio', `${this.ratio}`);

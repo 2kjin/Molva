@@ -39,7 +39,8 @@
             .slider-movie-backdrop_path
               img(
                 :src="imgFnc(`${content.backdrop_path}`)"
-              )
+                 @click="goDetail(`${content.movie_id}`)"
+             )
             .slider-movie-box
               div
               .slider-movie-title
@@ -232,6 +233,9 @@ export default {
     setStyleProperty(element, styles) {
       Object.assign(element.style, styles);
     },
+    goDetail(id){
+      this.$router.push(`${id}`);
+    },
   },
   mounted() {
     this.$el.style.setProperty('--ratio', `${this.ratio}`);
@@ -245,7 +249,6 @@ export default {
   },
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 

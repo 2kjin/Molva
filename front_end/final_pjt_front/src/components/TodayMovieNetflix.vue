@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 style="margin: 0px 0px 2% 0px;">Netflix Top 10</h4>
+    <h4 style="margin: 0px 0px 2% 0px;"> Today's Netflix</h4>
     <TodayMovieNetflixItem
       :ott-movie="ottData"
       style="margin: 3% 0px;"
@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     ottData() {
-      return this.$store.state.ott_movies
+      return this.$store.state.ott_netflix_movies
     }
   }
 }

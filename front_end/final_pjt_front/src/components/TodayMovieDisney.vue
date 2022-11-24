@@ -1,10 +1,11 @@
 <template>
   <div>
-    <h4 style="margin: 2% 0px;" >Disney Plus Top 10</h4>
+    <h4 style="margin: 2% 0px;" > Today's Disney Plus</h4>
     <TodayMovieDisneyItem
       :ott-movie="ottData"
       style="margin: 3% 0px;"
     />
+    <!-- {{ottData}} -->
   </div>
 </template>
 
@@ -25,7 +26,7 @@ export default {
   },
   computed:{
     ottData() {
-      return this.$store.state.ott_movies
+      return this.$store.state.ott_disney_movies
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-<div style="padding: 0 auto;">
+<div style="padding: 0 auto; margin: 2% 0 0 0;">
   <div class="movie-detail" v-if="movie && movie.backdrop_path">
     <div class="container">
       <div
@@ -23,12 +23,15 @@
         <div class="ml-4 w-75">
           <h2 class="movie-title">{{ movie.title }}</h2>
 
+        <div class="movie-information-wrapper mt-4 d-flex justify-content-start" style="padding : auto">
           <div
-              v-for="ott_path in movie.ott_paths"
-              :key="ott_path.id"
-            >
-              <img :src='image(ott_path.ott_path)' alt="" width="50" height="50">
-            </div>
+            v-for="ott_path in movie.ott_paths"
+            :key="ott_path.id"
+            style="border-radius: 7px; margin:0px 10px 0px 10px;"
+          >
+            <img :src='image(ott_path.ott_path)' alt="" width="50" height="50">
+          </div>
+        </div>
 
           <div class="movie-information-wrapper mt-4 d-flex align-items-center">
             <div>{{ movie.release_date.split("-")[0] }}</div>
@@ -74,10 +77,11 @@
 
           <div class="movie-overview mt-3">{{ movie.overview }}</div>
 
-          <div class="movie-information-wrapper mt-4 d-flex justify-content-around">
+          <div class="movie-information-wrapper mt-4 d-flex justify-content-start">
             <div
               v-for="actor in movie.actors"
               :key="actor.id"
+               style="border-radius: 30px; box-shadow: 0 5px 7px 0 #000000; margin:0px 10px 0px 10px;"
             >
               <img :src='image(actor.profile_path)' alt="" style=" height:10vh;">
             </div>

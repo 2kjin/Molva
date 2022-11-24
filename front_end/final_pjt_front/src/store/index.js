@@ -16,13 +16,16 @@ export default new Vuex.Store({
   ],
   state: {
     token: null,
-    movies: null,
     movie: null,
-    loading: true,
-    ott_movies: null,
-    genre_movies: null,
     reviews:null,
+    movies: null,
+    loading: true,
     youtubeVideos: [],
+    genre_movies: null,
+    ott_wavve_movies: null,
+    ott_watcha_movies: null,
+    ott_disney_movies: null,
+    ott_netflix_movies: null,
   },
   getters: {
     isLogin(state) {
@@ -51,7 +54,21 @@ export default new Vuex.Store({
       state.reviews = payload
     },
     GET_OTT_MOVIE(state, ott_movies) {
-      state.ott_movies = ott_movies
+      const ottId = ott_movies['ottId']
+      const ott_movie = ott_movies['data']
+      // console.log('tttt')
+      // console.log(ottId)
+
+      if (ottId === 8){
+        state.ott_netflix_movies = ott_movie
+      } else if (ottId === 337) {
+        state.ott_disney_movies = ott_movie
+      } else if (ottId === 97) {
+        state.ott_watcha_movies = ott_movie
+      } else if (ottId === 356) {
+        state.ott_wavve_movies = ott_movie
+      }
+      // state.ott_movies = ott_movies
     },
     GET_GENRE_MOVIE(state, genre_movies) {
       state.genre_movies = genre_movies
@@ -174,7 +191,12 @@ export default new Vuex.Store({
         url: `${API_URL}/movies/create_ott_list/${ottId}/`,
       })
         .then((res) => {
-          context.commit("GET_OTT_MOVIE", res.data)
+          // console.log(ottId)
+          const payload = {
+            data: res.data, 
+            ottId: ottId
+          }
+          context.commit("GET_OTT_MOVIE", payload)
         })
         .catch((err)=>{
           router.push('/404-not-found')
