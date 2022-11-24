@@ -15,7 +15,9 @@ export const movieApi = {
   nowPlaying: () => request.get("movie/now_playing"),
   popular: () => request.get("movie/popular"),
   upComing: () => request.get("movie/upcoming"),
-
+  similar: (id) => request.get(`movie/${id}/similar`),
+  recommendations: (id) => request.get(`movie/${id}/recommendations`),
+  
   movieDetail: (id) =>
     request.get(`movie/${id}`, {
       params: { append_to_response: "videos" },

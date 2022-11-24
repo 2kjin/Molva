@@ -102,8 +102,15 @@
           <div class="movie-youtube-area">
             관련 영상
             <hr>
+            <DetailViewSimilar :send-id="sendId"/>
+
             <YoutubeList :title="movie.title"/>
           </div>
+          <!-- <div class="movie-youtube-area">
+            <DetailViewRecommendations
+              :send-id="sendId"
+            />
+          </div> -->
 
 
         </div>
@@ -118,6 +125,8 @@ import { mapMutations } from "vuex";
 import YoutubeList from '@/components/YoutubeList'
 import DetailReviewForm from '../components/DetailReviewForm.vue'
 import DetailReviewList from '../components/DetailReviewList.vue'
+import DetailViewSimilar from '@/components/DetailViewSimilar'
+// import DetailViewRecommendations from '@/components/DetailViewRecommendations'
 
 export default {
   name:'DetailView',
@@ -125,6 +134,8 @@ export default {
     YoutubeList,
     DetailReviewForm,
     DetailReviewList,
+    DetailViewSimilar,
+    // DetailViewRecommendations,
   },
   data() {
     return {
@@ -132,6 +143,7 @@ export default {
       movieDetail: {},
       genres: [],
       ott: [],
+      sendId: null
     };
   },
   computed:{
@@ -184,7 +196,11 @@ export default {
   },
   created() {
     this.$store.dispatch('getDetail', this.$route.params.id),
-    this.$store.dispatch('getReviews', this.$route.params.id)
+    this.$store.dispatch('getReviews', this.$route.params.id),
+    this.sendId = this.$route.params.id
+    // console.log(this.sendId)
+    console.log(111111111111111111111111111111111111111)
+
   },
 };
 </script>

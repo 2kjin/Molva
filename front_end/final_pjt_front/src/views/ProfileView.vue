@@ -5,12 +5,11 @@
   </div>
 </template>
 <script>
-// @ is an alias to /src
 import GenreMovie from '@/components/GenreMovie'
 export default {
   name: 'ProfileView',
   components: {
-    GenreMovie
+    GenreMovie,
   }
 }
 </script>
