@@ -62,11 +62,11 @@ class MovieDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('like_users',)
 
-# class GenreSerializer(serializers.ModelSerializer):
+class GenreSerializer(serializers.ModelSerializer):
 
-#     class Meta:
-#         model = Genre
-#         fields = '__all__'
+    class Meta:
+        model = Genre
+        fields = '__all__'
 
 # class ActorSerializer(serializers.ModelSerializer):
 

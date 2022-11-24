@@ -4,7 +4,7 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer, OttpathSerializer
+from .serializers import ReviewSerializer, MovieListSerializer, MovieDetailSerializer, GenreSerializer
 
 from .models import Movie, Genre, Actor, Director, Review, Watch_Provider
 from django.shortcuts import get_object_or_404, get_list_or_404
@@ -126,6 +126,12 @@ def create_json(request):
 
     # print('성공!')
     return HttpResponse()
+
+@api_view(['GET'])
+def genre_menu(request):
+    genres = Genre.objects.all()
+    serializer = GenreSerializer(genres, many=True)
+    return Response(serializer.data)
 
 @api_view(['GET'])
 def genre_list(request, genre_pk):

@@ -20,6 +20,7 @@ export default new Vuex.Store({
     reviews:null,
     movies: null,
     loading: true,
+    genre_menu: null,
     youtubeVideos: [],
     genre_movies: null,
     ott_wavve_movies: null,
@@ -69,6 +70,9 @@ export default new Vuex.Store({
         state.ott_wavve_movies = ott_movie
       }
       // state.ott_movies = ott_movies
+    },
+    GET_GENRE_MENU(state, genre_menu) {
+      state.genre_menu = genre_menu
     },
     GET_GENRE_MOVIE(state, genre_movies) {
       state.genre_movies = genre_movies
@@ -203,8 +207,22 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    // GET GENRE MENU
+    getGenreMenu(context) {
+      axios({
+        method: "get",
+        url: `${API_URL}/movies/genre/`,
+      })
+      .then((res) => {
+        context.commit("GET_GENRE_MENU", res.data)
+      })
+      .catch((err)=>{
+        router.push('/404-not-found')
+        console.log(err)
+      })
+    },
     // GET GENRE MOVIE
-    getgenreMovie(context, genreId){
+    getGenreMovie(context, genreId){
       axios({
         method: "get",
         url: `${API_URL}/movies/create_genre_list/${genreId}/`,
