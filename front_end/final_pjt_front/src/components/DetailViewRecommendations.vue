@@ -39,7 +39,7 @@
             .slider-movie-backdrop_path
               img(
                 :src="imgFnc(`${content.backdrop_path}`)"
-                @click="goDetail(`${content.movie_id}`)"
+                @click="goDetail(`${content.id}`)"
               )
             .slider-movie-box
               div
@@ -89,7 +89,7 @@ export default {
       contentContainer: [],
       contentContainerSize: 6,
       infinityLoop: false,
-      recommendations: {},
+      recommendationsData: {},
     };
   },
   methods: {
@@ -233,7 +233,7 @@ export default {
       } else {
         this.contentContainerSize = 6;
       }
-      this.contentContainer = _.chunk(this.recommendations, this.contentContainerSize);
+      this.contentContainer = _.chunk(this.recommendationsData, this.contentContainerSize);
     },
     setStyleProperty(element, styles) {
       Object.assign(element.style, styles);
@@ -242,22 +242,18 @@ export default {
       this.$router.push(`${id}`);
     },
   },
-  async mounted() {
+  async created() {
     // vuex를 통해서 로딩을 없애준다.
-    // console.log(this.sendId)
-    // const { id } = this.$route.params.id;
     const { data } = await movieApi.recommendations(this.sendId);
-    // console.log(data.results);
-    this.recommendations = data.results;
-    console.log(this.recommendations)
+    this.recommendationsData = data.results;
+    this.setContentContainer();
+  },
+  mounted() {
     this.$el.style.setProperty('--ratio', `${this.ratio}`);
     window.addEventListener('resize', _.debounce(this.resetContentContainer, 150));
   },
   destroyed() {
     window.removeEventListener('resize', _.debounce(this.resetContentContainer, 150));
-  },
-  created() {
-    this.setContentContainer();
   },
 }
 </script>

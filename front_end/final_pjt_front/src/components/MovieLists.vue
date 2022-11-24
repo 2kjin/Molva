@@ -32,7 +32,6 @@ export default {
       return `https://image.tmdb.org/t/p/w300/${img}`;
     },
      goDetail(id){
-      // console.log(id);
       this.$router.push(`${id}`);
     }
   },

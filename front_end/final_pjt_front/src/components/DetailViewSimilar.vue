@@ -39,7 +39,7 @@
             .slider-movie-backdrop_path
               img(
                 :src="imgFnc(`${content.backdrop_path}`)"
-                @click="goDetail(`${content.movie_id}`)"
+                @click="checkUrl(`${content.id}`)"
               )
             .slider-movie-box
               div
@@ -89,7 +89,8 @@ export default {
       contentContainer: [],
       contentContainerSize: 6,
       infinityLoop: false,
-      similar: {},
+      similarData: {},
+      chk: null,
     };
   },
   methods: {
@@ -176,6 +177,7 @@ export default {
     },
     slideIsLast(element) {
       const containerIndex = this.containerIndex(element);
+      // console.log(this.containerIndex(element))
       return this.contentIndex(element) === this.contentContainer[containerIndex].length - 1;
     },
     transitionDistance(element) {
@@ -233,31 +235,35 @@ export default {
       } else {
         this.contentContainerSize = 6;
       }
-      this.contentContainer = _.chunk(this.similar, this.contentContainerSize);
+      this.contentContainer = _.chunk(this.similarData, this.contentContainerSize);      
     },
     setStyleProperty(element, styles) {
       Object.assign(element.style, styles);
     },
+    checkUrl(id){
+      this.chk = id
+      return this.goDetail(this.chk)
+    },
     goDetail(id){
+      console.log(id)
       this.$router.push(`${id}`);
     },
   },
-  async mounted() {
-    // vuex를 통해서 로딩을 없애준다.
-    // console.log(this.sendId)
-    // const { id } = this.$route.params.id;
-    const { data } = await movieApi.similar(this.sendId);
-    // console.log(data.results);
-    this.similar = data.results;
-    console.log(this.similar)
-    console.logG(111111111111111111111111111111111)
+  beforeRouteUpdate(to, from, next) {
+    this.chk = to.params.id   
+    next()
+  },
+  mounted() {
     this.$el.style.setProperty('--ratio', `${this.ratio}`);
     window.addEventListener('resize', _.debounce(this.resetContentContainer, 150));
   },
   destroyed() {
     window.removeEventListener('resize', _.debounce(this.resetContentContainer, 150));
   },
-  created() {
+  async created() {
+    // vuex를 통해서 로딩을 없애준다.
+    const { data } = await movieApi.similar(this.sendId);
+    this.similarData = data.results;
     this.setContentContainer();
   },
 }

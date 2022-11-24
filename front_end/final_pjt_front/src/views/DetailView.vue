@@ -102,16 +102,13 @@
           <div class="movie-youtube-area">
             관련 영상
             <hr>
+            <MovieText :text="'Similar Movie'"></MovieText>
             <DetailViewSimilar :send-id="sendId"/>
-
+            <hr>
+            <MovieText :text="'Recommendation Movie'"></MovieText>
+            <DetailViewRecommendations :send-id="sendId"/>
             <YoutubeList :title="movie.title"/>
           </div>
-          <!-- <div class="movie-youtube-area">
-            <DetailViewRecommendations
-              :send-id="sendId"
-            />
-          </div> -->
-
 
         </div>
       </div>
@@ -122,20 +119,22 @@
 
 <script>
 import { mapMutations } from "vuex";
+import MovieText from "../components/MovieText"
 import YoutubeList from '@/components/YoutubeList'
+import DetailViewSimilar from '@/components/DetailViewSimilar'
 import DetailReviewForm from '../components/DetailReviewForm.vue'
 import DetailReviewList from '../components/DetailReviewList.vue'
-import DetailViewSimilar from '@/components/DetailViewSimilar'
-// import DetailViewRecommendations from '@/components/DetailViewRecommendations'
+import DetailViewRecommendations from '@/components/DetailViewRecommendations'
 
 export default {
   name:'DetailView',
   components:{
+    MovieText,
     YoutubeList,
     DetailReviewForm,
     DetailReviewList,
     DetailViewSimilar,
-    // DetailViewRecommendations,
+    DetailViewRecommendations,
   },
   data() {
     return {
@@ -177,7 +176,6 @@ export default {
   methods: {
     ...mapMutations(["SET_LOADING"]),
     formClicked(){
-      console.log(this.movie)
       const btnText = document.querySelector('.form-btn')
       if (this.isFormViewed){
         this.isFormViewed = false;
@@ -198,8 +196,6 @@ export default {
     this.$store.dispatch('getDetail', this.$route.params.id),
     this.$store.dispatch('getReviews', this.$route.params.id),
     this.sendId = this.$route.params.id
-    // console.log(this.sendId)
-    console.log(111111111111111111111111111111111111111)
 
   },
 };

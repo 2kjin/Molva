@@ -27,12 +27,9 @@ export default {
   },
   async mounted() {
       // vuex를 통해서 로딩을 없애준다.
-      // console.log(this.sendId)
       // const { id } = this.$route.params.id;
       const { data } = await movieApi.similar(this.sendId);
-      // console.log(data.results);
       this.similar = data.results;
-      console.log(this.similar)
   },
 }
 </script>

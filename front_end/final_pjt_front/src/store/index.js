@@ -57,8 +57,6 @@ export default new Vuex.Store({
     GET_OTT_MOVIE(state, ott_movies) {
       const ottId = ott_movies['ottId']
       const ott_movie = ott_movies['data']
-      // console.log('tttt')
-      // console.log(ottId)
 
       if (ottId === 8){
         state.ott_netflix_movies = ott_movie
@@ -195,7 +193,6 @@ export default new Vuex.Store({
         url: `${API_URL}/movies/create_ott_list/${ottId}/`,
       })
         .then((res) => {
-          // console.log(ottId)
           const payload = {
             data: res.data, 
             ottId: ottId
@@ -249,7 +246,6 @@ export default new Vuex.Store({
         params,
       })
       .then(res => {
-        // console.log(res.data.items)
         commit('SEARCH_YOUTUBE', res)
       })
       .catch(err => console.log(err))
