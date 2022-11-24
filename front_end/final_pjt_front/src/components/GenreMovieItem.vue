@@ -1,24 +1,34 @@
 <template>
   <div>
-
+    <div v-for="(movie,key) in gogoSing" :key="key">
+      {{ movie.title }}
+    </div>
   </div>
 </template>
 
 <script>
+import _ from "lodash"
+
 export default {
   name: 'GenreMovieItem',
+  data() {
+    return {
+      randomGenreMovie: null
+    }
+  },
   props: {
-    genreList : Array,
+    genreSel : Object,
   },
   methods: {
-    getGenreMovie() {
-      this.$store.dispatch('getGenreMovie')
-      this.genre_lst = this.$store.state.genre_menu
-    },
+    randomMovie() {
+      this.randomGenreMovie = _.sampleSize(this.genreSel.data, 6)
+    }
   },
-  created() {
-    this.getGenreMovie()
-  },
+  computed: {
+    gogoSing() {
+      return _.sampleSize(this.genreSel.data, 6)
+    }
+  }
 }
 </script>
 
