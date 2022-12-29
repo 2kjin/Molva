@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script>
+<script>``
 import {Carousel3d, Slide} from 'vue-carousel-3d'
 import CarouselItem from './CarouselItem.vue'
 export default {
@@ -24,7 +24,6 @@ export default {
   computed:{
     movies(){
       return this.$store.state.movies
-      
     }
   },
 }
