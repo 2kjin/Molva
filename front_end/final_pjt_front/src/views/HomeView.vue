@@ -12,10 +12,18 @@ export default {
   components: {
     CarouselContent,
   },
-  beforeCreate() {
-    this.$store.dispatch("getMovies") // main
-    // this.$store.dispatch("getMovies", "popular") // popular
-  },
+  // methods: {
+  //   getMovies() {
+  //     this.$store.dispatch('getMovies')
+  //   }
+  // },
+  // created() {
+  //   this.getMovies()
+  // },
+  // beforeCreate() {
+  //   this.$store.dispatch("getMovies") // main
+  //   // this.$store.dispatch("getMovies", "popular") // popular
+  // },
 }
 </script>
 
