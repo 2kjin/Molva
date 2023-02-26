@@ -1,25 +1,29 @@
 <template>
-  <div id="carousel">
+  <div>
+    <h1 id="banner">  I’M JUST EXACTLY WHAT I'VE WANTED TO BE </h1>
+    <div id="carousel">
     <carousel-3d :width="350" :height="500"
     :autoplay="true" :autoplay-timeout="1800">
       <slide v-for="(movie, i) in movies" 
       :index="i"
       :key="movie.id">
-        <carousel-item :movie="movie"/>
+        <CarouselItem :movie="movie"/>
       </slide>
     </carousel-3d>
   </div>
+  </div>
 </template>
 
-<script>``
+<script>
 import {Carousel3d, Slide} from 'vue-carousel-3d'
-import CarouselItem from './CarouselItem.vue'
+import CarouselItem from '@/components/CarouselItem'
+
 export default {
-  name: 'CarouselContent',
-  components:{
+  name: "HomeView",
+  components: {
     Carousel3d,
     Slide,
-    CarouselItem
+    CarouselItem,
   },
   computed:{
     movies(){
@@ -30,6 +34,19 @@ export default {
 </script>
 
 <style scoped>
+div {
+  margin: 0 auto;
+  max-width: 100vw;
+}
+#banner {
+  margin-top: 70px;
+  text-align: center;
+  color: #e0d598;
+  transition: transform 0.5s linear;
+}
+#banner:hover {
+  transform: scale(1.1);
+}
 #carousel{
   margin: 80px auto;
   margin-bottom: 50px;

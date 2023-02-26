@@ -17,7 +17,21 @@ urlpatterns = [
 
 ]
 
+#BE
+
+# python -m venv venv
+# source venv/Scripts/activate
+# pip install -r requirments.txt
+# python manage.py migrate
 # python manage.py loaddata actors.json directors.json genres.json movies.json otts.json
+# python manage.py runserver
+
+#FE 
+
+# npm i
+# npm run serve
+
+
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Movie > movies.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Genre > genres.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Actor > actors.json
