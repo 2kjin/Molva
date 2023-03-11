@@ -1,0 +1,30 @@
+[
+{
+    "model": "movies.watch_provider",
+    "pk": 8,
+    "fields": {
+        "ott_path": "/t2yyOv40HZeVlLjYsCsPHnWLk4W.jpg"
+    }
+},
+{
+    "model": "movies.watch_provider",
+    "pk": 97,
+    "fields": {
+        "ott_path": "/vXXZx0aWQtDv2klvObNugm4dQMN.jpg"
+    }
+},
+{
+    "model": "movies.watch_provider",
+    "pk": 337,
+    "fields": {
+        "ott_path": "/7rwgEs15tFwyR9NPQ5vpzxTj19Q.jpg"
+    }
+},
+{
+    "model": "movies.watch_provider",
+    "pk": 356,
+    "fields": {
+        "ott_path": "/2ioan5BX5L9tz4fIGU93blTeFhv.jpg"
+    }
+}
+]
