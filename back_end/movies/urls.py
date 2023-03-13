@@ -17,6 +17,23 @@ urlpatterns = [
 
 ]
 
+#BE
+
+# python -m venv venv
+# source venv/Scripts/activate
+# pip install -r requirments.txt
+# python manage.py migrate
+# python manage.py loaddata actors.json directors.json genres.json movies.json otts.json
+# python manage.py runserver
+
+#FE 
+
+# npm i
+# npm run serve
+
+# data 뽑기
+# 장고서버 켜서 http://127.0.0.1:8000/movies/get_data/ 경로 실행
+
 # python manage.py loaddata actors.json directors.json genres.json movies.json otts.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Movie > movies.json
 # python -Xutf8 manage.py dumpdata --indent 4 movies.Genre > genres.json
