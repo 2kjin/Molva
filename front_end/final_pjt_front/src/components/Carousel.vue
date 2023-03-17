@@ -1,7 +1,10 @@
 <template>
   <div id="carousel">
-    <carousel-3d :width="350" :height="500"
-    :autoplay="true" :autoplay-timeout="1800">
+    <carousel-3d :controls-visible="true"
+    :inverse-scaling="200"
+    :disable3d="false"
+    :space="400" :display="8"
+    :height="600" autoplay>
       <slide v-for="(movie, i) in movies" 
       :index="i"
       :key="movie.id">
@@ -31,15 +34,7 @@ export default {
 </script>
 
 <style scoped>
-#carousel{
-  margin: 80px auto;
-  margin-bottom: 50px;
-  border-radius: 10px;
-}
-/* .carousel-3d {
-    width: 150%;
-    height: 200px;
-} */
+
 div.carousel-3d-container {
   background: none;
   overflow: visible;
@@ -49,6 +44,8 @@ div.carousel-3d-slide{
   border:none;
   transition: transform .5s;
   box-shadow: 0 10px 15px 0 #000000;
+  background: none;
+
 }
 div.carousel-3d-slide:hover{
   cursor: pointer;

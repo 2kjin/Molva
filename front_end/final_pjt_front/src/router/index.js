@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import IndexPage from '@/views/IndexPage'
 import HomeView from '@/views/HomeView'
-import MovieView from '@/views/MovieView'
 import RandomView from '@/views/RandomView'
 import TodayView from '@/views/TodayView'
 import DetailView from '@/views/DetailView'
@@ -23,11 +22,6 @@ const routes = [
     path: '/home',
     name: 'home',
     component: HomeView,
-  },
-  {
-    path: '/movie',
-    name: 'movie',
-    component: MovieView,
   },
   {
     path: '/random',
