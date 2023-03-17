@@ -13,9 +13,6 @@
           <v-tab><router-link :to="{name:'random'}" style="text-decoration: none; color:#e0d598 ">RANDOM</router-link></v-tab>
         </span>
         <span v-if="isLogin">
-          <v-tab><router-link :to="{name:'movie'}" style="text-decoration: none; color:#e0d598 ">NOW?</router-link></v-tab>
-        </span>
-        <span v-if="isLogin">
           <v-tab><router-link :to="{name:'search'}" style="text-decoration: none; color:#e0d598">SEARCH</router-link></v-tab>
         </span>
         <!-- <span v-if="isLogin">

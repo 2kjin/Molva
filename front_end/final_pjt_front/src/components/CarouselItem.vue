@@ -1,20 +1,20 @@
 <template>
-  <div id="carouselItem">
+  <div id="movielItem">
     <img :src="imgSrc"
+    @click="goDetail(movie?.movie_id)"
     >
-    <!-- @click="goDetail(movie?.movie_id)" -->
-      <div id="carouselContent">
-        <!-- <v-rating
+      <div id="movieInfo">
+        {{movie.title}}
+        <v-rating
         class="rating"
         background-color="amber"
         :value="movie.vote_average / 2"
         color="amber"
         dense
         half-increments
-        readonly
-        size="18"
-        style="margin: 3px 0"
-      ></v-rating> -->
+        size="16"
+        style="margin: 2px 0"
+      ></v-rating>
     </div>
     
   </div>
@@ -40,17 +40,26 @@ export default {
 </script>
 
 <style scoped>
+#movieItem{
+  position: relative;
+}
 
-#carouselItem{
+#movieInfo{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  position: absolute;
+  top: 270px;
+  width: 100%;
+  height: 100%;
 }
 
 img{
-  width: 100%;
+  height: 540px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 </style>

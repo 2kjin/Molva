@@ -1,19 +1,22 @@
 <template>
-  <div>
-    <div class="d-flex flex-wrap" v-if="nowPlaying">
-      <div class="h4 ml-3 mt-5 mb-4 text-white">Now Playing</div>
+  <div class="d-flex justify-content-center">
+    <div class="contentItem mx-10" v-if="nowPlaying">
+      <div class="h4" style="color:#e0d598">Now Playing</div>
       <MovieLists :movieList="nowPlaying"></MovieLists>
-      <MovieText :text="'Popular'"></MovieText>
+    </div>
+    <div class="contentItem mx-10" v-if="popular">
+      <div class="h4" style="color:#e0d598">Popular</div>
       <MovieLists :movieList="popular"></MovieLists>
-      <MovieText :text="'Comming Soon'"></MovieText>
+    </div>
+    <div class="contentItem mx-10" v-if="upComming">
+      <div class="h4" style="color:#e0d598">Comming Soon</div>
       <MovieLists :movieList="upComming"></MovieLists>
     </div>
   </div>
 </template>
 
 <script>
-import MovieLists from "../components/MovieLists";
-import MovieText from "../components/MovieText";
+import MovieLists from "../components/MovieListsColumn";
 import { movieApi } from "../utils/axios";
 import { mapMutations } from "vuex";
 export default {
@@ -25,7 +28,6 @@ export default {
     };
   },
   components: {
-    MovieText,
     MovieLists,
   },
   methods: {
@@ -59,6 +61,7 @@ export default {
 </script>
 
 <style>
+
 .movie-card {
   margin: 12px;
   width: 125px;
@@ -66,8 +69,8 @@ export default {
   font-weight: 400;
 }
 .movie-card:hover {
-  opacity: 0.5;
   cursor: pointer;
+  transform: scale(1.1);
 }
 .movie-card > img {
   height: 180px;
